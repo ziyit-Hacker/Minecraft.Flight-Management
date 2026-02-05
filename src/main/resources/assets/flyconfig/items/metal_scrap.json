@@ -1,0 +1,7 @@
+{
+  "model": {
+    "type": "model",
+    "model": "flight-management:item/metal_scrap",
+    "layer0": "flight-management:item/metal_scrap"
+  }
+}
