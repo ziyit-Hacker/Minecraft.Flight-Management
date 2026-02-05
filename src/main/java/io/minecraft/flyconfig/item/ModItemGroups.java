@@ -39,4 +39,8 @@ public class ModItemGroups {
                         entries.add(ModItems.AIRCRAFT_OIL);
                         entries.add(ModItems.FLIGHT_MANAGER);
                     }).build());
+
+    public static void registerModItemGroups() {
+        FlightManagement.LOGGER.info("Registering Mod Item Groups for " + FlightManagement.MOD_ID);
+    }
 }
