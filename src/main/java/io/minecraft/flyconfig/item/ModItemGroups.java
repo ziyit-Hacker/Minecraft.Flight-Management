@@ -32,7 +32,7 @@ public class ModItemGroups {
 //    }
 
     public static final ItemGroup FLYCOMFIG_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(FlightManagement.MOD_ID, "flyconfig-group"),
-            ItemGroup.create(null, -1).displayName(Text.translatable("itemGroup.flyconfig_group"))
+            ItemGroup.create(null, -1).displayName(Text.translatable("itemGroup.flyconfig-group"))
                     .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.METAL_SCRAP);

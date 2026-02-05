@@ -26,7 +26,7 @@ public class ModItems {
             .maxCount(1).rarity(Rarity.EPIC).component(DataComponentTypes.DEATH_PROTECTION, DeathProtectionComponent.TOTEM_OF_UNDYING));
 
     public static Item registerItems(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
-        final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of("tutorial", path));
+        final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of("flyconfig", path));
         return Items.register(registryKey, factory, settings);
     }
 
