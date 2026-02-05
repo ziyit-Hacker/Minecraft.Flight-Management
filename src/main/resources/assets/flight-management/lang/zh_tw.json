@@ -7,5 +7,4 @@
   "tooltip.flight-management.flight_manager.desc": "管理飛行航線的核心道具，右鍵啟動",
   "item.flight-management.flight_manager.use": "已啟動飛行管理儀！航線資料已載入",
   "itemGroup.flyconfig.flyconfig_group": "飛行管理",
-  Translation key not included in default localization file.
 }

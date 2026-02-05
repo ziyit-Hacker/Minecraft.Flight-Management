@@ -31,6 +31,4 @@ public class ModItems {
     public static void registerModItems() {
         FlightManagement.LOGGER.info("Registering ModItems.");
     }
-
-    { I Am Error =( }
 }
