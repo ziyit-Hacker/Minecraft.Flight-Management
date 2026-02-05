@@ -5,5 +5,6 @@
   "tooltip.flight-management.metal_scrap.desc": "飞舟遗落之金铁，可锻为航具之材",
   "tooltip.flight-management.aircraft_oil.desc": "精炼之燃油，足以驱动飞舟万里",
   "tooltip.flight-management.flight_manager.desc": "掌飞舟航线之符，右击可启之",
-  "item.flight-management.flight_manager.use": "司航符已启！航线之籍已览"
+  "item.flight-management.flight_manager.use": "司航符已启！航线之籍已览",
+    "itemGroup.flyconfig.flyconfig_group": "飞航组"
 }

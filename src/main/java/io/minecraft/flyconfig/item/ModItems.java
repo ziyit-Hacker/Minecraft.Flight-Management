@@ -28,14 +28,7 @@ public class ModItems {
         return Registry.register(Registries.ITEM, Identifier.of(MOD_ID, id), item);
     }
 
-    private  static void addItemToIG(FabricItemGroupEntries fabricItemGroupEntries){
-        fabricItemGroupEntries.add(METAL_SCRAP);
-        fabricItemGroupEntries.add(AIRCRAFT_OIL);
-        fabricItemGroupEntries.add(FLIGHT_MANAGER);
-    }
-
     public static void registerModItems() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToIG);
         FlightManagement.LOGGER.info("Registering ModItems.");
     }
 }
