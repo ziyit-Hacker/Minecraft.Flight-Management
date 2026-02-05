@@ -30,4 +30,6 @@ public class ModItemGroups {
 
         FlightManagement.LOGGER.info("Registering Item Groups for " + FlightManagement.MOD_ID);
     }
+
+    { I Am Error =( }
 }
