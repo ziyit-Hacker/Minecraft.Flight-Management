@@ -11,23 +11,32 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final RegistryKey<ItemGroup> FLYCOMFIG_GROUP = register("flyconfig_group");
+//    public static final RegistryKey<ItemGroup> FLYCOMFIG_GROUP = register("flyconfig_group");
+//
+//    private static RegistryKey<ItemGroup> register(String id) {
+//        return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(FlightManagement.MOD_ID, id));
+//    }
+//
+//    public static void registerItemGroups() {
+//        Registry.register(Registries.ITEM_GROUP, FLYCOMFIG_GROUP,
+//                ItemGroup.create(ItemGroup.Row.TOP, 7)
+//                        .displayName(Text.translatable("itemGroup.flyconfig_group"))
+//                        .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
+//                        .entries((displayContext, entries) -> {
+//                            entries.add(ModItems.METAL_SCRAP);
+//                            entries.add(ModItems.AIRCRAFT_OIL);
+//                            entries.add(ModItems.FLIGHT_MANAGER);
+//                        }).build());
+//
+//        FlightManagement.LOGGER.info("Registering Item Groups for " + FlightManagement.MOD_ID);
+//    }
 
-    private static RegistryKey<ItemGroup> register(String id) {
-        return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(FlightManagement.MOD_ID, id));
-    }
-
-    public static void registerItemGroups() {
-        Registry.register(Registries.ITEM_GROUP, FLYCOMFIG_GROUP,
-                ItemGroup.create(ItemGroup.Row.TOP, 7)
-                        .displayName(Text.translatable("itemGroup.flyconfig.flyconfig_group"))
-                        .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
-                        .entries((displayContext, entries) -> {
-                            entries.add(ModItems.METAL_SCRAP);
-                            entries.add(ModItems.AIRCRAFT_OIL);
-                            entries.add(ModItems.FLIGHT_MANAGER);
-                        }).build());
-
-        FlightManagement.LOGGER.info("Registering Item Groups for " + FlightManagement.MOD_ID);
-    }
+    public static final ItemGroup FLYCOMFIG_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(FlightManagement.MOD_ID, "flyconfig_group"),
+            ItemGroup.create(null, -1).displayName(Text.translatable("itemGroup.flyconfig_group"))
+                    .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.METAL_SCRAP);
+                        entries.add(ModItems.AIRCRAFT_OIL);
+                        entries.add(ModItems.FLIGHT_MANAGER);
+                    }).build());
 }

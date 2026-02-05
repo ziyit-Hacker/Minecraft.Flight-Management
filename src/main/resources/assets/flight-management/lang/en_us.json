@@ -6,5 +6,5 @@
   "tooltip.flight-management.aircraft_oil.desc": "High-octane jet fuel, keeps your ride running smooth",
   "tooltip.flight-management.flight_manager.desc": "The brains of the operation—right-click to fire it up",
   "item.flight-management.flight_manager.use": "Flight Controller active! Route data locked and loaded",
-  "itemGroup.flyconfig.flyconfig_group": "Flight Management",
+  "itemGroup.flyconfig_group": "Flight Management",
 }

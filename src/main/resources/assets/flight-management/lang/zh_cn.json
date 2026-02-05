@@ -6,5 +6,5 @@
   "tooltip.flight-management.aircraft_oil.desc": "高纯度航空机油，为飞行器提供动力",
   "tooltip.flight-management.flight_manager.desc": "管理航班航线的核心道具，右键激活",
   "item.flight-management.flight_manager.use": "已激活航班管理器！航线数据已加载",
-  "itemGroup.flyconfig.flyconfig_group": "飞行管理"
+  "itemGroup.flyconfig_group": "飞行管理"
 }
