@@ -19,7 +19,7 @@ public class ModItemGroups {
 
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, FLYCOMFIG_GROUP,
-                ItemGroup.create(ItemGroup.Row.TOP, -1)
+                ItemGroup.create(ItemGroup.Row.TOP, 7)
                         .displayName(Text.translatable("itemGroup.flyconfig.flyconfig_group"))
                         .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
                         .entries((displayContext, entries) -> {
