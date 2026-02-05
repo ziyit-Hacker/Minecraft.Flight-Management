@@ -1,6 +1,6 @@
 {
   "type": "minecraft:craft_shapeless",
-  "category": "misc",
+  "category": "redstone",
   "group": "flyconfig",
   "key": {
     "#": {
