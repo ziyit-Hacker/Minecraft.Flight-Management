@@ -43,5 +43,4 @@ public class ModItemGroups {
     public static void registerModItemGroups() {
         FlightManagement.LOGGER.info("Registering Mod Item Groups for " + FlightManagement.MOD_ID);
     }
-    // 这是注释
 }
