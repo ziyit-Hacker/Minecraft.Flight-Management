@@ -1,10 +1,6 @@
 {
-  "item.flight-management.metal_scrap": "金属废料",
-  "item.flight-management.aircraft_oil": "合成机油",
-  "item.flight-management.flight_manager": "航班管理器",
-  "tooltip.flight-management.metal_scrap.desc": "可回收的航空金属废料，用于合成飞行道具",
-  "tooltip.flight-management.aircraft_oil.desc": "高纯度航空机油，为飞行器提供动力",
-  "tooltip.flight-management.flight_manager.desc": "管理航班航线的核心道具，右键激活",
-  "item.flight-management.flight_manager.use": "已激活航班管理器！航线数据已加载",
-  "itemGroup.flyconfig_group": "飞行管理"
+  "item.flyconfig.metal_scrap": "金属废料",
+  "item.flyconfig.aircraft_oil": "合成机油",
+  "item.flyconfig.flight_manager": "航班管理器",
+  "itemGroup.flyconfig-group": "飞行管理"
 }

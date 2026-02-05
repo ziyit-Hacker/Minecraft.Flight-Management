@@ -31,7 +31,7 @@ public class ModItemGroups {
 //        FlightManagement.LOGGER.info("Registering Item Groups for " + FlightManagement.MOD_ID);
 //    }
 
-    public static final ItemGroup FLYCOMFIG_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of("flyconfig", "flyconfig_group"),
+    public static final ItemGroup FLYCOMFIG_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(FlightManagement.MOD_ID, "flyconfig-group"),
             ItemGroup.create(null, -1).displayName(Text.translatable("itemGroup.flyconfig_group"))
                     .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
                     .entries((displayContext, entries) -> {
