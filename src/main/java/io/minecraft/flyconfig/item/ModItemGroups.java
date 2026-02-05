@@ -29,6 +29,5 @@ public class ModItemGroups {
                         }).build());
 
         FlightManagement.LOGGER.info("Registering Item Groups for " + FlightManagement.MOD_ID);
-        // 我是注释
     }
 }
