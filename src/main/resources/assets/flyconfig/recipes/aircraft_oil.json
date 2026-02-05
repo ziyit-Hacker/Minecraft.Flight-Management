@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "flyconfig:metal_scrap"
   },
-  "result": "flyconfig:aircraft_oil",
+  "result": {"item": "flyconfig:aircraft_oil", "count": 1},
   "cookingtime": 100,
   "experience": 0.2,
   "category": "misc"
