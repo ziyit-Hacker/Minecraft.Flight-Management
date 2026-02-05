@@ -13,8 +13,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
-import static io.minecraft.flyconfig.FlightManagement.MOD_ID;
-
 public class ModItems {
     public static final Item METAL_SCRAP = registerItems("metal_scrap", new Item(new Item.Settings()
             .maxCount(99).food(new FoodComponent.Builder().saturationModifier(0.3F).alwaysEdible().build()).rarity(Rarity.COMMON)));
@@ -25,7 +23,7 @@ public class ModItems {
 
     private static Item registerItems(String id, Item item) {
         // return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(MOD_ID, id)), item);
-        return Registry.register(Registries.ITEM, Identifier.of(MOD_ID, id), item);
+        return Registry.register(Registries.ITEM, Identifier.of("flyconfig", id), item);
     }
 
     public static void registerModItems() {
