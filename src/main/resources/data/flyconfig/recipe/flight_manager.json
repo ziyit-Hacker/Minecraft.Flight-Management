@@ -1,10 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "H H",
-    "ZXZ",
-    "HHH"
-  ],
+  "category": "misc",
+  "group": "flyconfig",
   "key": {
     "H": {
       "item": "flyconfig:aircraft_oil"
@@ -16,9 +13,13 @@
       "item": "minecraft:elytra"
     }
   },
+  "pattern": [
+    "H H",
+    "ZXZ",
+    "HHH"
+  ],
   "result": {
     "item": "flyconfig:flight_manager",
     "count": 1
-  },
-  "category": "misc"
+  }
 }
