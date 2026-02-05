@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "model",
-    "model": "flyconfig:item/aircraft_oil"
+    "model": "flight-management:item/aircraft_oil"
   }
 }

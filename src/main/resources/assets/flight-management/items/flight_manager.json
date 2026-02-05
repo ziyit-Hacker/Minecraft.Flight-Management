@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "model",
-    "model": "flyconfig:item/flight_manager"
+    "model": "flight-management:item/flight_manager"
   }
 }
