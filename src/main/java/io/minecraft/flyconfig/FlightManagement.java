@@ -26,4 +26,5 @@ public class FlightManagement implements ModInitializer {
 
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
 	}
+	// 这是注释
 }
