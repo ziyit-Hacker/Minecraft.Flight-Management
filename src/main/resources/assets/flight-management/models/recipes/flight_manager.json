@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H H",
+    "ZXZ",
+    "HHH"
+  ],
+  "key": {
+    "H": {
+      "item": "flight-management:aircraft_oil"
+    },
+    "Z": {
+      "item": "flight-management:metal_scrap"
+    },
+    "X": {
+      "item": "minecraft:elytra"
+    }
+  },
+  "result": {
+    "item": "flight-management:flight_manager",
+    "count": 1
+  },
+  "category": "misc"
+}

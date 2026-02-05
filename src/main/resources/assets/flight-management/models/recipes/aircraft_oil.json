@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "flight-management:metal_scrap"
+  },
+  "result": "flight-management:aircraft_oil",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "category": "misc"
+}

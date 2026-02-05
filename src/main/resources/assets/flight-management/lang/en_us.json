@@ -1,0 +1,9 @@
+{
+  "item.flight-management.metal_scrap": "Aviation Scrap Metal In KARDS",
+  "item.flight-management.aircraft_oil": "Jet Fuel Blend In KARDS",
+  "item.flight-management.flight_manager": "Flight Controller",
+  "tooltip.flight-management.metal_scrap.desc": "Salvaged metal from old jets—perfect for building flight gear",
+  "tooltip.flight-management.aircraft_oil.desc": "High-octane jet fuel, keeps your ride running smooth",
+  "tooltip.flight-management.flight_manager.desc": "The brains of the operation—right-click to fire it up",
+  "item.flight-management.flight_manager.use": "Flight Controller active! Route data locked and loaded"
+}
