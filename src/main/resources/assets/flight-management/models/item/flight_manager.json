@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "flight-management:item/flight_manager"
-  }
-}
