@@ -1,0 +1,8 @@
+{
+  "format_version": "1.21.4",
+  "mappings": {
+    "flight-management:flight_manager": "flight-management:item/flight_manager",
+    "flight-management:aircraft_oil": "flight-management:item/aircraft_oil",
+    "flight-management:metal_scrap": "flight-management:item/metal_scrap"
+  }
+}
