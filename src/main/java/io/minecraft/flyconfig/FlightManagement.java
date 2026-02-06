@@ -1,5 +1,6 @@
 package io.minecraft.flyconfig;
 
+import io.minecraft.flyconfig.enchantment.ModEnchantments;
 import io.minecraft.flyconfig.item.ModItemGroups;
 import io.minecraft.flyconfig.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -23,7 +24,9 @@ public class FlightManagement implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
-
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
+
+		ModEnchantments.initialize();
+		LOGGER.info("[" + MOD_ID + "] Enchantment and event registration completed");
 	}
 }

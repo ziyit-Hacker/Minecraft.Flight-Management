@@ -12,12 +12,12 @@
     "C": "minecraft:repeater"
   },
   "pattern": [
-    "H H",
-    "ZXZ",
-    "HHH"
+    "A#A",
+    "*B*",
+    "A&C"
   ],
   "result": {
     "id": "flyconfig:germany_developed",
-    "count": 1
+    "count": 2
   }
 }
