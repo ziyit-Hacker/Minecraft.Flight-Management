@@ -1,16 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "category": "redstone",
   "group": "flyconfig",
   "show_notification": true,
   "key": {
     "H": {
+      "fabric:type": "minecraft:item",
       "id": "flyconfig:aircraft_oil"
     },
     "Z": {
+      "fabric:type": "minecraft:item",
       "id": "flyconfig:metal_scrap"
     },
     "X": {
+      "fabric:type": "minecraft:item",
       "id": "minecraft:elytra"
     }
   },
@@ -20,6 +23,7 @@
     "HHH"
   ],
   "result": {
+    "fabric:type": "minecraft:item",
     "id": "flyconfig:flight_manager",
     "count": 1
   }
