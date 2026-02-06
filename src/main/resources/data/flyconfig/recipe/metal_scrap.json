@@ -6,11 +6,11 @@
   "experience": 0.1,
   "cookingtime": 200,
   "ingredient": {
-    "fabric:type": "minecraft:item",
+    "fabric:type": "item",
     "id": "minecraft:iron_ingot"
   },
   "result": {
-    "fabric:type": "minecraft:item",
+    "fabric:type": "item",
     "id": "flyconfig:metal_scrap",
     "count": 1
   }

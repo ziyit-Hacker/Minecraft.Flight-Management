@@ -4,7 +4,7 @@
   "group": "flyconfig",
   "key": {
     "#": {
-      "fabric:type": "minecraft:item",
+      "fabric:type": "item",
       "id": "flyconfig:metal_scrap"
     }
   },
@@ -13,7 +13,7 @@
     "##"
   ],
   "result": {
-    "fabric:type": "minecraft:item",
+    "fabric:type": "item",
     "id": "flyconfig:aircraft_oil",
     "count": 1
   }

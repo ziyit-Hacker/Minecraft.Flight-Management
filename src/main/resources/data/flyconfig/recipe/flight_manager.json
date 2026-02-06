@@ -5,15 +5,15 @@
   "show_notification": true,
   "key": {
     "H": {
-      "fabric:type": "minecraft:item",
+      "fabric:type": "item",
       "id": "flyconfig:aircraft_oil"
     },
     "Z": {
-      "fabric:type": "minecraft:item",
+      "fabric:type": "item",
       "id": "flyconfig:metal_scrap"
     },
     "X": {
-      "fabric:type": "minecraft:item",
+      "fabric:type": "item",
       "id": "minecraft:elytra"
     }
   },
@@ -23,7 +23,7 @@
     "HHH"
   ],
   "result": {
-    "fabric:type": "minecraft:item",
+    "fabric:type": "item",
     "id": "flyconfig:flight_manager",
     "count": 1
   }
