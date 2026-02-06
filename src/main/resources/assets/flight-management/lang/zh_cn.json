@@ -1388,5 +1388,7 @@
   "item.minecraft.enchanted_book.fortune": "附魔书",
   "options.languageAccuracyWarning": "（翻译一定114514%正确！！！）",
   "options.languageWarning": "翻译一定114514%正确！！！",
-  "menu.credits": "点开这个的是gay！"
+  "gui.done": "点击后你是人机",
+  "menu.credits": "点开这个的是gay！",
+  "menu.resourcePack": "萌新才用！"
 }
