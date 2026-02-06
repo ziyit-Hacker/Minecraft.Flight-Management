@@ -4,18 +4,9 @@
   "group": "flyconfig",
   "show_notification": true,
   "key": {
-    "H": {
-      "fabric:type": "item",
-      "id": "flyconfig:aircraft_oil"
-    },
-    "Z": {
-      "fabric:type": "item",
-      "id": "flyconfig:metal_scrap"
-    },
-    "X": {
-      "fabric:type": "item",
-      "id": "minecraft:elytra"
-    }
+    "H": "flyconfig:aircraft_oil",
+    "Z": "flyconfig:metal_scrap",
+    "X": "minecraft:elytra"
   },
   "pattern": [
     "H H",
@@ -23,7 +14,6 @@
     "HHH"
   ],
   "result": {
-    "fabric:type": "item",
     "id": "flyconfig:flight_manager",
     "count": 1
   }
