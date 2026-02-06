@@ -1,7 +1,6 @@
 package io.minecraft.flyconfig.item;
 
 import io.minecraft.flyconfig.FlightManagement;
-import io.minecraft.flyconfig.enchantment.ModEnchantments;
 import io.minecraft.flyconfig.item.ModItems;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
@@ -31,31 +30,7 @@ public class ModItemGroups {
                         entries.add(ModItems.AIRCRAFT_OIL);
                         entries.add(ModItems.FLIGHT_MANAGER);
                         entries.add(ModItems.GERMANY_DEVELOPED);
-
-                        displayContext.lookup().getOptional(RegistryKeys.ENCHANTMENT).ifPresent(registryWrapper -> {
-                            addCustomLevelEnchantedBooks(entries, registryWrapper, ModEnchantments.LOUIS,
-                                    ItemGroup.StackVisibility.PARENT_TAB_ONLY,
-                                    1, 3, 5, 6, 10, 16, 32, 64, 128, 255);
-                        });
                     }).build());
-
-    private static void addCustomLevelEnchantedBooks(
-            ItemGroup.Entries entries,
-            RegistryWrapper<Enchantment> registryWrapper,
-            RegistryKey<Enchantment> enchantmentKey,
-            ItemGroup.StackVisibility stackVisibility,
-            int... levels
-    ) {
-        Optional<RegistryEntry.Reference<Enchantment>> enchantmentEntryOpt = registryWrapper.getOptional(enchantmentKey);
-        enchantmentEntryOpt.ifPresent(enchantmentEntry -> {
-            for (int level : levels) {
-                ItemStack enchantedBook = EnchantmentHelper.getEnchantedBookWith(
-                        new EnchantmentLevelEntry(enchantmentEntry, level)
-                );
-                entries.add(enchantedBook, stackVisibility);
-            }
-        });
-    }
 
     public static void registerModItemGroups() {
         FlightManagement.LOGGER.info("[" + MOD_ID + "] Item Group registration completed");

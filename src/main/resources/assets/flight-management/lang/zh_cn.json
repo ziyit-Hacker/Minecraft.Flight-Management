@@ -572,7 +572,7 @@
   "potion.potency.13": "X III",
   "potion.potency.14": "X IV",
   "potion.potency.15": "X V",
-  "potion.potency.16": "十六",
+  "potion.potency.16": "路易十六",
   "potion.potency.17": "X VII",
   "potion.potency.18": "X VIII",
   "potion.potency.19": "X IX",
@@ -877,7 +877,7 @@
   "enchantment.level.13": "X III",
   "enchantment.level.14": "X IV",
   "enchantment.level.15": "X V",
-  "enchantment.level.16": "十六",
+  "enchantment.level.16": "路易十六",
   "enchantment.level.17": "X VII",
   "enchantment.level.18": "X VIII",
   "enchantment.level.19": "X IX",
@@ -1400,5 +1400,11 @@
   "accessibility.onboarding.screen.narrator": "你连狗都不如",
   "accessibility.onboarding.screen.title": "我的世界是我的世界\n\n这长得跟个我的世界一样的我的世界多么Minecraft啊！",
   "title.credits": "© ZIYIT，这不是BUGJANG的！",
-  "enchantment.flyconfig.louis": "路易"
+  "flat_world_preset.unknown": "[NO DATA]",
+  "gameMode.adventure": "冒险家好！",
+  "gameMode.changed": "666，胆小鬼，还切 %s",
+  "gameMode.creative": "创哥理赔",
+  "gameMode.hardcore": "最好玩的模式",
+  "gameMode.spectator": "还看！收你来了！",
+  "gameMode.survival": "切模式的是gay"
 }
