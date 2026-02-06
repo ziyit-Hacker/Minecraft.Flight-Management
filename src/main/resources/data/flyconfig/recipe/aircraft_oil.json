@@ -1,9 +1,10 @@
 {
-  "type": "crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "group": "flyconfig",
   "key": {
     "#": {
+      "fabric:type": "item",
       "item": "flyconfig:metal_scrap"
     }
   },
@@ -12,7 +13,7 @@
     "##"
   ],
   "result": {
-    "count": 1,
-    "id": "flyconfig:aircraft_oil"
+    "id": "flyconfig:aircraft_oil",
+    "count": 1
   }
 }
