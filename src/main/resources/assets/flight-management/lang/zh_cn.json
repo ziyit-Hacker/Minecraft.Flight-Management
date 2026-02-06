@@ -1,6 +1,6 @@
 {
   "item.flyconfig.metal_scrap": "金属废料",
-  "item.flyconfig.aircraft_oil": "合成机油",
+  "item.flyconfig.synthetic_motoroil": "合成机油",
   "item.flyconfig.flight_manager": "航班管理器",
   "itemGroup.flyconfig-group": "飞行管理"
 }

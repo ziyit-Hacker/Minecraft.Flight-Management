@@ -4,7 +4,7 @@
   "group": "flyconfig",
   "show_notification": true,
   "key": {
-    "H": "flyconfig:aircraft_oil",
+    "H": "flyconfig:synthetic_motoroil",
     "Z": "flyconfig:metal_scrap",
     "X": "minecraft:elytra"
   },

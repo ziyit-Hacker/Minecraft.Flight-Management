@@ -1,6 +1,6 @@
 {
   "item.flyconfig.metal_scrap": "Aviation Scrap Metal In KARDS",
-  "item.flyconfig.aircraft_oil": "Jet Fuel Blend In KARDS",
+  "item.flyconfig.synthetic_motoroil": "Synthetic Motor Oil In KARDS",
   "item.flyconfig.flight_manager": "Flight Controller",
   "itemGroup.flyconfig-group": "Flight Management"
 }
