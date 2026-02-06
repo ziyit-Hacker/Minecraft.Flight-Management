@@ -877,7 +877,7 @@
   "enchantment.level.13": "X III",
   "enchantment.level.14": "X IV",
   "enchantment.level.15": "X V",
-  "enchantment.level.16": "X VI",
+  "enchantment.level.16": "十六",
   "enchantment.level.17": "X VII",
   "enchantment.level.18": "X VIII",
   "enchantment.level.19": "X IX",
@@ -1399,5 +1399,6 @@
   "accessibility.onboarding.accessibility.button": "I`m going to kill you!!!",
   "accessibility.onboarding.screen.narrator": "你连狗都不如",
   "accessibility.onboarding.screen.title": "我的世界是我的世界\n\n这长得跟个我的世界一样的我的世界多么Minecraft啊！",
-  "title.credits": "© ZIYIT，这不是BUGJANG的！"
+  "title.credits": "© ZIYIT，这不是BUGJANG的！",
+  "enchantment.flyconfig.louis": "路易"
 }
