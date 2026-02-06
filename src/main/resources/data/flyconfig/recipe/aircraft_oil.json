@@ -3,17 +3,14 @@
   "category": "redstone",
   "group": "flyconfig",
   "key": {
-    "#": {
-      "fabric:type": "item",
-      "item": "flyconfig:metal_scrap"
-    }
+    "#": "flyconfig:metal_scrap"
   },
   "pattern": [
     "##",
     "##"
   ],
   "result": {
-    "id": "flyconfig:aircraft_oil",
+    "item": "flyconfig:aircraft_oil",
     "count": 1
   }
 }

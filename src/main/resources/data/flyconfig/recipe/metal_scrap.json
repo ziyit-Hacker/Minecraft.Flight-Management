@@ -2,14 +2,8 @@
   "type": "minecraft:smelting",
   "category": "redstone",
   "group": "flyconfig",
-  "ingredient": {
-    "fabric:type": "item",
-    "item": "minecraft:iron_ingot"
-  },
-  "result": {
-    "id": "flyconfig:metal_scrap",
-    "count": 1
-  },
+  "ingredient": "minecraft:iron_ingot",
+  "result": "flyconfig:metal_scrap",
   "cookingTime": 200,
   "experience": 0.1
 }
