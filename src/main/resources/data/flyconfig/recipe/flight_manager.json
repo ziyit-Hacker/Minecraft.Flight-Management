@@ -1,7 +1,8 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "category": "redstone",
   "group": "flyconfig",
+  "show_notification": true,
   "key": {
     "H": {
       "item": "flyconfig:aircraft_oil"
@@ -19,7 +20,7 @@
     "HHH"
   ],
   "result": {
-    "item": "flyconfig:flight_manager",
+    "id": "flyconfig:flight_manager",
     "count": 1
   }
 }

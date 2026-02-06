@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:craft_shapeless",
+  "type": "crafting_shapeless",
   "category": "redstone",
   "group": "flyconfig",
   "key": {
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 1,
-    "item": "flyconfig:aircraft_oil"
+    "id": "flyconfig:aircraft_oil"
   }
 }
