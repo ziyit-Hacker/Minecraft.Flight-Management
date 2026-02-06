@@ -1394,5 +1394,9 @@
   "options.font.title": "你是是gay！",
   "options.resourcepack": "萌新才用！",
   "options.resourcepack.title": "你是萌新，哈哈！",
-  "options.sounds": "声音？我只听音乐！"
+  "options.sounds": "声音？我只听音乐！",
+  "options.sounds.title": "搞基的音乐",
+  "accessibility.onboarding.accessibility.button": "I`m going to kill you!!!",
+  "accessibility.onboarding.screen.narrator": "你连狗都不如",
+  "accessibility.onboarding.screen.title": "我的世界是我的世界\n\n这长得跟个我的世界一样的我的世界多么Minecraft啊！"
 }
