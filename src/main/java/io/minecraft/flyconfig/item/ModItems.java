@@ -22,8 +22,12 @@ public class ModItems {
 
     public static final Item AIRCRAFT_OIL = registerItems("synthetic_motoroil", Item::new, new Item.Settings()
             .maxCount(16).rarity(Rarity.UNCOMMON));
+
     public static final Item FLIGHT_MANAGER = registerItems("flight_manager", Item::new, new Item.Settings()
-            .maxCount(1).rarity(Rarity.EPIC).component(DataComponentTypes.DEATH_PROTECTION, DeathProtectionComponent.TOTEM_OF_UNDYING));
+            .maxCount(1).rarity(Rarity.RARE).component(DataComponentTypes.DEATH_PROTECTION, DeathProtectionComponent.TOTEM_OF_UNDYING));
+
+    public static final Item GERMANY_DEVELOPED = registerItems("germany_developed", Item::new, new Item.Settings()
+            .maxCount(2).rarity(Rarity.EPIC));
 
     public static Item registerItems(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of("flyconfig", path));

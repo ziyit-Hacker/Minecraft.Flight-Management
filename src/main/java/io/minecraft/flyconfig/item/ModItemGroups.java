@@ -38,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.METAL_SCRAP);
                         entries.add(ModItems.AIRCRAFT_OIL);
                         entries.add(ModItems.FLIGHT_MANAGER);
+                        entries.add(ModItems.GERMANY_DEVELOPED);
                     }).build());
 
     public static void registerModItemGroups() {
