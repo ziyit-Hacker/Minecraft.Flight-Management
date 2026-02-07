@@ -6,7 +6,6 @@
   "key": {
     "#": "flyconfig:synthetic_motoroil",
     "*": "flyconfig:metal_scrap",
-    "&": "flyconfig:flight_manager",
     "A": "minecraft:redstone",
     "B": "minecraft:comparator",
     "C": "minecraft:repeater"
@@ -14,7 +13,7 @@
   "pattern": [
     "A#A",
     "*B*",
-    "A&C"
+    "ACA"
   ],
   "result": {
     "id": "flyconfig:germany_developed",
