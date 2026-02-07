@@ -24,7 +24,5 @@ public class FlightManagement implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
-
-		LOGGER.info("[" + MOD_ID + "] Enchantment and event registration completed");
 	}
 }
