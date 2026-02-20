@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "tutorial:block/vertical_half_brick"
-  }
-}
