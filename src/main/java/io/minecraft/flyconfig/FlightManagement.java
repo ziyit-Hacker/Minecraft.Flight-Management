@@ -1,5 +1,6 @@
 package io.minecraft.flyconfig;
 
+import io.minecraft.flyconfig.block.ModBlocks;
 import io.minecraft.flyconfig.item.ModItemGroups;
 import io.minecraft.flyconfig.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -24,6 +25,8 @@ public class FlightManagement implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
+
+		ModBlocks.init();
 
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
 	}
