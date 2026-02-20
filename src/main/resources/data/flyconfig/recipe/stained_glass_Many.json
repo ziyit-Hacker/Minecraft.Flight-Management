@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flyconfig",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:stained_glass"
+    ],
+    "result": {
+        "id": "minecraft:stained_glass",
+        "count": 16
+    },
+    "show_notification": true
+}

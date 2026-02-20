@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flyconfig",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_stairs"
+    ],
+    "result": {
+        "id": "minecraft:jungle_stairs",
+        "count": 16
+    },
+    "show_notification": true
+}

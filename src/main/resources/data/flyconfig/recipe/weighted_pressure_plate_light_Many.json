@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flyconfig",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:weighted_pressure_plate_light"
+    ],
+    "result": {
+        "id": "minecraft:weighted_pressure_plate_light",
+        "count": 16
+    },
+    "show_notification": true
+}

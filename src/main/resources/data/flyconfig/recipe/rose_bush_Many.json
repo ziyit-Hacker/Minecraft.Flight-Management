@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flyconfig",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:rose_bush"
+    ],
+    "result": {
+        "id": "minecraft:rose_bush",
+        "count": 16
+    },
+    "show_notification": true
+}
