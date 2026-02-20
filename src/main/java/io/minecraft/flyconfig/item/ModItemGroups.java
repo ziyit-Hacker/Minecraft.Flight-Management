@@ -2,6 +2,7 @@ package io.minecraft.flyconfig.item;
 
 import io.minecraft.flyconfig.FlightManagement;
 import io.minecraft.flyconfig.item.ModItems;
+import io.minecraft.flyconfig.block.ModBlocks;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
@@ -22,7 +23,7 @@ import java.util.stream.IntStream;
 import static io.minecraft.flyconfig.FlightManagement.MOD_ID;
 
 public class ModItemGroups {
-    public static final ItemGroup FLYCOMFIG_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "flyconfig-group"),
+    public static final ItemGroup FLYCONFIG_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "flyconfig-group"),
             ItemGroup.create(null, -1).displayName(Text.translatable("itemGroup.flyconfig-group"))
                     .icon(() -> new ItemStack(ModItems.FLIGHT_MANAGER))
                     .entries((displayContext, entries) -> {
@@ -30,6 +31,7 @@ public class ModItemGroups {
                         entries.add(ModItems.AIRCRAFT_OIL);
                         entries.add(ModItems.FLIGHT_MANAGER);
                         entries.add(ModItems.GERMANY_DEVELOPED);
+                        entries.add(new ItemStack(ModBlocks.VERTICAL_HALF_BRICK));
                     }).build());
 
     public static void registerModItemGroups() {
