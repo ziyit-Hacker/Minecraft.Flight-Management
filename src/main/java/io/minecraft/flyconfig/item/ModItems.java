@@ -2,6 +2,7 @@ package io.minecraft.flyconfig.item;
 
 import io.minecraft.flyconfig.FlightManagement;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.DeathProtectionComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
@@ -17,8 +18,9 @@ public class ModItems {
     private ModItems() {
     }
 
-    public static final Item METAL_SCRAP = registerItems("metal_scrap", Item::new, new Item.Settings()
-            .maxCount(99).food(new FoodComponent.Builder().saturationModifier(0.3F).alwaysEdible().build()).rarity(Rarity.COMMON));
+    public static final Item METAL_SCRAP = registerItems("metal_scrap", MetalScrapItem::new, new Item.Settings()
+            .maxCount(99)
+            .food(ModFoodComponents.METAL_SCRAP, ConsumableComponents.FOOD));
 
     public static final Item AIRCRAFT_OIL = registerItems("synthetic_motoroil", Item::new, new Item.Settings()
             .maxCount(16).rarity(Rarity.UNCOMMON));
