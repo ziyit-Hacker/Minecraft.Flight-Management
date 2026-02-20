@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "sticky_piston",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:sticky_piston"

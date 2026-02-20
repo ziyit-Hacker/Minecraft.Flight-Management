@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "sugar_cane",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:sugar_cane"

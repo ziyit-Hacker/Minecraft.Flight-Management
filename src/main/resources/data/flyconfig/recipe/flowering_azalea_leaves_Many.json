@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "flowering_azalea_leaves",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:flowering_azalea_leaves"

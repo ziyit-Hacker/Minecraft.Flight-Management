@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "powder_snow_bucket",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:powder_snow_bucket"

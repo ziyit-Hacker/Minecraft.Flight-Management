@@ -1,7 +1,7 @@
 {
   "type": "crafting_shapeless",
   "category": "redstone",
-  "group": "flyconfig",
+  "group": "elytra",
   "ingredients": ["flyconfig:germany_developed", "flyconfig:synthetic_motoroil"],
   "result": {
     "id": "minecraft:elytra",

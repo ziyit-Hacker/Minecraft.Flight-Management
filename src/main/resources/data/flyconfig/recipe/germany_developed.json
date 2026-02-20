@@ -1,7 +1,7 @@
 {
   "type": "crafting_shaped",
   "category": "redstone",
-  "group": "flyconfig",
+  "group": "germany_developed",
   "show_notification": true,
   "key": {
     "#": "flyconfig:synthetic_motoroil",

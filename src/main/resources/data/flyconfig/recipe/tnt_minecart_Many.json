@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "tnt_minecart",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:tnt_minecart"

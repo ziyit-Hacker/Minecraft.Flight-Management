@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "acacia_planks",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:acacia_planks"

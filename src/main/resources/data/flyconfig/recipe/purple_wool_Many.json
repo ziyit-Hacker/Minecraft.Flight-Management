@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "purple_wool",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:purple_wool"

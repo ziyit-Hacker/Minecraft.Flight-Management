@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "enchanting_table",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:enchanting_table"

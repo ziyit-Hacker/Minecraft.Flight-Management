@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "stripped_spruce_log",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:stripped_spruce_log"

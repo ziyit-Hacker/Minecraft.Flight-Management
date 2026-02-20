@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "netherite_hoe",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:netherite_hoe"

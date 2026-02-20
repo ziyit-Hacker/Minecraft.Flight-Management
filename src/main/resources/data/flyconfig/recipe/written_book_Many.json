@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "written_book",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:written_book"

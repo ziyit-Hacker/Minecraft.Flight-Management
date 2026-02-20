@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "soul_lantern",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:soul_lantern"

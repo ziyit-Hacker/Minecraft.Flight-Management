@@ -58,7 +58,7 @@ def generate_recipe(item_id):
     recipe = {
         "type": "crafting_shapeless",
         "category": "redstone",
-        "group": MOD_NAMESPACE,
+        "group": item_id,
         "ingredients": [
             GERMANY_DEVELOPED_ID,
             full_item_id

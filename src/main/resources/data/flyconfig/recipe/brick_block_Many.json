@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "brick_block",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:brick_block"

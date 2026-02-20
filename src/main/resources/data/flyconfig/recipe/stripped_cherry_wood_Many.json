@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "stripped_cherry_wood",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:stripped_cherry_wood"

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "golden_boots",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:golden_boots"

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "ghast_tear",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:ghast_tear"

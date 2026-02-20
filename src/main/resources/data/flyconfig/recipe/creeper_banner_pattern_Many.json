@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "creeper_banner_pattern",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:creeper_banner_pattern"

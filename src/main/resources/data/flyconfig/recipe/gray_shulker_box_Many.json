@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "gray_shulker_box",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:gray_shulker_box"

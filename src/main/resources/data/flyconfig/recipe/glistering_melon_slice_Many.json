@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "glistering_melon_slice",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:glistering_melon_slice"

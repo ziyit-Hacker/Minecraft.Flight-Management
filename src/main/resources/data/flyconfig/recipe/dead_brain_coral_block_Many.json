@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "dead_brain_coral_block",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:dead_brain_coral_block"

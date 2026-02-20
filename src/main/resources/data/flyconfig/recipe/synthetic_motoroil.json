@@ -1,7 +1,7 @@
 {
   "type": "crafting_shaped",
   "category": "redstone",
-  "group": "flyconfig",
+  "group": "synthetic_motoroil",
   "key": {
     "#": "flyconfig:metal_scrap"
   },

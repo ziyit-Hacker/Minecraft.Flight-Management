@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "sweet_berry_bush",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:sweet_berry_bush"

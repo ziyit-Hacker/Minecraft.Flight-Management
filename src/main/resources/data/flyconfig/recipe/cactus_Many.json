@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "cactus",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:cactus"

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "brown_banner",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:brown_banner"

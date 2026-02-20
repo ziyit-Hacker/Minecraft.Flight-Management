@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "cherry_fence",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:cherry_fence"

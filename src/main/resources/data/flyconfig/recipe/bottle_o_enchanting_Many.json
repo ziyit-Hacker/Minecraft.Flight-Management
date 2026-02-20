@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "bottle_o_enchanting",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:bottle_o_enchanting"

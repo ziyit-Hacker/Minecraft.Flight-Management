@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "empty_bucket",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:empty_bucket"

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "pink_glazed_terracotta",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:pink_glazed_terracotta"

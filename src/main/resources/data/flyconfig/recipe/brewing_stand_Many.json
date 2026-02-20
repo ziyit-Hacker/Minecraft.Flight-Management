@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "brewing_stand",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:brewing_stand"

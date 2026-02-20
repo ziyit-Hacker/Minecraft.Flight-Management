@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "splash_potion",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:splash_potion"

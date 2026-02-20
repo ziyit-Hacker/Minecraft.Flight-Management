@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "eye_of_ender",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:eye_of_ender"

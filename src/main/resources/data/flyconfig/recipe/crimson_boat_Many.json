@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "crimson_boat",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:crimson_boat"

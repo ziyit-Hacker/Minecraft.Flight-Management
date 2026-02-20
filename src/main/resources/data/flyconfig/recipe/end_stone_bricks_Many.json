@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "end_stone_bricks",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:end_stone_bricks"

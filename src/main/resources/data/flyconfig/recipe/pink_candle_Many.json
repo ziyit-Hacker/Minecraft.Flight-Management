@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "pink_candle",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:pink_candle"

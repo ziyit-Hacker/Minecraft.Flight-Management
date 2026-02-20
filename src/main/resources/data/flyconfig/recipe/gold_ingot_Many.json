@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "gold_ingot",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:gold_ingot"

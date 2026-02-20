@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "oak_trapdoor",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:oak_trapdoor"

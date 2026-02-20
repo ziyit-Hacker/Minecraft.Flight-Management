@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "phantom_membrane",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:phantom_membrane"

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "enchanted_golden_apple",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:enchanted_golden_apple"

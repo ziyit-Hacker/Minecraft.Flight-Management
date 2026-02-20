@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "fishing_rod",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:fishing_rod"

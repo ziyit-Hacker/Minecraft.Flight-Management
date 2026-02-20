@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "fletching_table",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:fletching_table"

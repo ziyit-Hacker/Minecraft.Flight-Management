@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "experience_bottle",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:experience_bottle"

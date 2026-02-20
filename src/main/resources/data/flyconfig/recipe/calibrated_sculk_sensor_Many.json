@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "calibrated_sculk_sensor",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:calibrated_sculk_sensor"

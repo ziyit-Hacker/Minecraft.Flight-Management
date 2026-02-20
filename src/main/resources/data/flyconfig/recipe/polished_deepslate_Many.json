@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "polished_deepslate",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:polished_deepslate"

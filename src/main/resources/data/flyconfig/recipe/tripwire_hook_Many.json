@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "tripwire_hook",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:tripwire_hook"

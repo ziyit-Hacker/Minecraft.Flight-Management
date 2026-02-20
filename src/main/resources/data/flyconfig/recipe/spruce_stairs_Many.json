@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "spruce_stairs",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:spruce_stairs"

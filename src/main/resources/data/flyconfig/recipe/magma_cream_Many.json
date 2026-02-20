@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "magma_cream",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:magma_cream"

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "stripped_birch_wood",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:stripped_birch_wood"

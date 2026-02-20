@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "lime_stained_glass",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:lime_stained_glass"

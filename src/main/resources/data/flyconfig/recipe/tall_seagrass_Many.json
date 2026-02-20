@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "tall_seagrass",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:tall_seagrass"

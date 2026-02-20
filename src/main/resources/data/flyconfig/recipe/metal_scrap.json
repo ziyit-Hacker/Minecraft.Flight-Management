@@ -1,7 +1,7 @@
 {
   "type": "smoking",
   "category": "misc",
-  "group": "flyconfig",
+  "group": "metal_scrap",
   "show_notification": true,
   "experience": 0.1,
   "cookingtime": 200,

@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "jungle_chest_boat",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:jungle_chest_boat"

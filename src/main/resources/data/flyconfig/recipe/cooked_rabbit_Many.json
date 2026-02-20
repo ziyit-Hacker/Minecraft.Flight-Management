@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "cooked_rabbit",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:cooked_rabbit"

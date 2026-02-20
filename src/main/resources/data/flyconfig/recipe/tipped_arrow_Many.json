@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "tipped_arrow",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:tipped_arrow"

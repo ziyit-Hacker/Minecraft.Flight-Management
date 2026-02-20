@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "name_tag",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:name_tag"

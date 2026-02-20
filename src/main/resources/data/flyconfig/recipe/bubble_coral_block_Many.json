@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "bubble_coral_block",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:bubble_coral_block"

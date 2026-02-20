@@ -1,7 +1,7 @@
 {
     "type": "crafting_shapeless",
     "category": "redstone",
-    "group": "flyconfig",
+    "group": "lily_of_the_valley",
     "ingredients": [
         "flyconfig:germany_developed",
         "minecraft:lily_of_the_valley"
