@@ -3,7 +3,7 @@
 	"package": "io.minecraft.flyconfig.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"FuelRegistryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
