@@ -11,7 +11,7 @@ import net.minecraft.resource.featuretoggle.FeatureSet;
 import static io.minecraft.flyconfig.item.ModItems.AIRCRAFT_OIL;
 
 public class ModFuels {
-    private static final int STACK_FUEL_DURATION = 1600 * 64;
+    private static final int STACK_FUEL_DURATION = 200 * 64 * 2;
 
     public static FuelRegistry createCustomFuelRegistry(RegistryWrapper.WrapperLookup registries, FeatureSet enabledFeatures, int itemSmeltTime) {
         return new FuelRegistry.Builder(registries, enabledFeatures)

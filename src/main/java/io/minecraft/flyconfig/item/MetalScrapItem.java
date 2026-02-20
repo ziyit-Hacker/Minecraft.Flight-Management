@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class MetalScrapItem extends Item {
-    private static final float CHANCE = 0.75F;
+    private static final float CHANCE = 0.25F;
     private static final int MIN_AMPLIFIER = 0;
     private static final int MAX_AMPLIFIER = 127;
     private static final float INFINITE_DURATION_CHANCE = 0.25F;
