@@ -69,7 +69,7 @@ def generate_recipe(item_id):
         },
         "show_notification": True
     }
-    recipe_filename = f"{item_id}_Many.json"
+    recipe_filename = f"{item_id}.json"
     recipe_path = os.path.join(OUTPUT_DIR, recipe_filename)
     with open(recipe_path, "w", encoding="utf-8") as f:
         json.dump(recipe, f, indent=4, ensure_ascii=False)
