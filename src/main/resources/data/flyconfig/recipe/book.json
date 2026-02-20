@@ -4,6 +4,7 @@
     "group": "book",
     "ingredients": [
         "flyconfig:germany_developed",
+        "flyconfig:metal_scrap",
         "minecraft:book"
     ],
     "result": {

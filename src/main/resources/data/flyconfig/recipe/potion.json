@@ -4,11 +4,12 @@
     "group": "potion",
     "ingredients": [
         "flyconfig:germany_developed",
-        "minecraft:potion"
+        "minecraft:knowledge_book",
+        "minecraft:glass_bottle"
     ],
     "result": {
         "id": "minecraft:potion",
-        "count": 16
+        "count": 1
     },
     "show_notification": true
 }

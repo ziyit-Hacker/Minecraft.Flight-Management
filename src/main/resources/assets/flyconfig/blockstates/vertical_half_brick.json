@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "flyconfig:block/vertical_half_brick" }
+    "type=bottom": { "model": "flyconfig:block/vertical_half_brick" },
+    "type=top": { "model": "flyconfig:block/vertical_half_brick_top" },
+    "type=double": { "model": "flyconfig:block/vertical_half_brick_double" }
   }
 }

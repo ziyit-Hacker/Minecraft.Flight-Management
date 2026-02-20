@@ -1,6 +1,3 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "tutorial:block/vertical_half_brick"
-  }
+  "parent": "flyconfig:block/vertical_half_brick"
 }

@@ -2,7 +2,6 @@ package io.minecraft.flyconfig.item;
 
 import io.minecraft.flyconfig.FlightManagement;
 import io.minecraft.flyconfig.item.ModItems;
-import io.minecraft.flyconfig.block.ModBlocks;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
@@ -31,7 +30,6 @@ public class ModItemGroups {
                         entries.add(ModItems.AIRCRAFT_OIL);
                         entries.add(ModItems.FLIGHT_MANAGER);
                         entries.add(ModItems.GERMANY_DEVELOPED);
-                        entries.add(new ItemStack(ModBlocks.VERTICAL_HALF_BRICK));
                     }).build());
 
     public static void registerModItemGroups() {

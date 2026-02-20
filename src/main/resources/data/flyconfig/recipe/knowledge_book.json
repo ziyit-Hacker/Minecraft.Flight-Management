@@ -1,15 +1,14 @@
 {
   "type": "crafting_shapeless",
   "category": "redstone",
-  "group": "enchanted_golden_apple",
+  "group": "knowledge_book",
   "ingredients": [
     "flyconfig:germany_developed",
-    "minecraft:apple",
-    "minecraft:gold_block"
+    "minecraft:book"
   ],
   "result": {
-    "id": "minecraft:enchanted_golden_apple",
-    "count": 8
+    "id": "minecraft:knowledge_book",
+    "count": 1
   },
   "show_notification": true
 }
