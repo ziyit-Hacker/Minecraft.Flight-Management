@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flyconfig",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:diamond_pickaxe"
+    ],
+    "result": {
+        "id": "minecraft:diamond_pickaxe",
+        "count": 16
+    },
+    "show_notification": true
+}

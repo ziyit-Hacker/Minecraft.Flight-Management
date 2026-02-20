@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flyconfig",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:netherite_shovel"
+    ],
+    "result": {
+        "id": "minecraft:netherite_shovel",
+        "count": 16
+    },
+    "show_notification": true
+}
