@@ -31,6 +31,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FLIGHT_MANAGER);
                         entries.add(ModItems.GERMANY_DEVELOPED);
                         entries.add(ModItems.ULHEALN);
+                        entries.add(ModItems.NODATA);
                     }).build());
 
     public static void registerModItemGroups() {
