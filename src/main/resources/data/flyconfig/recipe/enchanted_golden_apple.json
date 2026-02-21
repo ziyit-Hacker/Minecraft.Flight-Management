@@ -3,7 +3,7 @@
   "category": "redstone",
   "group": "enchanted_golden_apple",
   "ingredients": [
-    "minecraft:gold_apple",
+    "minecraft:golden_apple",
     "minecraft:gold_block"
   ],
   "result": {
