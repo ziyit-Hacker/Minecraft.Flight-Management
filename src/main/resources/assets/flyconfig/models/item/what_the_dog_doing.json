@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "flyconfig:item/what_the_dog_doing"
+  }
+}
