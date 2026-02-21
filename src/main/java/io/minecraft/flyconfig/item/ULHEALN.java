@@ -11,9 +11,6 @@ import net.minecraft.item.consume.UseAction;
 import net.minecraft.world.World;
 
 public class ULHEALN extends Item {
-    private static final int NAUSEA_AMPLIFIER = 255;
-    private static final int NAUSEA_DURATION = 200;
-
     public ULHEALN(Settings settings) {
         super(settings);
     }
@@ -32,16 +29,27 @@ public class ULHEALN extends Item {
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack result = super.finishUsing(stack, world, user);
 
-        FlightManagement.LOGGER.info("ULHEALN finishUsing called! User: " + user.getName().getString());
-
         if (!world.isClient() && user instanceof PlayerEntity player) {
-            FlightManagement.LOGGER.info("Server side: Processing ULHEALN effects for " + player.getName().getString());
-
             player.clearStatusEffects();
-            FlightManagement.LOGGER.info("Cleared all status effects for " + player.getName().getString());
 
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, NAUSEA_DURATION, NAUSEA_AMPLIFIER));
-            FlightManagement.LOGGER.info("Applied NAUSEA effect (amplifier: " + NAUSEA_AMPLIFIER + ", duration: " + NAUSEA_DURATION + " ticks) to " + player.getName().getString());
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 255));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 5100, 1));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 5100, 3));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 5100, 5));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 5100, 255));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 5100, 2));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 5100, 3));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 5100, 2));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 5100, 5));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 5100, 5));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 500, 255));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 5100, 10));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 5100, 2));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 5100, 2));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 1000, 1));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 5100, 1));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 5100, 2));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HERO_OF_THE_VILLAGE, 5100, 1));
         }
 
         return result;

@@ -30,6 +30,7 @@ public class ModItemGroups {
                         entries.add(ModItems.AIRCRAFT_OIL);
                         entries.add(ModItems.FLIGHT_MANAGER);
                         entries.add(ModItems.GERMANY_DEVELOPED);
+                        entries.add(ModItems.ULHEALN);
                     }).build());
 
     public static void registerModItemGroups() {
