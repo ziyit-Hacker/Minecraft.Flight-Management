@@ -3,12 +3,12 @@
     "category": "redstone",
     "group": "name_tag",
     "ingredients": [
-        "flyconfig:germany_developed",
-        "minecraft:name_tag"
+        "minecraft:paper",
+        "minecraft:iron_nugget"
     ],
     "result": {
         "id": "minecraft:name_tag",
-        "count": 16
+        "count": 1
     },
     "show_notification": true
 }

@@ -12,7 +12,7 @@ DELETE_FILES = [
     "sign", "stripes_banner_pattern", "sweet_berry_bush", "tall_seagrass", 
     "tripwire", "warped_boat", "warped_chest_boat", "water_cauldron", 
     "weighted_pressure_plate_heavy", "weighted_pressure_plate_light", 
-    "zombified_piglin_head"
+    "zombified_piglin_head", "stained_glass", "stained_glass_pane"
 ]
 
 # 2. 需要修改count为1的文件（stack size 16>1报错）
