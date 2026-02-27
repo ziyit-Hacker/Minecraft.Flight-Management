@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wheat_seeds",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wheat_seeds"
+    ],
+    "result": {
+        "id": "minecraft:wheat_seeds",
+        "count": 16
+    },
+    "show_notification": true
+}

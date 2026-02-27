@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_trapdoor",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_trapdoor"
+    ],
+    "result": {
+        "id": "minecraft:warped_trapdoor",
+        "count": 16
+    },
+    "show_notification": true
+}

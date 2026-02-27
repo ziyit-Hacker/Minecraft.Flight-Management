@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wither_rose",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wither_rose"
+    ],
+    "result": {
+        "id": "minecraft:wither_rose",
+        "count": 16
+    },
+    "show_notification": true
+}

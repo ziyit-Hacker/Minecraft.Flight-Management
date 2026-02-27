@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wooden_shovel",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wooden_shovel"
+    ],
+    "result": {
+        "id": "minecraft:wooden_shovel",
+        "count": 1
+    },
+    "show_notification": true
+}

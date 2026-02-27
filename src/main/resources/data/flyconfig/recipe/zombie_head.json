@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "zombie_head",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:zombie_head"
+    ],
+    "result": {
+        "id": "minecraft:zombie_head",
+        "count": 16
+    },
+    "show_notification": true
+}

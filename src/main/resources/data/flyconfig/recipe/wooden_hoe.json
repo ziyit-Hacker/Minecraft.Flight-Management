@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wooden_hoe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wooden_hoe"
+    ],
+    "result": {
+        "id": "minecraft:wooden_hoe",
+        "count": 1
+    },
+    "show_notification": true
+}

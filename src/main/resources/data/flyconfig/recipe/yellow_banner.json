@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "yellow_banner",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:yellow_banner"
+    ],
+    "result": {
+        "id": "minecraft:yellow_banner",
+        "count": 16
+    },
+    "show_notification": true
+}

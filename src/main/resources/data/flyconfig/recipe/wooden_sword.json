@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wooden_sword",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wooden_sword"
+    ],
+    "result": {
+        "id": "minecraft:wooden_sword",
+        "count": 1
+    },
+    "show_notification": true
+}

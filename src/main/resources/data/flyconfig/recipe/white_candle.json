@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "white_candle",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:white_candle"
+    ],
+    "result": {
+        "id": "minecraft:white_candle",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "written_book",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:written_book"
+    ],
+    "result": {
+        "id": "minecraft:written_book",
+        "count": 16
+    },
+    "show_notification": true
+}

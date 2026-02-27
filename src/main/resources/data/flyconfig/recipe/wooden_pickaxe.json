@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wooden_pickaxe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wooden_pickaxe"
+    ],
+    "result": {
+        "id": "minecraft:wooden_pickaxe",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_slab",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_slab"
+    ],
+    "result": {
+        "id": "minecraft:warped_slab",
+        "count": 16
+    },
+    "show_notification": true
+}

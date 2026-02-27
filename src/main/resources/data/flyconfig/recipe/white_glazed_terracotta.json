@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "white_glazed_terracotta",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:white_glazed_terracotta"
+    ],
+    "result": {
+        "id": "minecraft:white_glazed_terracotta",
+        "count": 16
+    },
+    "show_notification": true
+}

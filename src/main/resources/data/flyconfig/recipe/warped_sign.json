@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_sign",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_sign"
+    ],
+    "result": {
+        "id": "minecraft:warped_sign",
+        "count": 16
+    },
+    "show_notification": true
+}

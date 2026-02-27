@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wither_skeleton_skull",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wither_skeleton_skull"
+    ],
+    "result": {
+        "id": "minecraft:wither_skeleton_skull",
+        "count": 16
+    },
+    "show_notification": true
+}

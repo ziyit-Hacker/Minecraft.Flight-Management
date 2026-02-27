@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "wooden_axe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:wooden_axe"
+    ],
+    "result": {
+        "id": "minecraft:wooden_axe",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_stairs",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_stairs"
+    ],
+    "result": {
+        "id": "minecraft:warped_stairs",
+        "count": 16
+    },
+    "show_notification": true
+}

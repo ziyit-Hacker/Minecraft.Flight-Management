@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "yellow_wool",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:yellow_wool"
+    ],
+    "result": {
+        "id": "minecraft:yellow_wool",
+        "count": 16
+    },
+    "show_notification": true
+}
