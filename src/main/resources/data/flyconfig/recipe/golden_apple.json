@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "golden_apple",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:golden_apple"
+    ],
+    "result": {
+        "id": "minecraft:golden_apple",
+        "count": 16
+    },
+    "show_notification": true
+}

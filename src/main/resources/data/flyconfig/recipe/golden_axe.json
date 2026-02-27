@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "golden_axe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:golden_axe"
+    ],
+    "result": {
+        "id": "minecraft:golden_axe",
+        "count": 1
+    },
+    "show_notification": true
+}

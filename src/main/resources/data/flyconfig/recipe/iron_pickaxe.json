@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "iron_pickaxe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:iron_pickaxe"
+    ],
+    "result": {
+        "id": "minecraft:iron_pickaxe",
+        "count": 1
+    },
+    "show_notification": true
+}

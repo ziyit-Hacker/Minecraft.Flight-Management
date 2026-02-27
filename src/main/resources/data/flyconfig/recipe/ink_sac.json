@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "ink_sac",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:ink_sac"
+    ],
+    "result": {
+        "id": "minecraft:ink_sac",
+        "count": 16
+    },
+    "show_notification": true
+}

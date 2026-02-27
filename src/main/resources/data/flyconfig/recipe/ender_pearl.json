@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "ender_pearl",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:ender_pearl"
+    ],
+    "result": {
+        "id": "minecraft:ender_pearl",
+        "count": 16
+    },
+    "show_notification": true
+}

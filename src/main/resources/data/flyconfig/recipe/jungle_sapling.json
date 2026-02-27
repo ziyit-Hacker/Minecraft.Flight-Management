@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_sapling",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_sapling"
+    ],
+    "result": {
+        "id": "minecraft:jungle_sapling",
+        "count": 16
+    },
+    "show_notification": true
+}

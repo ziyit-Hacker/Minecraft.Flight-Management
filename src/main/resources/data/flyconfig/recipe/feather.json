@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "feather",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:feather"
+    ],
+    "result": {
+        "id": "minecraft:feather",
+        "count": 16
+    },
+    "show_notification": true
+}

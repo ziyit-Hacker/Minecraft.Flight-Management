@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "glow_item_frame",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:glow_item_frame"
+    ],
+    "result": {
+        "id": "minecraft:glow_item_frame",
+        "count": 16
+    },
+    "show_notification": true
+}

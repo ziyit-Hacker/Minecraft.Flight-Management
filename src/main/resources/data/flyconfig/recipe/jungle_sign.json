@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_sign",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_sign"
+    ],
+    "result": {
+        "id": "minecraft:jungle_sign",
+        "count": 16
+    },
+    "show_notification": true
+}

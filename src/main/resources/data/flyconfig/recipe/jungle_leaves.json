@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_leaves",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_leaves"
+    ],
+    "result": {
+        "id": "minecraft:jungle_leaves",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "gold_nugget",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:gold_nugget"
+    ],
+    "result": {
+        "id": "minecraft:gold_nugget",
+        "count": 16
+    },
+    "show_notification": true
+}

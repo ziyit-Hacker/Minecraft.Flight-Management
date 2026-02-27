@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "golden_carrot",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:golden_carrot"
+    ],
+    "result": {
+        "id": "minecraft:golden_carrot",
+        "count": 16
+    },
+    "show_notification": true
+}

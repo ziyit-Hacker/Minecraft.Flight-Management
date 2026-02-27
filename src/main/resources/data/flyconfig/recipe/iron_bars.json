@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "iron_bars",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:iron_bars"
+    ],
+    "result": {
+        "id": "minecraft:iron_bars",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "iron_leggings",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:iron_leggings"
+    ],
+    "result": {
+        "id": "minecraft:iron_leggings",
+        "count": 1
+    },
+    "show_notification": true
+}

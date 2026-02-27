@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "iron_helmet",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:iron_helmet"
+    ],
+    "result": {
+        "id": "minecraft:iron_helmet",
+        "count": 1
+    },
+    "show_notification": true
+}

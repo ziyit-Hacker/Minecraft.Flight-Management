@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "flower_banner_pattern",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:flower_banner_pattern"
+    ],
+    "result": {
+        "id": "minecraft:flower_banner_pattern",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "golden_sword",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:golden_sword"
+    ],
+    "result": {
+        "id": "minecraft:golden_sword",
+        "count": 1
+    },
+    "show_notification": true
+}

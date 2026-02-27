@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "honeycomb",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:honeycomb"
+    ],
+    "result": {
+        "id": "minecraft:honeycomb",
+        "count": 16
+    },
+    "show_notification": true
+}

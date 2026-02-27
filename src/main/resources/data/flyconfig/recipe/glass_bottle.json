@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "glass_bottle",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:glass_bottle"
+    ],
+    "result": {
+        "id": "minecraft:glass_bottle",
+        "count": 16
+    },
+    "show_notification": true
+}

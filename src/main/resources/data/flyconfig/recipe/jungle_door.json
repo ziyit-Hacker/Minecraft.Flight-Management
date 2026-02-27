@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_door",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_door"
+    ],
+    "result": {
+        "id": "minecraft:jungle_door",
+        "count": 16
+    },
+    "show_notification": true
+}

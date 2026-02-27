@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "green_dye",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:green_dye"
+    ],
+    "result": {
+        "id": "minecraft:green_dye",
+        "count": 16
+    },
+    "show_notification": true
+}

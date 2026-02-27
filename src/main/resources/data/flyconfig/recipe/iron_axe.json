@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "iron_axe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:iron_axe"
+    ],
+    "result": {
+        "id": "minecraft:iron_axe",
+        "count": 1
+    },
+    "show_notification": true
+}

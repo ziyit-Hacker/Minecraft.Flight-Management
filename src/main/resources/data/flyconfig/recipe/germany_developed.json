@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "category": "redstone",
+  "group": "germany_developed",
+  "show_notification": true,
+  "key": {
+    "#": "flyconfig:synthetic_motoroil",
+    "*": "flyconfig:metal_scrap",
+    "A": "minecraft:redstone",
+    "B": "minecraft:comparator",
+    "C": "minecraft:repeater"
+  },
+  "pattern": [
+    "A#A",
+    "*B*",
+    "ACA"
+  ],
+  "result": {
+    "id": "flyconfig:germany_developed",
+    "count": 2
+  }
+}

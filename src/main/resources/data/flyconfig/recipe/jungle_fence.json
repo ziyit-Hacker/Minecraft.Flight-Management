@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_fence",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_fence"
+    ],
+    "result": {
+        "id": "minecraft:jungle_fence",
+        "count": 16
+    },
+    "show_notification": true
+}

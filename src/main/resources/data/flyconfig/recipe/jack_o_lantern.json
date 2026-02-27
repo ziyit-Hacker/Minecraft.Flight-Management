@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jack_o_lantern",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jack_o_lantern"
+    ],
+    "result": {
+        "id": "minecraft:jack_o_lantern",
+        "count": 16
+    },
+    "show_notification": true
+}

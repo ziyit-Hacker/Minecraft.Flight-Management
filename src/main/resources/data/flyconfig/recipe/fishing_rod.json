@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "fishing_rod",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:fishing_rod"
+    ],
+    "result": {
+        "id": "minecraft:fishing_rod",
+        "count": 1
+    },
+    "show_notification": true
+}

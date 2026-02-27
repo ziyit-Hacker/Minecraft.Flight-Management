@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "golden_helmet",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:golden_helmet"
+    ],
+    "result": {
+        "id": "minecraft:golden_helmet",
+        "count": 1
+    },
+    "show_notification": true
+}

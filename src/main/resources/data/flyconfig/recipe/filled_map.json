@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "filled_map",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:filled_map"
+    ],
+    "result": {
+        "id": "minecraft:filled_map",
+        "count": 16
+    },
+    "show_notification": true
+}

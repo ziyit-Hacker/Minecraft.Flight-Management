@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "fire_coral",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:fire_coral"
+    ],
+    "result": {
+        "id": "minecraft:fire_coral",
+        "count": 16
+    },
+    "show_notification": true
+}

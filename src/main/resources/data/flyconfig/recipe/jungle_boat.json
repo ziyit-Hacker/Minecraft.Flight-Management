@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_boat",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_boat"
+    ],
+    "result": {
+        "id": "minecraft:jungle_boat",
+        "count": 1
+    },
+    "show_notification": true
+}

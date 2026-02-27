@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "horn_coral_block",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:horn_coral_block"
+    ],
+    "result": {
+        "id": "minecraft:horn_coral_block",
+        "count": 16
+    },
+    "show_notification": true
+}

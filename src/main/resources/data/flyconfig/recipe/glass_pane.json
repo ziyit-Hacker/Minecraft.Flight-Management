@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "glass_pane",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:glass_pane"
+    ],
+    "result": {
+        "id": "minecraft:glass_pane",
+        "count": 16
+    },
+    "show_notification": true
+}

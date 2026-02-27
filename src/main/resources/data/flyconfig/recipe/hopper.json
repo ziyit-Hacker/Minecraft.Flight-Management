@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "hopper",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:hopper"
+    ],
+    "result": {
+        "id": "minecraft:hopper",
+        "count": 16
+    },
+    "show_notification": true
+}

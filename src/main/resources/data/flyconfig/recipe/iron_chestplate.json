@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "iron_chestplate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:iron_chestplate"
+    ],
+    "result": {
+        "id": "minecraft:iron_chestplate",
+        "count": 1
+    },
+    "show_notification": true
+}

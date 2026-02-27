@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_planks"
+    ],
+    "result": {
+        "id": "minecraft:jungle_planks",
+        "count": 16
+    },
+    "show_notification": true
+}
