@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "piglin_banner_pattern",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:piglin_banner_pattern"
+    ],
+    "result": {
+        "id": "minecraft:piglin_banner_pattern",
+        "count": 1
+    },
+    "show_notification": true
+}

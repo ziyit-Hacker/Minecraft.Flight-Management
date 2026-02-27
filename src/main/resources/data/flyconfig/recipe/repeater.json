@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "repeater",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:repeater"
+    ],
+    "result": {
+        "id": "minecraft:repeater",
+        "count": 16
+    },
+    "show_notification": true
+}

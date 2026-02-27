@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "purple_bed",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:purple_bed"
+    ],
+    "result": {
+        "id": "minecraft:purple_bed",
+        "count": 1
+    },
+    "show_notification": true
+}

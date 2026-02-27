@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "polished_blackstone",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:polished_blackstone"
+    ],
+    "result": {
+        "id": "minecraft:polished_blackstone",
+        "count": 16
+    },
+    "show_notification": true
+}

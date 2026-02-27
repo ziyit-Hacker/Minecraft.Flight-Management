@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "red_sand",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:red_sand"
+    ],
+    "result": {
+        "id": "minecraft:red_sand",
+        "count": 16
+    },
+    "show_notification": true
+}

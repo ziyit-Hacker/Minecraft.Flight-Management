@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "quartz",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:quartz"
+    ],
+    "result": {
+        "id": "minecraft:quartz",
+        "count": 16
+    },
+    "show_notification": true
+}

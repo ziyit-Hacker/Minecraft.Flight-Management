@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_sapling",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_sapling"
+    ],
+    "result": {
+        "id": "minecraft:oak_sapling",
+        "count": 16
+    },
+    "show_notification": true
+}

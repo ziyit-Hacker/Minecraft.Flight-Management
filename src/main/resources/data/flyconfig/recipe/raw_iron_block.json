@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "raw_iron_block",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:raw_iron_block"
+    ],
+    "result": {
+        "id": "minecraft:raw_iron_block",
+        "count": 16
+    },
+    "show_notification": true
+}

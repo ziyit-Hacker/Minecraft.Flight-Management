@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "peony",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:peony"
+    ],
+    "result": {
+        "id": "minecraft:peony",
+        "count": 16
+    },
+    "show_notification": true
+}

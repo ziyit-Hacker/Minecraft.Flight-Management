@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_log",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_log"
+    ],
+    "result": {
+        "id": "minecraft:oak_log",
+        "count": 16
+    },
+    "show_notification": true
+}

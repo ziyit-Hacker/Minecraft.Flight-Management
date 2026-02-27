@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_fence_gate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_fence_gate"
+    ],
+    "result": {
+        "id": "minecraft:oak_fence_gate",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "piston",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:piston"
+    ],
+    "result": {
+        "id": "minecraft:piston",
+        "count": 16
+    },
+    "show_notification": true
+}

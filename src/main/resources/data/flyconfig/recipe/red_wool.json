@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "red_wool",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:red_wool"
+    ],
+    "result": {
+        "id": "minecraft:red_wool",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oxeye_daisy",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oxeye_daisy"
+    ],
+    "result": {
+        "id": "minecraft:oxeye_daisy",
+        "count": 16
+    },
+    "show_notification": true
+}

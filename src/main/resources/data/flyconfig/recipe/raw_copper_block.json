@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "raw_copper_block",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:raw_copper_block"
+    ],
+    "result": {
+        "id": "minecraft:raw_copper_block",
+        "count": 16
+    },
+    "show_notification": true
+}

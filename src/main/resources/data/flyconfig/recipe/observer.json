@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "observer",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:observer"
+    ],
+    "result": {
+        "id": "minecraft:observer",
+        "count": 16
+    },
+    "show_notification": true
+}

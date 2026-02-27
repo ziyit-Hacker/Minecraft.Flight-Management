@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "pumpkin_seeds",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:pumpkin_seeds"
+    ],
+    "result": {
+        "id": "minecraft:pumpkin_seeds",
+        "count": 16
+    },
+    "show_notification": true
+}

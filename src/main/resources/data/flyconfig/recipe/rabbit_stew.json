@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "rabbit_stew",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:rabbit_stew"
+    ],
+    "result": {
+        "id": "minecraft:rabbit_stew",
+        "count": 1
+    },
+    "show_notification": true
+}

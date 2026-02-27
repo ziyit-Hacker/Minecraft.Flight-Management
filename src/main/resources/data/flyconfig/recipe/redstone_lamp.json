@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "redstone_lamp",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:redstone_lamp"
+    ],
+    "result": {
+        "id": "minecraft:redstone_lamp",
+        "count": 16
+    },
+    "show_notification": true
+}

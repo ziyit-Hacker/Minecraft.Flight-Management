@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "potion",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:knowledge_book",
+        "minecraft:glass_bottle"
+    ],
+    "result": {
+        "id": "minecraft:potion",
+        "count": 1
+    },
+    "show_notification": true
+}

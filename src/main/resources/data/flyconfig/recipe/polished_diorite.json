@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "polished_diorite",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:polished_diorite"
+    ],
+    "result": {
+        "id": "minecraft:polished_diorite",
+        "count": 16
+    },
+    "show_notification": true
+}

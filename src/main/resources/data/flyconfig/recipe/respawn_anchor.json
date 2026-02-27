@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "respawn_anchor",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:respawn_anchor"
+    ],
+    "result": {
+        "id": "minecraft:respawn_anchor",
+        "count": 16
+    },
+    "show_notification": true
+}

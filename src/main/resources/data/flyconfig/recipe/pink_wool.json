@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "pink_wool",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:pink_wool"
+    ],
+    "result": {
+        "id": "minecraft:pink_wool",
+        "count": 16
+    },
+    "show_notification": true
+}

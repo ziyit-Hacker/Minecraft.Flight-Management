@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "orange_tulip",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:orange_tulip"
+    ],
+    "result": {
+        "id": "minecraft:orange_tulip",
+        "count": 16
+    },
+    "show_notification": true
+}

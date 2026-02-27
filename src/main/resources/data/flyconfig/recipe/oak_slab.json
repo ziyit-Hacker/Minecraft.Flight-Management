@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_slab",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_slab"
+    ],
+    "result": {
+        "id": "minecraft:oak_slab",
+        "count": 16
+    },
+    "show_notification": true
+}

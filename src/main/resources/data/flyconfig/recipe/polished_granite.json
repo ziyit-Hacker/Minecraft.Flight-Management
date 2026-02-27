@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "polished_granite",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:polished_granite"
+    ],
+    "result": {
+        "id": "minecraft:polished_granite",
+        "count": 16
+    },
+    "show_notification": true
+}

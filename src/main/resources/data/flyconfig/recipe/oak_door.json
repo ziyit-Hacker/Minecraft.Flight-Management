@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_door",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_door"
+    ],
+    "result": {
+        "id": "minecraft:oak_door",
+        "count": 16
+    },
+    "show_notification": true
+}

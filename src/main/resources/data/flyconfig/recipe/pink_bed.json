@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "pink_bed",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:pink_bed"
+    ],
+    "result": {
+        "id": "minecraft:pink_bed",
+        "count": 1
+    },
+    "show_notification": true
+}

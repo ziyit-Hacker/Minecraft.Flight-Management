@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_stairs",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_stairs"
+    ],
+    "result": {
+        "id": "minecraft:oak_stairs",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_pressure_plate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_pressure_plate"
+    ],
+    "result": {
+        "id": "minecraft:oak_pressure_plate",
+        "count": 16
+    },
+    "show_notification": true
+}

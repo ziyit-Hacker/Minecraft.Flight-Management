@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "prismarine_bricks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:prismarine_bricks"
+    ],
+    "result": {
+        "id": "minecraft:prismarine_bricks",
+        "count": 16
+    },
+    "show_notification": true
+}
