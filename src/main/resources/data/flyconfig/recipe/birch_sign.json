@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "birch_sign",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:birch_sign"
+    ],
+    "result": {
+        "id": "minecraft:birch_sign",
+        "count": 16
+    },
+    "show_notification": true
+}

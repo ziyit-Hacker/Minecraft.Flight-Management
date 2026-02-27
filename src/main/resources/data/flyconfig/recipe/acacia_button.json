@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "acacia_button",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:acacia_button"
+    ],
+    "result": {
+        "id": "minecraft:acacia_button",
+        "count": 16
+    },
+    "show_notification": true
+}

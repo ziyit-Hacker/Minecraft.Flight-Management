@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "beehive",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:beehive"
+    ],
+    "result": {
+        "id": "minecraft:beehive",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "acacia_sapling",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:acacia_sapling"
+    ],
+    "result": {
+        "id": "minecraft:acacia_sapling",
+        "count": 16
+    },
+    "show_notification": true
+}

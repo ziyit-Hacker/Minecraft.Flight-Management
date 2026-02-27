@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "blast_furnace",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:blast_furnace"
+    ],
+    "result": {
+        "id": "minecraft:blast_furnace",
+        "count": 16
+    },
+    "show_notification": true
+}

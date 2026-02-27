@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "brewing_stand",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:brewing_stand"
+    ],
+    "result": {
+        "id": "minecraft:brewing_stand",
+        "count": 16
+    },
+    "show_notification": true
+}

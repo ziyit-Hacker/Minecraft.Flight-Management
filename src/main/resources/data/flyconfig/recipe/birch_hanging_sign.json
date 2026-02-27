@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "birch_hanging_sign",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:birch_hanging_sign"
+    ],
+    "result": {
+        "id": "minecraft:birch_hanging_sign",
+        "count": 16
+    },
+    "show_notification": true
+}

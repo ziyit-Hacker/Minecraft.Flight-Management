@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "baked_potato",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:baked_potato"
+    ],
+    "result": {
+        "id": "minecraft:baked_potato",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "ancient_debris",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:ancient_debris"
+    ],
+    "result": {
+        "id": "minecraft:ancient_debris",
+        "count": 16
+    },
+    "show_notification": true
+}

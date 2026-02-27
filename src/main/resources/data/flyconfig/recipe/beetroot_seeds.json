@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "beetroot_seeds",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:beetroot_seeds"
+    ],
+    "result": {
+        "id": "minecraft:beetroot_seeds",
+        "count": 16
+    },
+    "show_notification": true
+}

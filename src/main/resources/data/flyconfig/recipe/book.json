@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "book",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "flyconfig:metal_scrap",
+        "minecraft:book"
+    ],
+    "result": {
+        "id": "minecraft:book",
+        "count": 16
+    },
+    "show_notification": true
+}

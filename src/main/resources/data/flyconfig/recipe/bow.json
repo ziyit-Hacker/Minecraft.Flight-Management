@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "bow",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:bow"
+    ],
+    "result": {
+        "id": "minecraft:bow",
+        "count": 1
+    },
+    "show_notification": true
+}

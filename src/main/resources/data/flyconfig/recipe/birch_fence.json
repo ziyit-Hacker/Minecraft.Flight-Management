@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "birch_fence",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:birch_fence"
+    ],
+    "result": {
+        "id": "minecraft:birch_fence",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "beetroot",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:beetroot"
+    ],
+    "result": {
+        "id": "minecraft:beetroot",
+        "count": 16
+    },
+    "show_notification": true
+}

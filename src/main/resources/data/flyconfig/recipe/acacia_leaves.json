@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "acacia_leaves",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:acacia_leaves"
+    ],
+    "result": {
+        "id": "minecraft:acacia_leaves",
+        "count": 16
+    },
+    "show_notification": true
+}

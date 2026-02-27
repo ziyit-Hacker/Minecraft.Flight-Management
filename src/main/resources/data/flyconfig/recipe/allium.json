@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "allium",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:allium"
+    ],
+    "result": {
+        "id": "minecraft:allium",
+        "count": 16
+    },
+    "show_notification": true
+}

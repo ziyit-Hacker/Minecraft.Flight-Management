@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "birch_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:birch_planks"
+    ],
+    "result": {
+        "id": "minecraft:birch_planks",
+        "count": 16
+    },
+    "show_notification": true
+}

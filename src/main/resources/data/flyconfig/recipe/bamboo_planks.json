@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "bamboo_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:bamboo_planks"
+    ],
+    "result": {
+        "id": "minecraft:bamboo_planks",
+        "count": 16
+    },
+    "show_notification": true
+}

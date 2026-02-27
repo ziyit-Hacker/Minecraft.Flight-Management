@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "brick",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:brick"
+    ],
+    "result": {
+        "id": "minecraft:brick",
+        "count": 16
+    },
+    "show_notification": true
+}

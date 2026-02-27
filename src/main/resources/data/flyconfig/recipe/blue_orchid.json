@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "blue_orchid",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:blue_orchid"
+    ],
+    "result": {
+        "id": "minecraft:blue_orchid",
+        "count": 16
+    },
+    "show_notification": true
+}

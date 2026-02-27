@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "beef",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:beef"
+    ],
+    "result": {
+        "id": "minecraft:beef",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "blaze_rod",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:blaze_rod"
+    ],
+    "result": {
+        "id": "minecraft:blaze_rod",
+        "count": 16
+    },
+    "show_notification": true
+}

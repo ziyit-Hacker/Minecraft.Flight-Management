@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "bubble_coral",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:bubble_coral"
+    ],
+    "result": {
+        "id": "minecraft:bubble_coral",
+        "count": 16
+    },
+    "show_notification": true
+}

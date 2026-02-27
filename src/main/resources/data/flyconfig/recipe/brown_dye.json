@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "brown_dye",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:brown_dye"
+    ],
+    "result": {
+        "id": "minecraft:brown_dye",
+        "count": 16
+    },
+    "show_notification": true
+}

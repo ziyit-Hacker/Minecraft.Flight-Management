@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "acacia_pressure_plate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:acacia_pressure_plate"
+    ],
+    "result": {
+        "id": "minecraft:acacia_pressure_plate",
+        "count": 16
+    },
+    "show_notification": true
+}

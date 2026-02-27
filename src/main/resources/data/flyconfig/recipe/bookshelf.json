@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "bookshelf",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:bookshelf"
+    ],
+    "result": {
+        "id": "minecraft:bookshelf",
+        "count": 16
+    },
+    "show_notification": true
+}

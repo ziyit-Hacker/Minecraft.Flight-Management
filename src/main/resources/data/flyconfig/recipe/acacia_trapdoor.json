@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "acacia_trapdoor",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:acacia_trapdoor"
+    ],
+    "result": {
+        "id": "minecraft:acacia_trapdoor",
+        "count": 16
+    },
+    "show_notification": true
+}

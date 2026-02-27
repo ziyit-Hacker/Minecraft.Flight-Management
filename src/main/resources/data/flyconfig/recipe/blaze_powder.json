@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "blaze_powder",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:blaze_powder"
+    ],
+    "result": {
+        "id": "minecraft:blaze_powder",
+        "count": 16
+    },
+    "show_notification": true
+}

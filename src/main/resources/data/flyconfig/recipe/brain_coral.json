@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "brain_coral",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:brain_coral"
+    ],
+    "result": {
+        "id": "minecraft:brain_coral",
+        "count": 16
+    },
+    "show_notification": true
+}

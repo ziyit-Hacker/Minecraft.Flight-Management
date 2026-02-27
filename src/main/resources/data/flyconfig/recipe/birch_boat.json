@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "birch_boat",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:birch_boat"
+    ],
+    "result": {
+        "id": "minecraft:birch_boat",
+        "count": 1
+    },
+    "show_notification": true
+}

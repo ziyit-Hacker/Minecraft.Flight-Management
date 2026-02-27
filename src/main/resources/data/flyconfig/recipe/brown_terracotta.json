@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "brown_terracotta",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:brown_terracotta"
+    ],
+    "result": {
+        "id": "minecraft:brown_terracotta",
+        "count": 16
+    },
+    "show_notification": true
+}

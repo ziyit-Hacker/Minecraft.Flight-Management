@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "acacia_fence_gate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:acacia_fence_gate"
+    ],
+    "result": {
+        "id": "minecraft:acacia_fence_gate",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "azure_bluet",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:azure_bluet"
+    ],
+    "result": {
+        "id": "minecraft:azure_bluet",
+        "count": 16
+    },
+    "show_notification": true
+}

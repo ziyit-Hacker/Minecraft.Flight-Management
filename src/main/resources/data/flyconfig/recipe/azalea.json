@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "azalea",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:azalea"
+    ],
+    "result": {
+        "id": "minecraft:azalea",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "bee_nest",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:bee_nest"
+    ],
+    "result": {
+        "id": "minecraft:bee_nest",
+        "count": 16
+    },
+    "show_notification": true
+}
