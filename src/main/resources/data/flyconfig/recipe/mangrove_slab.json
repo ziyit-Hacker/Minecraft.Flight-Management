@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "mangrove_slab",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:mangrove_slab"
+    ],
+    "result": {
+        "id": "minecraft:mangrove_slab",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lilac",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lilac"
+    ],
+    "result": {
+        "id": "minecraft:lilac",
+        "count": 16
+    },
+    "show_notification": true
+}

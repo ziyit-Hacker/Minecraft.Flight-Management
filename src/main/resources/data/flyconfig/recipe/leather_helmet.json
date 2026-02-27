@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "leather_helmet",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:leather_helmet"
+    ],
+    "result": {
+        "id": "minecraft:leather_helmet",
+        "count": 1
+    },
+    "show_notification": true
+}

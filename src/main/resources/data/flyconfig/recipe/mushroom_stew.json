@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "mushroom_stew",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:mushroom_stew"
+    ],
+    "result": {
+        "id": "minecraft:mushroom_stew",
+        "count": 1
+    },
+    "show_notification": true
+}

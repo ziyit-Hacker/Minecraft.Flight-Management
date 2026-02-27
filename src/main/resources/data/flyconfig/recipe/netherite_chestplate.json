@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "netherite_chestplate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:netherite_chestplate"
+    ],
+    "result": {
+        "id": "minecraft:netherite_chestplate",
+        "count": 1
+    },
+    "show_notification": true
+}

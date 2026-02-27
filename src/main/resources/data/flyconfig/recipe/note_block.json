@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "note_block",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:note_block"
+    ],
+    "result": {
+        "id": "minecraft:note_block",
+        "count": 16
+    },
+    "show_notification": true
+}

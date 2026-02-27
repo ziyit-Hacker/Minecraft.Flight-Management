@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "light_gray_terracotta",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:light_gray_terracotta"
+    ],
+    "result": {
+        "id": "minecraft:light_gray_terracotta",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lime_bed",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lime_bed"
+    ],
+    "result": {
+        "id": "minecraft:lime_bed",
+        "count": 1
+    },
+    "show_notification": true
+}

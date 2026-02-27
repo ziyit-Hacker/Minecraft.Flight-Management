@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "kelp",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:kelp"
+    ],
+    "result": {
+        "id": "minecraft:kelp",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "nether_star",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:nether_star"
+    ],
+    "result": {
+        "id": "minecraft:nether_star",
+        "count": 16
+    },
+    "show_notification": true
+}

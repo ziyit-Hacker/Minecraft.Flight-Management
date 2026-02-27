@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lingering_potion",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lingering_potion"
+    ],
+    "result": {
+        "id": "minecraft:lingering_potion",
+        "count": 1
+    },
+    "show_notification": true
+}

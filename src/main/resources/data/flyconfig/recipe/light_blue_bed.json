@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "light_blue_bed",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:light_blue_bed"
+    ],
+    "result": {
+        "id": "minecraft:light_blue_bed",
+        "count": 1
+    },
+    "show_notification": true
+}

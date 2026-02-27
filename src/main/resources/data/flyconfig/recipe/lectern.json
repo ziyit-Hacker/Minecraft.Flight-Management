@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lectern",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lectern"
+    ],
+    "result": {
+        "id": "minecraft:lectern",
+        "count": 16
+    },
+    "show_notification": true
+}

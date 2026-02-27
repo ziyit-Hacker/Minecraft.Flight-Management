@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lantern",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lantern"
+    ],
+    "result": {
+        "id": "minecraft:lantern",
+        "count": 16
+    },
+    "show_notification": true
+}

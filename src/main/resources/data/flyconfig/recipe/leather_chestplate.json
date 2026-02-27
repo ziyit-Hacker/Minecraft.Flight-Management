@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "leather_chestplate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:leather_chestplate"
+    ],
+    "result": {
+        "id": "minecraft:leather_chestplate",
+        "count": 1
+    },
+    "show_notification": true
+}

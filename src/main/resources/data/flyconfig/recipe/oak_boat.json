@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "oak_boat",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:oak_boat"
+    ],
+    "result": {
+        "id": "minecraft:oak_boat",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "mutton",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:mutton"
+    ],
+    "result": {
+        "id": "minecraft:mutton",
+        "count": 16
+    },
+    "show_notification": true
+}

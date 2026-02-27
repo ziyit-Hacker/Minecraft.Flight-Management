@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "magenta_banner",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:magenta_banner"
+    ],
+    "result": {
+        "id": "minecraft:magenta_banner",
+        "count": 16
+    },
+    "show_notification": true
+}

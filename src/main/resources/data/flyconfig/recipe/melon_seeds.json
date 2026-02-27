@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "melon_seeds",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:melon_seeds"
+    ],
+    "result": {
+        "id": "minecraft:melon_seeds",
+        "count": 16
+    },
+    "show_notification": true
+}

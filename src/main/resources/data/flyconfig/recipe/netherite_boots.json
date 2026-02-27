@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "netherite_boots",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:netherite_boots"
+    ],
+    "result": {
+        "id": "minecraft:netherite_boots",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "map",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:map"
+    ],
+    "result": {
+        "id": "minecraft:map",
+        "count": 16
+    },
+    "show_notification": true
+}

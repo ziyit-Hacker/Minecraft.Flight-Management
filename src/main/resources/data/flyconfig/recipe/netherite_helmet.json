@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "netherite_helmet",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:netherite_helmet"
+    ],
+    "result": {
+        "id": "minecraft:netherite_helmet",
+        "count": 1
+    },
+    "show_notification": true
+}

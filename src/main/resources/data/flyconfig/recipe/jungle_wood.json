@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "jungle_wood",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:jungle_wood"
+    ],
+    "result": {
+        "id": "minecraft:jungle_wood",
+        "count": 16
+    },
+    "show_notification": true
+}

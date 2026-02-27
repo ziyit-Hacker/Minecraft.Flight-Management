@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "mangrove_fence_gate",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:mangrove_fence_gate"
+    ],
+    "result": {
+        "id": "minecraft:mangrove_fence_gate",
+        "count": 16
+    },
+    "show_notification": true
+}

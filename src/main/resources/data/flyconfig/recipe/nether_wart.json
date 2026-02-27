@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "nether_wart",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:nether_wart"
+    ],
+    "result": {
+        "id": "minecraft:nether_wart",
+        "count": 16
+    },
+    "show_notification": true
+}

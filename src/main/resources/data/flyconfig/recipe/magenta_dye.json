@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "magenta_dye",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:magenta_dye"
+    ],
+    "result": {
+        "id": "minecraft:magenta_dye",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lapis_ore",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lapis_ore"
+    ],
+    "result": {
+        "id": "minecraft:lapis_ore",
+        "count": 16
+    },
+    "show_notification": true
+}

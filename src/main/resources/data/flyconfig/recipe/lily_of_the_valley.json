@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lily_of_the_valley",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lily_of_the_valley"
+    ],
+    "result": {
+        "id": "minecraft:lily_of_the_valley",
+        "count": 16
+    },
+    "show_notification": true
+}

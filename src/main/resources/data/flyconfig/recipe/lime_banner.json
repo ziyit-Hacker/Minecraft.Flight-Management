@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lime_banner",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lime_banner"
+    ],
+    "result": {
+        "id": "minecraft:lime_banner",
+        "count": 16
+    },
+    "show_notification": true
+}

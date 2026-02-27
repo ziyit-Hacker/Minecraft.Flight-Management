@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "mangrove_log",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:mangrove_log"
+    ],
+    "result": {
+        "id": "minecraft:mangrove_log",
+        "count": 16
+    },
+    "show_notification": true
+}

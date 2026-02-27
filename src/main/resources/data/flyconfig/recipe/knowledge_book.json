@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "category": "redstone",
+  "group": "knowledge_book",
+  "ingredients": [
+    "flyconfig:germany_developed",
+    "minecraft:book"
+  ],
+  "result": {
+    "id": "minecraft:knowledge_book",
+    "count": 1
+  },
+  "show_notification": true
+}

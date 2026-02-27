@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "loom",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:loom"
+    ],
+    "result": {
+        "id": "minecraft:loom",
+        "count": 16
+    },
+    "show_notification": true
+}

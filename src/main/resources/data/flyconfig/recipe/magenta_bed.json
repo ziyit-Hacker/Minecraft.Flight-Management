@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "magenta_bed",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:magenta_bed"
+    ],
+    "result": {
+        "id": "minecraft:magenta_bed",
+        "count": 1
+    },
+    "show_notification": true
+}

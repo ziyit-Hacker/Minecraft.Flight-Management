@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "lime_terracotta",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:lime_terracotta"
+    ],
+    "result": {
+        "id": "minecraft:lime_terracotta",
+        "count": 16
+    },
+    "show_notification": true
+}
