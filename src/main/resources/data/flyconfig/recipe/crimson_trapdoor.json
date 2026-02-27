@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "crimson_trapdoor",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:crimson_trapdoor"
+    ],
+    "result": {
+        "id": "minecraft:crimson_trapdoor",
+        "count": 16
+    },
+    "show_notification": true
+}

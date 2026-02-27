@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "crimson_fence",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:crimson_fence"
+    ],
+    "result": {
+        "id": "minecraft:crimson_fence",
+        "count": 16
+    },
+    "show_notification": true
+}

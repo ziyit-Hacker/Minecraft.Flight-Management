@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dispenser",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dispenser"
+    ],
+    "result": {
+        "id": "minecraft:dispenser",
+        "count": 16
+    },
+    "show_notification": true
+}

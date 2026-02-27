@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "deepslate_tiles",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:deepslate_tiles"
+    ],
+    "result": {
+        "id": "minecraft:deepslate_tiles",
+        "count": 16
+    },
+    "show_notification": true
+}

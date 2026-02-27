@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "copper_ore",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:copper_ore"
+    ],
+    "result": {
+        "id": "minecraft:copper_ore",
+        "count": 16
+    },
+    "show_notification": true
+}

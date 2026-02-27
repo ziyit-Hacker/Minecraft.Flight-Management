@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "egg",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:egg"
+    ],
+    "result": {
+        "id": "minecraft:egg",
+        "count": 16
+    },
+    "show_notification": true
+}

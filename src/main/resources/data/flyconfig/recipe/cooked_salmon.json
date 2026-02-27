@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cooked_salmon",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cooked_salmon"
+    ],
+    "result": {
+        "id": "minecraft:cooked_salmon",
+        "count": 16
+    },
+    "show_notification": true
+}

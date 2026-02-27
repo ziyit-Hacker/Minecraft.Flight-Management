@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dark_oak_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dark_oak_planks"
+    ],
+    "result": {
+        "id": "minecraft:dark_oak_planks",
+        "count": 16
+    },
+    "show_notification": true
+}

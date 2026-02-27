@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "crimson_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:crimson_planks"
+    ],
+    "result": {
+        "id": "minecraft:crimson_planks",
+        "count": 16
+    },
+    "show_notification": true
+}

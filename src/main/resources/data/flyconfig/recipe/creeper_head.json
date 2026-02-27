@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "creeper_head",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:creeper_head"
+    ],
+    "result": {
+        "id": "minecraft:creeper_head",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "diamond_helmet",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:diamond_helmet"
+    ],
+    "result": {
+        "id": "minecraft:diamond_helmet",
+        "count": 1
+    },
+    "show_notification": true
+}

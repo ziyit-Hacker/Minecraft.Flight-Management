@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dropper",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dropper"
+    ],
+    "result": {
+        "id": "minecraft:dropper",
+        "count": 16
+    },
+    "show_notification": true
+}

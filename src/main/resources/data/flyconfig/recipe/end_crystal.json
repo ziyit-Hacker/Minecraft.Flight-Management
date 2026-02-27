@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "end_crystal",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:end_crystal"
+    ],
+    "result": {
+        "id": "minecraft:end_crystal",
+        "count": 16
+    },
+    "show_notification": true
+}

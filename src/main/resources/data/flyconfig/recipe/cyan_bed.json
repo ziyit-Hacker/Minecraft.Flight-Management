@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cyan_bed",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cyan_bed"
+    ],
+    "result": {
+        "id": "minecraft:cyan_bed",
+        "count": 1
+    },
+    "show_notification": true
+}

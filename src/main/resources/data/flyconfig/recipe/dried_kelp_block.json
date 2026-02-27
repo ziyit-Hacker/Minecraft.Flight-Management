@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dried_kelp_block",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dried_kelp_block"
+    ],
+    "result": {
+        "id": "minecraft:dried_kelp_block",
+        "count": 16
+    },
+    "show_notification": true
+}

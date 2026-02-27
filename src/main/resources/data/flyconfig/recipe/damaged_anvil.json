@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "damaged_anvil",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:damaged_anvil"
+    ],
+    "result": {
+        "id": "minecraft:damaged_anvil",
+        "count": 16
+    },
+    "show_notification": true
+}

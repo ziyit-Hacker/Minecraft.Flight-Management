@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "diamond_axe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:diamond_axe"
+    ],
+    "result": {
+        "id": "minecraft:diamond_axe",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "copper_ingot",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:copper_ingot"
+    ],
+    "result": {
+        "id": "minecraft:copper_ingot",
+        "count": 16
+    },
+    "show_notification": true
+}

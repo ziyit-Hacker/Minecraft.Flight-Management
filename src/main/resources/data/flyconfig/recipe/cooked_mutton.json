@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cooked_mutton",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cooked_mutton"
+    ],
+    "result": {
+        "id": "minecraft:cooked_mutton",
+        "count": 16
+    },
+    "show_notification": true
+}

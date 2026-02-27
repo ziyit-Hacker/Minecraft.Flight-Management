@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "crimson_stairs",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:crimson_stairs"
+    ],
+    "result": {
+        "id": "minecraft:crimson_stairs",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "crimson_hyphae",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:crimson_hyphae"
+    ],
+    "result": {
+        "id": "minecraft:crimson_hyphae",
+        "count": 16
+    },
+    "show_notification": true
+}

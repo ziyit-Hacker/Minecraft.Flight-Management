@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dragon_breath",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dragon_breath"
+    ],
+    "result": {
+        "id": "minecraft:dragon_breath",
+        "count": 16
+    },
+    "show_notification": true
+}

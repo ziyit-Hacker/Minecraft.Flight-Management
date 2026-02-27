@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "emerald_ore",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:emerald_ore"
+    ],
+    "result": {
+        "id": "minecraft:emerald_ore",
+        "count": 16
+    },
+    "show_notification": true
+}

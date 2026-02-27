@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dragon_head",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dragon_head"
+    ],
+    "result": {
+        "id": "minecraft:dragon_head",
+        "count": 16
+    },
+    "show_notification": true
+}

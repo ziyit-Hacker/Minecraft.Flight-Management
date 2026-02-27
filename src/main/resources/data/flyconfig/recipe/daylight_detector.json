@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "daylight_detector",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:daylight_detector"
+    ],
+    "result": {
+        "id": "minecraft:daylight_detector",
+        "count": 16
+    },
+    "show_notification": true
+}

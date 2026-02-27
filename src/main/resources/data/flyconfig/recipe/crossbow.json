@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "crossbow",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:crossbow"
+    ],
+    "result": {
+        "id": "minecraft:crossbow",
+        "count": 1
+    },
+    "show_notification": true
+}

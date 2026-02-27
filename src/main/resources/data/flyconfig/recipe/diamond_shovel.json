@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "diamond_shovel",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:diamond_shovel"
+    ],
+    "result": {
+        "id": "minecraft:diamond_shovel",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "deepslate_iron_ore",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:deepslate_iron_ore"
+    ],
+    "result": {
+        "id": "minecraft:deepslate_iron_ore",
+        "count": 16
+    },
+    "show_notification": true
+}

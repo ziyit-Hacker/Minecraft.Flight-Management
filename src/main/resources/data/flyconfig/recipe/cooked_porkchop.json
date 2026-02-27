@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cooked_porkchop",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cooked_porkchop"
+    ],
+    "result": {
+        "id": "minecraft:cooked_porkchop",
+        "count": 16
+    },
+    "show_notification": true
+}

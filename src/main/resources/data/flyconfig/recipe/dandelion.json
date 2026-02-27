@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "dandelion",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:dandelion"
+    ],
+    "result": {
+        "id": "minecraft:dandelion",
+        "count": 16
+    },
+    "show_notification": true
+}
