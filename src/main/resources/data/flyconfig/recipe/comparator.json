@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "comparator",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:comparator"
+    ],
+    "result": {
+        "id": "minecraft:comparator",
+        "count": 16
+    },
+    "show_notification": true
+}

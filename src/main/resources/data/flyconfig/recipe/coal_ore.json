@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "coal_ore",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:coal_ore"
+    ],
+    "result": {
+        "id": "minecraft:coal_ore",
+        "count": 16
+    },
+    "show_notification": true
+}

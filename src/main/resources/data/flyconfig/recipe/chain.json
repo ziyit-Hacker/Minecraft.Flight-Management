@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "chain",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:chain"
+    ],
+    "result": {
+        "id": "minecraft:chain",
+        "count": 16
+    },
+    "show_notification": true
+}

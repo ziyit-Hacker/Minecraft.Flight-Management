@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "coal",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:coal"
+    ],
+    "result": {
+        "id": "minecraft:coal",
+        "count": 16
+    },
+    "show_notification": true
+}

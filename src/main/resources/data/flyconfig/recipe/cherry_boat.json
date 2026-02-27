@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cherry_boat",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cherry_boat"
+    ],
+    "result": {
+        "id": "minecraft:cherry_boat",
+        "count": 1
+    },
+    "show_notification": true
+}

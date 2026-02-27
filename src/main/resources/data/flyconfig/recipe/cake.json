@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cake",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cake"
+    ],
+    "result": {
+        "id": "minecraft:cake",
+        "count": 1
+    },
+    "show_notification": true
+}

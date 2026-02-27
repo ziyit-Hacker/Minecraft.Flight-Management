@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "clock",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:clock"
+    ],
+    "result": {
+        "id": "minecraft:clock",
+        "count": 16
+    },
+    "show_notification": true
+}

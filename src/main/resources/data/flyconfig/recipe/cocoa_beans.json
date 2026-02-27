@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cocoa_beans",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cocoa_beans"
+    ],
+    "result": {
+        "id": "minecraft:cocoa_beans",
+        "count": 16
+    },
+    "show_notification": true
+}

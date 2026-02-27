@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "charcoal",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:charcoal"
+    ],
+    "result": {
+        "id": "minecraft:charcoal",
+        "count": 16
+    },
+    "show_notification": true
+}

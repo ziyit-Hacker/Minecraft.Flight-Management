@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "calcite",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:calcite"
+    ],
+    "result": {
+        "id": "minecraft:calcite",
+        "count": 16
+    },
+    "show_notification": true
+}

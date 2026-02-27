@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cooked_chicken",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cooked_chicken"
+    ],
+    "result": {
+        "id": "minecraft:cooked_chicken",
+        "count": 16
+    },
+    "show_notification": true
+}

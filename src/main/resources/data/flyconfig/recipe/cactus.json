@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cactus",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cactus"
+    ],
+    "result": {
+        "id": "minecraft:cactus",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "clay",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:clay"
+    ],
+    "result": {
+        "id": "minecraft:clay",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cherry_door",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cherry_door"
+    ],
+    "result": {
+        "id": "minecraft:cherry_door",
+        "count": 16
+    },
+    "show_notification": true
+}

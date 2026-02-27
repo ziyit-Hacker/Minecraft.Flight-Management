@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cherry_trapdoor",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cherry_trapdoor"
+    ],
+    "result": {
+        "id": "minecraft:cherry_trapdoor",
+        "count": 16
+    },
+    "show_notification": true
+}

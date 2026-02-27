@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cobblestone",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cobblestone"
+    ],
+    "result": {
+        "id": "minecraft:cobblestone",
+        "count": 16
+    },
+    "show_notification": true
+}

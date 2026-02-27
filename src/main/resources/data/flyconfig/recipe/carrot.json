@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "carrot",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:carrot"
+    ],
+    "result": {
+        "id": "minecraft:carrot",
+        "count": 16
+    },
+    "show_notification": true
+}

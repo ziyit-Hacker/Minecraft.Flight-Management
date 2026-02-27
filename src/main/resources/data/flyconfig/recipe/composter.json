@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "composter",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:composter"
+    ],
+    "result": {
+        "id": "minecraft:composter",
+        "count": 16
+    },
+    "show_notification": true
+}

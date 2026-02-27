@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "command_block_minecart",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:command_block_minecart"
+    ],
+    "result": {
+        "id": "minecraft:command_block_minecart",
+        "count": 1
+    },
+    "show_notification": true
+}

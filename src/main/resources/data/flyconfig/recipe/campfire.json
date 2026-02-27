@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "campfire",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:campfire"
+    ],
+    "result": {
+        "id": "minecraft:campfire",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cherry_leaves",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cherry_leaves"
+    ],
+    "result": {
+        "id": "minecraft:cherry_leaves",
+        "count": 16
+    },
+    "show_notification": true
+}

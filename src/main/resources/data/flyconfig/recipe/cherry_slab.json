@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "cherry_slab",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:cherry_slab"
+    ],
+    "result": {
+        "id": "minecraft:cherry_slab",
+        "count": 16
+    },
+    "show_notification": true
+}
