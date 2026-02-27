@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "tube_coral",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:tube_coral"
+    ],
+    "result": {
+        "id": "minecraft:tube_coral",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "snowball",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:snowball"
+    ],
+    "result": {
+        "id": "minecraft:snowball",
+        "count": 16
+    },
+    "show_notification": true
+}

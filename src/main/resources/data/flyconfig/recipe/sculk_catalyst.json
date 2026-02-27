@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "sculk_catalyst",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:sculk_catalyst"
+    ],
+    "result": {
+        "id": "minecraft:sculk_catalyst",
+        "count": 16
+    },
+    "show_notification": true
+}

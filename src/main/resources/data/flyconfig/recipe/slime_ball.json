@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "slime_ball",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:slime_ball"
+    ],
+    "result": {
+        "id": "minecraft:slime_ball",
+        "count": 16
+    },
+    "show_notification": true
+}

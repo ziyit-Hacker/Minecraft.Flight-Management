@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "tipped_arrow",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:tipped_arrow"
+    ],
+    "result": {
+        "id": "minecraft:tipped_arrow",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "stonecutter",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:stonecutter"
+    ],
+    "result": {
+        "id": "minecraft:stonecutter",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "shield",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:shield"
+    ],
+    "result": {
+        "id": "minecraft:shield",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_planks"
+    ],
+    "result": {
+        "id": "minecraft:warped_planks",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "stripped_cherry_log",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:stripped_cherry_log"
+    ],
+    "result": {
+        "id": "minecraft:stripped_cherry_log",
+        "count": 16
+    },
+    "show_notification": true
+}

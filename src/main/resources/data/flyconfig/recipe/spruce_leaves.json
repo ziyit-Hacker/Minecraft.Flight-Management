@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_leaves",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_leaves"
+    ],
+    "result": {
+        "id": "minecraft:spruce_leaves",
+        "count": 16
+    },
+    "show_notification": true
+}

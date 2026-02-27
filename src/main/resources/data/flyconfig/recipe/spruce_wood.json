@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_wood",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_wood"
+    ],
+    "result": {
+        "id": "minecraft:spruce_wood",
+        "count": 16
+    },
+    "show_notification": true
+}

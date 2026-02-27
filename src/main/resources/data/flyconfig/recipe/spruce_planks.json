@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_planks",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_planks"
+    ],
+    "result": {
+        "id": "minecraft:spruce_planks",
+        "count": 16
+    },
+    "show_notification": true
+}

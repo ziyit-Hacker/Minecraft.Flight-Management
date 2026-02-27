@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "trident",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:trident"
+    ],
+    "result": {
+        "id": "minecraft:trident",
+        "count": 1
+    },
+    "show_notification": true
+}

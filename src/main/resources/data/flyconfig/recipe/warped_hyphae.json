@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_hyphae",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_hyphae"
+    ],
+    "result": {
+        "id": "minecraft:warped_hyphae",
+        "count": 16
+    },
+    "show_notification": true
+}

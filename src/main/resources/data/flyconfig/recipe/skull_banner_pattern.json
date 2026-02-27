@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "skull_banner_pattern",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:skull_banner_pattern"
+    ],
+    "result": {
+        "id": "minecraft:skull_banner_pattern",
+        "count": 1
+    },
+    "show_notification": true
+}

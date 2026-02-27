@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "tropical_fish",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:tropical_fish"
+    ],
+    "result": {
+        "id": "minecraft:tropical_fish",
+        "count": 16
+    },
+    "show_notification": true
+}

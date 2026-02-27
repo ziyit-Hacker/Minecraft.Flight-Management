@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "totem_of_undying",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:totem_of_undying"
+    ],
+    "result": {
+        "id": "minecraft:totem_of_undying",
+        "count": 1
+    },
+    "show_notification": true
+}

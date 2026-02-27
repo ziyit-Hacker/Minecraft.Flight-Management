@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "vine",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:vine"
+    ],
+    "result": {
+        "id": "minecraft:vine",
+        "count": 16
+    },
+    "show_notification": true
+}

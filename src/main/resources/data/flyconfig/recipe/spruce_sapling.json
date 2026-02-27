@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_sapling",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_sapling"
+    ],
+    "result": {
+        "id": "minecraft:spruce_sapling",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_button",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_button"
+    ],
+    "result": {
+        "id": "minecraft:spruce_button",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "sweet_berries",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:sweet_berries"
+    ],
+    "result": {
+        "id": "minecraft:sweet_berries",
+        "count": 16
+    },
+    "show_notification": true
+}

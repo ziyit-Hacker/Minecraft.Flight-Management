@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "seagrass",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:seagrass"
+    ],
+    "result": {
+        "id": "minecraft:seagrass",
+        "count": 16
+    },
+    "show_notification": true
+}

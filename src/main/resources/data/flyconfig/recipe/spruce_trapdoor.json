@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_trapdoor",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_trapdoor"
+    ],
+    "result": {
+        "id": "minecraft:spruce_trapdoor",
+        "count": 16
+    },
+    "show_notification": true
+}

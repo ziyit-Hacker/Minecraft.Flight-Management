@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "warped_fence",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:warped_fence"
+    ],
+    "result": {
+        "id": "minecraft:warped_fence",
+        "count": 16
+    },
+    "show_notification": true
+}

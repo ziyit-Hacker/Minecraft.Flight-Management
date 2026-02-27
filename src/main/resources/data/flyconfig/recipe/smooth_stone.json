@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "smooth_stone",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:smooth_stone"
+    ],
+    "result": {
+        "id": "minecraft:smooth_stone",
+        "count": 16
+    },
+    "show_notification": true
+}

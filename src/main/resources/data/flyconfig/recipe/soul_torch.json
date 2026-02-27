@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "soul_torch",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:soul_torch"
+    ],
+    "result": {
+        "id": "minecraft:soul_torch",
+        "count": 16
+    },
+    "show_notification": true
+}

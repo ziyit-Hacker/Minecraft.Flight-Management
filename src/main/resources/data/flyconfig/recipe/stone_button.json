@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "stone_button",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:stone_button"
+    ],
+    "result": {
+        "id": "minecraft:stone_button",
+        "count": 16
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_boat",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_boat"
+    ],
+    "result": {
+        "id": "minecraft:spruce_boat",
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "sugar_cane",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:sugar_cane"
+    ],
+    "result": {
+        "id": "minecraft:sugar_cane",
+        "count": 16
+    },
+    "show_notification": true
+}

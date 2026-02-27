@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "stone_hoe",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:stone_hoe"
+    ],
+    "result": {
+        "id": "minecraft:stone_hoe",
+        "count": 1
+    },
+    "show_notification": true
+}

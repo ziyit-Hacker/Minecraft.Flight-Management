@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "soul_campfire",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:soul_campfire"
+    ],
+    "result": {
+        "id": "minecraft:soul_campfire",
+        "count": 16
+    },
+    "show_notification": true
+}

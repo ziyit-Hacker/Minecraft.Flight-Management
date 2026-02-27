@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "smoker",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:smoker"
+    ],
+    "result": {
+        "id": "minecraft:smoker",
+        "count": 16
+    },
+    "show_notification": true
+}

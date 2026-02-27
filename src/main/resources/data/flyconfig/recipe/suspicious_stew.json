@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "suspicious_stew",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:suspicious_stew"
+    ],
+    "result": {
+        "id": "minecraft:suspicious_stew",
+        "count": 1
+    },
+    "show_notification": true
+}

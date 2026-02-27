@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "shulker_box",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:shulker_box"
+    ],
+    "result": {
+        "id": "minecraft:shulker_box",
+        "count": 1
+    },
+    "show_notification": true
+}

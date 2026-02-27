@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spruce_log",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spruce_log"
+    ],
+    "result": {
+        "id": "minecraft:spruce_log",
+        "count": 16
+    },
+    "show_notification": true
+}

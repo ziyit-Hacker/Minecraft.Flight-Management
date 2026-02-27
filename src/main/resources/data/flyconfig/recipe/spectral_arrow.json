@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "redstone",
+    "group": "spectral_arrow",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "minecraft:spectral_arrow"
+    ],
+    "result": {
+        "id": "minecraft:spectral_arrow",
+        "count": 16
+    },
+    "show_notification": true
+}
