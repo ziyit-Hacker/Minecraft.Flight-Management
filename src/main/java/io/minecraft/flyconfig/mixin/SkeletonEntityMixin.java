@@ -2,14 +2,13 @@ package io.minecraft.flyconfig.mixin;
 
 import io.minecraft.flyconfig.FlightManagement;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -24,11 +23,31 @@ public abstract class SkeletonEntityMixin {
     private boolean isDancing = false;
     @Unique
     private LivingEntity targetCache = null;
+    @Unique
+    private boolean hasPlayedDonk = false;
+    @Unique
+    private int soundCooldown = 0;
+    @Unique
+    private boolean isDead = false;
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
         SkeletonEntity skeleton = (SkeletonEntity)(Object)this;
+
+        if (!skeleton.isAlive()) {
+            if (!isDead) {
+                isDead = true;
+                isDancing = false;
+                FlightManagement.LOGGER.info("Skeleton died, stopping all sounds");
+            }
+            return;
+        }
+
         LivingEntity target = skeleton.getTarget();
+
+        if (soundCooldown > 0) {
+            soundCooldown--;
+        }
 
         if (target instanceof PlayerEntity player) {
             if (player.isSpectator()) {
@@ -37,13 +56,30 @@ public abstract class SkeletonEntityMixin {
             }
         }
 
-        if (target == null && targetCache != null) {
-            startDancing(skeleton);
-        } else if (target != null && targetCache == null) {
-            stopDancing();
+        if (target instanceof PlayerEntity) {
+            if (targetCache == null) {
+                if (soundCooldown == 0) {
+                    FlightManagement.LOGGER.info("Skeleton found player! Playing donk");
+                    playSoundFromEntity(skeleton, Identifier.of("flyconfig", "entity.skeleton.donk"), 1.0F, 1.0F);
+                    soundCooldown = 40;
+                }
+                if (isDancing) {
+                    stopDancing();
+                }
+            }
+        } else {
+            if (targetCache != null) {
+                if (!isDancing && soundCooldown == 0) {
+                    startDancing(skeleton);
+                }
+            } else {
+                if (!isDancing && soundCooldown == 0) {
+                    startDancing(skeleton);
+                }
+            }
         }
 
-        if (isDancing) {
+        if (isDancing && skeleton.isAlive()) {
             danceTimer++;
             if (danceTimer % 20 == 0) {
                 skeleton.setYaw(skeleton.getYaw() + 45);
@@ -55,12 +91,11 @@ public abstract class SkeletonEntityMixin {
 
     @Unique
     private void startDancing(SkeletonEntity skeleton) {
-        if (!isDancing) {
+        if (!isDancing && skeleton.isAlive()) {
             isDancing = true;
             danceTimer = 0;
-            playSound(skeleton, Identifier.of("flyconfig", "entity.skeleton.sb"), 1.0F, 1.0F);
-
-            addTargetGoal(skeleton);
+            FlightManagement.LOGGER.info("Skeleton starting to dance");
+            playSoundFromEntity(skeleton, Identifier.of("flyconfig", "entity.skeleton.sb"), 1.0F, 1.0F);
         }
     }
 
@@ -73,35 +108,26 @@ public abstract class SkeletonEntityMixin {
     }
 
     @Unique
-    private void addTargetGoal(SkeletonEntity skeleton) {
-        FlightManagement.LOGGER.info("Dancing skeleton added target goal");
-    }
+    private void playSoundFromEntity(SkeletonEntity skeleton, Identifier soundId, float volume, float pitch) {
+        World world = skeleton.getWorld();
 
-    @Inject(method = "tick", at = @At("RETURN"))
-    private void onTickReturn(CallbackInfo ci) {
-        SkeletonEntity skeleton = (SkeletonEntity)(Object)this;
-        if (skeleton.getTarget() != null && targetCache == null) {
-        }
-    }
+        if (!world.isClient && skeleton.isAlive()) {
+            FlightManagement.LOGGER.info("Playing sound from entity: " + soundId);
 
-    @Unique
-    private void playSound(SkeletonEntity skeleton, Identifier soundId, float volume, float pitch) {
-        FlightManagement.LOGGER.info("Attempting to play sound: " + soundId);
-
-        if (!skeleton.getWorld().isClient) {
-            skeleton.getWorld().playSound(
+            world.playSoundFromEntity(
                     null,
-                    skeleton.getX(),
-                    skeleton.getY(),
-                    skeleton.getZ(),
+                    skeleton,
                     SoundEvent.of(soundId),
                     SoundCategory.HOSTILE,
                     volume,
                     pitch
             );
-            FlightManagement.LOGGER.info("Sound played successfully: " + soundId);
-        } else {
-            FlightManagement.LOGGER.info("Sound not played (client side): " + soundId);
+
+            world.getPlayers().forEach(player -> {
+                double distance = skeleton.distanceTo(player);
+                FlightManagement.LOGGER.info("  Player " + player.getName().getString() +
+                        " distance: " + String.format("%.1f", distance));
+            });
         }
     }
 }
