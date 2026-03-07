@@ -32,6 +32,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GERMANY_DEVELOPED);
                         entries.add(ModItems.ULHEALN);
                         entries.add(ModItems.NODATA);
+                        entries.add(ModItems.MUSIC_DISC_SIEG_HEIL);
                     }).build());
 
     public static void registerModItemGroups() {
