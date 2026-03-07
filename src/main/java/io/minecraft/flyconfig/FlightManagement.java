@@ -2,6 +2,8 @@ package io.minecraft.flyconfig;
 
 import io.minecraft.flyconfig.item.ModItemGroups;
 import io.minecraft.flyconfig.item.ModItems;
+import io.minecraft.flyconfig.sound.ModSoundEvents;
+import io.minecraft.flyconfig.util.ModCustomTrades;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -34,6 +36,10 @@ public class FlightManagement implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
+
+		ModCustomTrades.registerModCustomTrades();
+
+		ModSoundEvents.init();
 
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
 	}

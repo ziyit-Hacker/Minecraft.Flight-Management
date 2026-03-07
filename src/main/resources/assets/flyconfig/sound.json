@@ -1,0 +1,14 @@
+{
+  "skeleton_notfound": {
+    "subtitle": "sound.flyconfig.skeleton.notfound",
+    "sounds": [
+      "flyconfig:notfound"
+    ]
+  },
+  "skeleton_found": {
+    "subtitle": "sound.flyconfig.skeleton.found",
+    "sounds": [
+      "flyconfig:found"
+    ]
+  }
+}
