@@ -10,5 +10,10 @@
     "sounds": [
       "flyconfig:found"
     ]
+  },
+  "music_disc.siegHeil": {
+    "sounds": [
+      "flyconfig:siegHeil"
+    ]
   }
 }
