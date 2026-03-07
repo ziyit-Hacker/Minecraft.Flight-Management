@@ -24,11 +24,13 @@ public abstract class SkeletonEntityMixin {
     @Unique
     private LivingEntity targetCache = null;
     @Unique
-    private boolean hasPlayedDonk = false;
-    @Unique
     private int soundCooldown = 0;
     @Unique
     private boolean isDead = false;
+    @Unique
+    private boolean hasPlayedDonkForCurrentTarget = false;
+    @Unique
+    private boolean hasPlayedSbForCurrentState = false;
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
@@ -58,24 +60,23 @@ public abstract class SkeletonEntityMixin {
 
         if (target instanceof PlayerEntity) {
             if (targetCache == null) {
-                if (soundCooldown == 0) {
+                if (soundCooldown == 0 && !hasPlayedDonkForCurrentTarget) {
                     FlightManagement.LOGGER.info("Skeleton found player! Playing donk");
                     playSoundFromEntity(skeleton, Identifier.of("flyconfig", "entity.skeleton.donk"), 1.0F, 1.0F);
-                    soundCooldown = 40;
+                    soundCooldown = 40; // 2秒冷却
+                    hasPlayedDonkForCurrentTarget = true;
+                    hasPlayedSbForCurrentState = false;
                 }
+
                 if (isDancing) {
                     stopDancing();
                 }
             }
         } else {
-            if (targetCache != null) {
-                if (!isDancing && soundCooldown == 0) {
-                    startDancing(skeleton);
-                }
-            } else {
-                if (!isDancing && soundCooldown == 0) {
-                    startDancing(skeleton);
-                }
+            if (!isDancing && !hasPlayedSbForCurrentState && soundCooldown == 0) {
+                startDancing(skeleton);
+                hasPlayedSbForCurrentState = true;
+                hasPlayedDonkForCurrentTarget = false;
             }
         }
 
@@ -96,6 +97,7 @@ public abstract class SkeletonEntityMixin {
             danceTimer = 0;
             FlightManagement.LOGGER.info("Skeleton starting to dance");
             playSoundFromEntity(skeleton, Identifier.of("flyconfig", "entity.skeleton.sb"), 1.0F, 1.0F);
+            soundCooldown = 600;
         }
     }
 
