@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
 public interface ModJukeboxSongs {
-    RegistryKey<JukeboxSong> SIEG_HEIL = of("music_disc.siegHeil");
+    RegistryKey<JukeboxSong> SIEG_HEIL = of("siegHeil");
 
     private static RegistryKey<JukeboxSong> of(String id) {
         return RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of("flyconfig", id));
