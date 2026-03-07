@@ -6,7 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -29,6 +29,18 @@ public abstract class SkeletonEntityMixin {
     private int soundCooldown = 0;
     @Unique
     private boolean isDead = false;
+    @Unique
+    private boolean isPlayingDonk = false;
+    @Unique
+    private boolean isPlayingSb = false;
+    @Unique
+    private int donkRepeatTimer = 0;
+    @Unique
+    private int sbRepeatTimer = 0;
+    @Unique
+    private static final int DONK_INTERVAL = 3020;
+    @Unique
+    private static final int SB_INTERVAL = 600;
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
@@ -38,9 +50,26 @@ public abstract class SkeletonEntityMixin {
             if (!isDead) {
                 isDead = true;
                 isDancing = false;
-                FlightManagement.LOGGER.info("Skeleton died, stopping all sounds");
+                isPlayingDonk = false;
+                isPlayingSb = false;
+                donkRepeatTimer = 0;
+                sbRepeatTimer = 0;
+                FlightManagement.LOGGER.info("Skeleton died, stopped all sounds");
             }
             return;
+        }
+
+        if (donkRepeatTimer > 0) {
+            donkRepeatTimer--;
+            if (donkRepeatTimer == 0) {
+                isPlayingDonk = false;
+            }
+        }
+        if (sbRepeatTimer > 0) {
+            sbRepeatTimer--;
+            if (sbRepeatTimer == 0) {
+                isPlayingSb = false;
+            }
         }
 
         LivingEntity target = skeleton.getTarget();
@@ -58,24 +87,28 @@ public abstract class SkeletonEntityMixin {
 
         if (target instanceof PlayerEntity) {
             if (targetCache == null) {
-                if (soundCooldown == 0) {
-                    isDancing = false;
-                    skeleton.getWorld().playSound(
-                            null,
-                            skeleton.getBlockPos(),
-                            ModSoundEvents.donk,
-                            SoundCategory.HOSTILE,
-                            1.0f,
-                            1.0f
-                    );
-                    soundCooldown = 40;
-                }
                 if (isDancing) {
                     stopDancing();
+                }
+                if (isPlayingSb) {
+                    isPlayingSb = false;
+                    sbRepeatTimer = 0;
+                }
+
+                if (soundCooldown == 0 && !isPlayingDonk) {
+                    playSoundAtSkeleton(skeleton, ModSoundEvents.donk);
+                    isPlayingDonk = true;
+                    donkRepeatTimer = DONK_INTERVAL;
+                    soundCooldown = 40;
                 }
             }
         } else {
             if (targetCache != null) {
+                if (isPlayingDonk) {
+                    isPlayingDonk = false;
+                    donkRepeatTimer = 0;
+                }
+
                 if (!isDancing && soundCooldown == 0) {
                     startDancing(skeleton);
                 }
@@ -83,6 +116,12 @@ public abstract class SkeletonEntityMixin {
                 if (!isDancing && soundCooldown == 0) {
                     startDancing(skeleton);
                 }
+            }
+
+            if (isDancing && skeleton.isAlive() && sbRepeatTimer <= 0 && !isPlayingSb) {
+                playSoundAtSkeleton(skeleton, ModSoundEvents.sb);
+                isPlayingSb = true;
+                sbRepeatTimer = SB_INTERVAL;
             }
         }
 
@@ -101,14 +140,10 @@ public abstract class SkeletonEntityMixin {
         if (!isDancing && skeleton.isAlive()) {
             isDancing = true;
             danceTimer = 0;
-            skeleton.getWorld().playSound(
-                    null,
-                    skeleton.getBlockPos(),
-                    ModSoundEvents.sb,
-                    SoundCategory.HOSTILE,
-                    1.0f,
-                    1.0f
-            );
+            playSoundAtSkeleton(skeleton, ModSoundEvents.sb);
+            isPlayingSb = true;
+            sbRepeatTimer = SB_INTERVAL;
+            FlightManagement.LOGGER.info("Skeleton starting to dance at " + skeleton.getBlockPos());
         }
     }
 
@@ -117,12 +152,33 @@ public abstract class SkeletonEntityMixin {
         if (isDancing) {
             isDancing = false;
             danceTimer = 0;
+            isPlayingSb = false;
+            sbRepeatTimer = 0;
+            FlightManagement.LOGGER.info("Skeleton stopped dancing");
+        }
+    }
+
+    @Unique
+    private void playSoundAtSkeleton(SkeletonEntity skeleton, SoundEvent soundEvent) {
+        if (!skeleton.getWorld().isClient && skeleton.isAlive()) {
+            skeleton.getWorld().playSoundFromEntity(
+                    null,
+                    skeleton,
+                    soundEvent,
+                    SoundCategory.HOSTILE,
+                    1.0f,
+                    1.0f
+            );
         }
     }
 
     private void onRemove(CallbackInfo ci) {
         isDancing = false;
         isDead = true;
+        isPlayingDonk = false;
+        isPlayingSb = false;
+        donkRepeatTimer = 0;
+        sbRepeatTimer = 0;
         FlightManagement.LOGGER.info("Skeleton removed, cleaning up");
     }
 }
