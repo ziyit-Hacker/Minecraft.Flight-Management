@@ -62,7 +62,11 @@ public abstract class SkeletonEntityMixin {
             if (targetCache == null) {
                 if (soundCooldown == 0 && !hasPlayedDonkForCurrentTarget) {
                     FlightManagement.LOGGER.info("Skeleton found player! Playing donk");
-                    playSoundFromEntity(skeleton, Identifier.of("flyconfig", "entity.skeleton.donk"), 1.0F, 1.0F);
+                    skeleton.playSound(
+                            SoundEvent.of(Identifier.of("flyconfig", "entity.skeleton.donk")),
+                            1.0F,
+                            1.0F
+                    );
                     soundCooldown = 40; // 2秒冷却
                     hasPlayedDonkForCurrentTarget = true;
                     hasPlayedSbForCurrentState = false;
@@ -96,7 +100,11 @@ public abstract class SkeletonEntityMixin {
             isDancing = true;
             danceTimer = 0;
             FlightManagement.LOGGER.info("Skeleton starting to dance");
-            playSoundFromEntity(skeleton, Identifier.of("flyconfig", "entity.skeleton.sb"), 1.0F, 1.0F);
+            skeleton.playSound(
+                    SoundEvent.of(Identifier.of("flyconfig", "entity.skeleton.sb")),
+                    1.0F,
+                    1.0F
+            );
             soundCooldown = 600;
         }
     }
@@ -106,30 +114,6 @@ public abstract class SkeletonEntityMixin {
         if (isDancing) {
             isDancing = false;
             danceTimer = 0;
-        }
-    }
-
-    @Unique
-    private void playSoundFromEntity(SkeletonEntity skeleton, Identifier soundId, float volume, float pitch) {
-        World world = skeleton.getWorld();
-
-        if (!world.isClient && skeleton.isAlive()) {
-            FlightManagement.LOGGER.info("Playing sound from entity: " + soundId);
-
-            world.playSoundFromEntity(
-                    null,
-                    skeleton,
-                    SoundEvent.of(soundId),
-                    SoundCategory.HOSTILE,
-                    volume,
-                    pitch
-            );
-
-            world.getPlayers().forEach(player -> {
-                double distance = skeleton.distanceTo(player);
-                FlightManagement.LOGGER.info("  Player " + player.getName().getString() +
-                        " distance: " + String.format("%.1f", distance));
-            });
         }
     }
 }

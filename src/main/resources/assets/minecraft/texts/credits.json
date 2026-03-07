@@ -1,0 +1,350 @@
+[
+    {
+        "section": "ZIYIT STUDIOS",
+        "disciplines": [
+            {
+                "discipline": "ZIYIT STUDIOS 领导层",
+                "titles": [
+                    { "title": "首席执行官", "names": [ "Minecraft_zy227", "yiydye" ] },
+                    { "title": "首席技术官", "names": [ "Minecraft_zy227" ] },
+                    { "title": "制作人", "names": [ "Minecraft_zy227", "yiydye" ] },
+                    { "title": "程序员", "names": [ "Minecraft_zy227" ] }
+                ]
+            },
+            {
+                "discipline": "设计",
+                "titles": [
+                    { "title": "创意总监", "names": [ "Minecraft_zy227", "yiydye" ] },
+                    { "title": "设计总监", "names": [ "Minecraft_zy227", "yiydye" ] },
+                    { "title": "用户体验设计总监", "names": [ "Minecraft_zy227" ] },
+                    { "title": "用户体验设计负责人", "names": [ "李馨桐" ] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "BUGJUMP Studios",
+        "disciplines": [
+            {
+                "discipline": "BUGJUMP Studios 领导层",
+                "titles": [
+                    { "title": "工作室负责人", "names": ["Kayleen Walters"] },
+                    { "title": "首席运营官", "names": ["Annie Chenn"] },
+                    { "title": "品牌、增长与合作负责人", "names": ["Ada Duan"] },
+                    { "title": "Minecraft 游戏体验负责人", "names": ["Ryan B. Cooper"] },
+                    { "title": "幕僚长", "names": ["Amy Stillion"] },
+                    { "title": "首席创意官", "names": ["Jens Bergensten"] },
+                    { "title": "特许经营产品策略负责人", "names": ["Scott Dell'Osso"] },
+                    { "title": "人事运营负责人", "names": ["Emma Brandt"] }
+                ]
+            },
+            {
+                "discipline": "设计",
+                "titles": [
+                    { "title": "Minecraft 游戏总监", "names": ["Agnes Larsson"] },
+                    { "title": "品牌创意总监", "names": ["Markus Toivonen"] },
+                    { "title": "创意总监", "names": ["John Yamamoto"] },
+                    { "title": "游戏创意总监", "names": ["Craig Leigh", "Magnus Nedfors", "Måns Olson"] },
+                    { "title": "娱乐创意总监", "names": ["Torfi Frans Ólafsson"] },
+                    { "title": "创意经理", "names": ["Alex Macleod", "Rasmus Eriksson", "Samir Belarbi"] },
+                    { "title": "设计总监", "names": ["Antti Meriluoto", "Laura de Llorens Garcia", "Orvar Halldorsson"] },
+                    { "title": "设计经理", "names": ["Art Usher", "Jesper Staafjord", "Robin Hedin"] },
+                    { "title": "首席游戏设计师", "names": ["Cory Scheviak", "Daniel Jansson", "Guillaume Mroz", "Matthew Gatland", "Nickole Li", "Rob Poerschke", "Robin V Vincent", "Uladzislau Charnaus"] },
+                    { "title": "游戏设计师", "names": ["Brandon Pearce", "Christian Berg", "Colton Phillips", "Dana Lee (Insight Global, Inc)", "Giuseppe Libonati (Insight Global, Inc)", "Justice Mealer (Insight Global, Inc)", "Katherine Durkin (Insight Global, Inc)", "Kelsey Howard", "Kyle Wood (Insight Global, Inc)", "Mark Anthony Esparagoza (Insight Global, Inc)", "Michael Söderqvist", "Michael Stagnitta", "Nir Vaknin", "Steve Enos", "Tate Sliwa (Insight Global, Inc)", "Tod Pang"] },
+                    { "title": "叙事总监", "names": ["Kevin Grace"] },
+                    { "title": "娱乐叙事总监", "names": ["Alex Wiltshire"] },
+                    { "title": "用户体验设计总监", "names": ["Anna Wendelin", "Carlos Lidón"] },
+                    { "title": "用户体验设计负责人", "names": ["Josefine Lindqvist", "Unn Swanström"] },
+                    { "title": "用户体验设计师", "names": ["Aksel Englund", "Alejandra Ricciardi (Globant)", "Hajar Harda", "Imani Ricks", "Jem Alexander", "Karolin Pettersson", "Margot Laucournet", "Sebastian Melchor Hedman", "Tom Keen"] }
+                ]
+            },
+            {
+                "discipline": "编程",
+                "titles": [
+                    { "title": "技术总监", "names": ["Michael J. Ott", "Stefan Annell"] },
+                    { "title": "工程总监", "names": ["Mathias Ericsson"] },
+                    { "title": "工程总监，特许经营技术与服务", "names": ["Geoff Ebersol"] },
+                    { "title": "工程总监，增长产品", "names": ["Lawrence M. Sanchez II"] },
+                    { "title": "工程总监，内部新游戏", "names": ["Aisling Canton"] },
+                    { "title": "工程总监，Bedrock平台", "names": ["Jeff McKune", "Vince Curley"] },
+                    { "title": "工程经理，特许经营服务", "names": ["Matt Hawley"] },
+                    { "title": "工程经理", "names": ["Christian Diefenbach", "Elina Dettner", "Ellenor Wiig", "Elvira Melentyeva", "Erik Wallin", "Erika Renlund", "Fanny P Vadillo Herrera", "Haronid Moncivais", "Henrik Savenstedt", "Joel Bergman", "Jonas Jonsson", "Jonas Keating", "Lie Fujita", "Magnus Puig De La Bellacasa Cristiansson", "Nick Horvath", "Per Sahlée", "Rijil Narath", "Tanya Reinhardt (Ascendion, Inc)"] },
+                    { "title": "首席软件工程师", "names": ["Bill Carlson", "Brian Schwartz", "Brock Davis", "Bryan Yeo", "Chris BeHanna", "Dan Samhold", "David Carlton", "David Cowan", "Derrick Price", "Gary McLaughlin", "Henning Erlandsen", "Jake Shirley", "Jose Marcos De Oliveira", "Kanita Rauniyar", "Loren Hoffman", "Mason McCuskey", "Matt Cooley", "Max Bouchez", "Nickolas Graczyk", "Paul Crawford", "River Gillis", "Ryan Burns", "Torbjörn Allard", "Yash Shroff"] },
+                    { "title": "技术负责人", "names": ["Andrew Maher", "Anton Arbring", "Dan Mauk", "David Ekermann", "Felix Jones", "Garrett Allen", "Jahmai O'Sullivan", "Jakob Rydén", "James S Yarrow", "Jeffrey Kumley", "Joe Brockhaus", "Mangal Srinivasamurthy", "Michael Kranz", "Michael Stoyke", "Mikael Hedberg", "Nick Burlingame", "Oleg Kozitsyn", "Patrick McGannon", "Paulo Ragonha", "Raphael Landaverde", "Robert Sanchez", "Robert Sjödahl", "Sue Loh", "Tristan Schneider", "Zhengwu Zhang"] }
+                ]
+            },
+            {
+                "discipline": "制作",
+                "titles": [
+                    { "title": "特许经营技术与服务负责人", "names": ["Elvir Bahtijaragic"] },
+                    { "title": "教育版执行制作人", "names": ["Allison Matthews"] },
+                    { "title": "执行制作人", "names": ["Anita Sujarit", "Fredrik Telenius", "Hai Shi", "Ingela Garneij", "Klas Hammarström", "Nikoo Jorjani"] },
+                    { "title": "Bedrock平台总监", "names": ["Dave Cohen"] },
+                    { "title": "创作者总监", "names": ["Kayla Kinnunen"] },
+                    { "title": "内部新游戏总监", "names": ["David Nisshagen"] },
+                    { "title": "Minecraft启动器总监", "names": ["David Marc Siegel"] },
+                    { "title": "Minecraft在线与市场总监", "names": ["Travis Howland"] },
+                    { "title": "Minecraft网站总监", "names": ["Todd Baldwin"] },
+                    { "title": "发行与授权总监", "names": ["Dennis Ries"] },
+                    { "title": "信任与安全总监", "names": ["Carlos Figueiredo"] },
+                    { "title": "制作总监", "names": ["Alina Skripnyk", "Bryant Hawthorne", "Eric Taylor", "Justin Edwards", "Kristina Ashment", "Marcus Bodin", "Mike Ammerlaan", "Molly Woodruff", "Nathan Rose", "Todd Stevens"] },
+                    { "title": "制作经理", "names": ["Caroline Smith (Insight Global, Inc)", "Luis Cascante"] },
+                    { "title": "制作负责人", "names": ["Carrie Doring", "Milo Bengtsson", "Mona Landh Gullberg", "Tim Mardell"] },
+                    { "title": "首席制作人", "names": ["Melinda Knight", "Su Liu"] }
+                ]
+            },
+            {
+                "discipline": "视觉艺术",
+                "titles": [
+                    { "title": "创意负责人", "names": ["Erik Gestrelius", "Johan Aronsson", "Martin Johansson-He"] },
+                    { "title": "艺术总监", "names": ["Amanda Ström", "Filip Keatley Thoms", "Jasper Boerstra", "Julian Kerr", "Markus Karlsson Frost", "Ninni Landin", "Seung Sung", "Sherin Kwan", "Ullis Linder"] },
+                    { "title": "艺术经理", "names": ["Magdalena Berglind"] },
+                    { "title": "艺术家负责人", "names": ["Alexandra Dogaru", "Evelina Kolovou", "Joule Garvin", "Meagan Dumford", "Michael Apolis", "Michael Neumann"] },
+                    { "title": "技术美术", "names": ["Brendan 'Sully' Sullivan", "Dan Sonne"] },
+                    { "title": "产品设计负责人", "names": ["Connor Burtis", "Ryan Sand", "Will Krause"] },
+                    { "title": "产品设计师", "names": ["Adrian Ward", "Débora Martins", "Laura Palmroth", "Ro Ocampo (Allegis Group Services, Inc)", "Timothy Lusk (Allegis Group Services, Inc)"] },
+                    { "title": "平面设计师", "names": ["Caitlin Willhoite (Ten Gun Design, Inc)", "Isak de Jong"] }
+                ]
+            },
+            {
+                "discipline": "音频",
+                "titles": [
+                    { "title": "音频总监", "names": ["Peter Hont", "Samuel Åberg"] },
+                    { "title": "音效设计师", "names": ["Sandra Karlsson", "Thareeq Roshan", "Tom Koselnik Olovsson"] },
+                    { "title": "音乐作曲", "names": ["Aaron Cherof", "Amos Roddy", "Daniel Rosenfeld", "Kumi Tanioka", "Lena Raine"] },
+                    { "title": "音乐总监", "names": ["Kyle Hopkins", "Maya Halfon Cordova"] }
+                ]
+            },
+            {
+                "discipline": "质量评估",
+                "titles": [
+                    { "title": "质量总监，特许经营技术与服务", "names": ["Matthew Ng"] },
+                    { "title": "质量经理", "names": ["David Fries"] },
+                    { "title": "质量负责人", "names": ["Joe Whitman", "Mimi Holmstead"] },
+                    { "title": "质量评估专家", "names": ["Björn Philipson", "Matthew Dryden", "Olle Personne"] },
+                    { "title": "测试总监", "names": ["Angelica Morris (Experis)"] }
+                ]
+            },
+            {
+                "discipline": "用户研究",
+                "titles": [
+                    { "title": "用户研究负责人", "names": ["Deanne Adams"] },
+                    { "title": "用户研究员", "names": ["Sarah Santiago"] }
+                ]
+            },
+            {
+                "discipline": "运营",
+                "titles": [
+                    { "title": "全球运营总监", "names": ["Shanlenn B. Colby"] },
+                    { "title": "运营总监", "names": ["Jewell Morelli"] },
+                    { "title": "创意运营总监", "names": ["Ulrika Silfverstolpe"] },
+                    { "title": "人力资源总监", "names": ["Darcy Harpel", "Natalie Graham"] }
+                ]
+            },
+            {
+                "discipline": "玩家关怀",
+                "titles": [
+                    { "title": "玩家关怀总监", "names": ["Anne Quaranta"] },
+                    { "title": "玩家支持项目负责人", "names": ["Alexandru Giuglea", "Erfon Haubenstock", "Jake Rexus", "Jen Pedersen"] }
+                ]
+            },
+            {
+                "discipline": "数据分析",
+                "titles": [
+                    { "title": "玩家分析与洞察总监", "names": ["Francisco Rius"] },
+                    { "title": "数据科学与分析经理", "names": ["Abby Gaddis", "Duncan Davis", "Laura Funa", "Miguel Fierro"] },
+                    { "title": "数据工程经理", "names": ["Bill Chism"] },
+                    { "title": "数据与分析负责人", "names": ["Smitha Menon"] }
+                ]
+            },
+            {
+                "discipline": "业务管理与授权",
+                "titles": [
+                    { "title": "中国消费者与全球合作项目总监", "names": ["Jeremy Snook"] },
+                    { "title": "消费品项目总监", "names": ["Hanna Willis"] },
+                    { "title": "特许经营发展项目总监", "names": ["Federico San Martin"] },
+                    { "title": "特许经营业务总监", "names": ["Anthony Murphy"] },
+                    { "title": "日本与市场拓展业务总监", "names": ["Yutaka Noma"] }
+                ]
+            },
+            {
+                "discipline": "品牌管理",
+                "titles": [
+                    { "title": "品牌总监", "names": ["Thomas Falkenstrom"] },
+                    { "title": "品牌经理", "names": ["Harry Elonen"] },
+                    { "title": "品牌策略师", "names": ["Astrid Segerlund"] },
+                    { "title": "品牌分析师", "names": ["Sofia Alm"] }
+                ]
+            },
+            {
+                "discipline": "传播",
+                "titles": [
+                    { "title": "媒体总监", "names": ["Vu Bui"] },
+                    { "title": "传播总监", "names": ["Emil Rodriguez", "Owen Jones"] },
+                    { "title": "创意文案", "names": ["Julius Olofsson", "Linn Viberg", "Per Landin", "Sophie Austin"] },
+                    { "title": "社区总监", "names": ["Nea Aime Rollan"] },
+                    { "title": "社交媒体负责人", "names": ["Sean Flanery"] },
+                    { "title": "出版编辑", "names": ["Lauren Marklund"] }
+                ]
+            },
+            {
+                "discipline": "市场营销",
+                "titles": [
+                    { "title": "市场负责人", "names": ["Jeanie DuMont"] },
+                    { "title": "市场总监", "names": ["Fergus Lynch", "Gaylord Escalona", "Katie Penza"] }
+                ]
+            },
+            {
+                "discipline": "法律",
+                "titles": [
+                    { "title": "法务负责人", "names": ["Nick Morgan (CELA)"] },
+                    { "title": "高级法律顾问", "names": ["Tim Han (CELA)"] },
+                    { "title": "法律顾问", "names": ["Jessica Henderson", "Jyl Brown (CELA)", "Kari Annand (Snodgrass Annand)", "Maya Yamazaki (Davis Wright Tremaine)"] }
+                ]
+            },
+            {
+                "discipline": "财务",
+                "titles": [
+                    { "title": "财务总监", "names": ["Marina Kostesic"] },
+                    { "title": "财务会计", "names": ["Josefina Axelsson"] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "特别鸣谢",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    {
+                        "title": "",
+                        "names": [
+                            "ZIYIT STUIDOS",
+                            "4J Studios",
+                            "Accenture 网络工程服务",
+                            "Dan Roque, 生物开发者",
+                            "Gideon Driver, Zen3 Infosolutions America, Inc",
+                            "Jannis Petersen, Blockbench 创作者",
+                            "John 'DrZhark' Olarte, 生物开发者",
+                            "Julian Gough, 编剧",
+                            "Kent Christian Jense, 生物开发者",
+                            "Michele \"skypjack\" Caini, 高级软件工程师",
+                            "微软游戏安全团队",
+                            "微软 Magic 团队",
+                            "Reza Elghazi, 开发者客户经理",
+                            "PlayFab 团队",
+                            "Xbox Live 团队",
+                            "Vishnu Nalagangula, Zen3 Infosolutions America, Inc",
+                            "Xbox 游戏工作室"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "开发合作伙伴 - Blackbird Interactive",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    { "title": "程序员", "names": ["David Galloway", "Devon Plourde", "Jc Fowles", "Michelle Rocha", "Mike Biddlecombe", "Sabrina Korsch-Sharma", "Stevie Giovanni", "Tim Stump"] },
+                    { "title": "制作人", "names": ["Jeremy Powell"] },
+                    { "title": "开发副总裁", "names": ["Lee McKinnon Pederson"] },
+                    { "title": "工作室技术总监", "names": ["Michael Sikora"] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "开发合作伙伴 - Disbelief",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    { "title": "总裁", "names": ["Steve Ellmore"] },
+                    { "title": "首席技术官", "names": ["Steve Anichini"] },
+                    { "title": "制作人", "names": ["Andre Gracias"] },
+                    { "title": "技术总监", "names": ["Kristofel Munson"] },
+                    { "title": "首席程序员", "names": ["Tim Hagberg"] },
+                    { "title": "高级程序员", "names": ["Matt Mackowski", "Torin Wiebelt"] },
+                    { "title": "艺术总监", "names": ["Gabe Bott"] },
+                    { "title": "高级技术美术", "names": ["Katie McCarthy"] },
+                    { "title": "技术美术", "names": ["Ezri Sullivan"] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "开发合作伙伴 - Red Lens",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    { "title": "总裁", "names": ["Jared Noftle"] },
+                    { "title": "开发负责人", "names": ["Veasna Chhaysy-Park"] },
+                    { "title": "技术负责人", "names": ["Lily Leblanc"] },
+                    { "title": "制作人", "names": ["Nova Barlow"] },
+                    { "title": "软件工程师", "names": ["Elgin Ciani", "Grady Wright", "Johnathan Liu", "Jon Castro", "Joshua Greene", "Minji Chhaysy-Park", "Mitchell Lee", "Skyler Powers"] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "开发合作伙伴 - Skybox",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    { "title": "创始人", "names": ["Derek MacNeil", "Shyang Kong", "Steven Silvester"] },
+                    { "title": "制作", "names": ["Chris Aduna", "Jason Obertas", "Jennifer Barron", "Keegan Dillman", "Madeeha Ahmad", "Michael Tolkamp", "Phoenix Valencia", "Tud Racanelli", "Veronica Ng", "Yaw Obiri-Yeboah"] },
+                    { "title": "质量保证", "names": ["Ace Cheung", "Faith Chow", "Franka Mostert", "Ivan Yemelianov", "Jimmy Chen", "Leo Hewitt", "Mark Ball", "Valeriia Kirka", "Vicky Huang", "William Redmond", "Zack Hutchinson"] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "开发合作伙伴 - Sprung Studios Ltd",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    { "title": "首席执行官", "names": ["James Chaytor"] },
+                    { "title": "全球业务发展总监", "names": ["Brooke Allison"] },
+                    { "title": "工作室总监", "names": ["Ben Adams"] },
+                    { "title": "高级制作人", "names": ["Amelia Wales"] },
+                    { "title": "制作人", "names": ["Jaclynn Wong"] },
+                    { "title": "用户体验/界面负责人", "names": ["Anton Li"] },
+                    { "title": "高级用户体验/界面设计师", "names": ["Dimitria Eleftherios"] },
+                    { "title": "工程负责人", "names": ["Matthew Jarvis"] },
+                    { "title": "高级界面工程师", "names": ["Louis Edbrooke"] },
+                    { "title": "用户研究负责人", "names": ["Luke Fraser"] },
+                    { "title": "高级用户研究员", "names": ["Erica Qiu"] }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "BUGJUMP Studios 校友",
+        "disciplines": [
+            {
+                "discipline": "",
+                "titles": [
+                    { "title": "Minecraft 原创作者", "names": ["Markus Persson"] },
+                    { "title": "工作室负责人", "names": ["Åsa Bredin", "Helen Chiang"] },
+                    { "title": "Minecraft 负责人", "names": ["Matt Booty"] },
+                    { "title": "斯德哥尔摩工作室负责人", "names": ["Ulrika Hojgard"] },
+                    { "title": "首席执行官", "names": ["Carl Manneh"] },
+                    { "title": "首席技术官", "names": ["Rikard Herlitz"] },
+                    { "title": "幕僚长", "names": ["Andrew J. Adamyk", "Yassal Sundman"] },
+                    { "title": "首席创意官", "names": ["Saxs Persson"] },
+                    { "title": "特许经营运营负责人", "names": ["Josh Bliggenstorfer"] },
+                    { "title": "游戏负责人", "names": ["Patrick Liu", "Sara Jansson Bach"] },
+                    { "title": "游戏总监", "names": ["Henrik Pettersson"] },
+                    { "title": "创意总监", "names": ["John Hendricks"] }
+                ]
+            }
+        ]
+    }
+]
