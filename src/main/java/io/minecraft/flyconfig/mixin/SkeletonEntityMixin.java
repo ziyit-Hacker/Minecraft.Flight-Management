@@ -1,19 +1,15 @@
 package io.minecraft.flyconfig.mixin;
 
 import io.minecraft.flyconfig.FlightManagement;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.ActiveTargetGoal;
-import net.minecraft.entity.ai.goal.LookAtEntityGoal;
-import net.minecraft.entity.ai.goal.ProjectileAttackGoal;
-import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -28,22 +24,6 @@ public abstract class SkeletonEntityMixin {
     private boolean isDancing = false;
     @Unique
     private LivingEntity targetCache = null;
-
-    @Inject(method = "initGoals", at = @At("TAIL"))
-    private void modifyGoals(CallbackInfo ci) {
-        SkeletonEntity skeleton = (SkeletonEntity)(Object)this;
-
-        skeleton.targetSelector.add(1, new ActiveTargetGoal<>(skeleton, PlayerEntity.class, true, true) {
-            @Override
-            public boolean canStart() {
-                if (!super.canStart()) return false;
-                if (this.targetEntity instanceof PlayerEntity player) {
-                    return !player.isSpectator();
-                }
-                return true;
-            }
-        });
-    }
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
@@ -79,6 +59,8 @@ public abstract class SkeletonEntityMixin {
             isDancing = true;
             danceTimer = 0;
             playSound(skeleton, Identifier.of("flyconfig", "entity.skeleton.sb"), 1.0F, 1.0F);
+
+            addTargetGoal(skeleton);
         }
     }
 
@@ -90,10 +72,16 @@ public abstract class SkeletonEntityMixin {
         }
     }
 
-    @Inject(method = "onAttacking", at = @At("HEAD"))
-    private void onAttacking(LivingEntity target, CallbackInfo ci) {
+    @Unique
+    private void addTargetGoal(SkeletonEntity skeleton) {
+        FlightManagement.LOGGER.info("Dancing skeleton added target goal");
+    }
+
+    @Inject(method = "tick", at = @At("RETURN"))
+    private void onTickReturn(CallbackInfo ci) {
         SkeletonEntity skeleton = (SkeletonEntity)(Object)this;
-        playSound(skeleton, Identifier.of("flyconfig", "entity.skeleton.donk"), 1.0F, 1.0F);
+        if (skeleton.getTarget() != null && targetCache == null) {
+        }
     }
 
     @Unique

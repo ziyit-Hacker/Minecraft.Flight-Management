@@ -5,7 +5,8 @@
 	"mixins": [
 		"FuelRegistryMixin",
 		"ArrowEntityMixin",
-		"DeathMessageMixin"
+		"DeathMessageMixin",
+		"SkeletonEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
