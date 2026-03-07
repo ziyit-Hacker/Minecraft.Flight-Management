@@ -1,0 +1,14 @@
+{
+  "entity.skeleton.donk": {
+    "subtitle": "subtitles.entity.skeleton.donk",
+    "sounds": [
+      "flyconfig:donk"
+    ]
+  },
+  "entity.skeleton.sb": {
+    "subtitle": "subtitles.entity.skeleton.sb",
+    "sounds": [
+      "flyconfig:sb"
+    ]
+  }
+}
