@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "category": "redstone",
+  "group": "music_disks",
+  "ingredients": [
+    "flyconfig:germany_developed",
+    "minecraft:iron_ingot",
+    "minecraft:clock"
+  ],
+  "result": {
+    "id": "flyconfig:music_disc_sieg_heil",
+    "count": 1
+  },
+  "show_notification": true
+}

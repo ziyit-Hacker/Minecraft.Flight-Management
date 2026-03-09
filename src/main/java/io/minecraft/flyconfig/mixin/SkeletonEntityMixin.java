@@ -41,6 +41,8 @@ public abstract class SkeletonEntityMixin {
     private static final int DONK_INTERVAL = 3020;
     @Unique
     private static final int SB_INTERVAL = 600;
+    @Unique
+    private boolean initialCheckDone = false;
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
@@ -57,6 +59,21 @@ public abstract class SkeletonEntityMixin {
                 FlightManagement.LOGGER.info("Skeleton died, stopped all sounds");
             }
             return;
+        }
+
+        if (!initialCheckDone) {
+            LivingEntity target = findTarget(skeleton);
+            if (target != null) {
+                playSoundAtSkeleton(skeleton, ModSoundEvents.DONK);
+                isPlayingDonk = true;
+                donkRepeatTimer = DONK_INTERVAL;
+            } else {
+                playSoundAtSkeleton(skeleton, ModSoundEvents.SB);
+                isPlayingSb = true;
+                sbRepeatTimer = SB_INTERVAL;
+                isDancing = true;
+            }
+            initialCheckDone = true;
         }
 
         if (donkRepeatTimer > 0) {
@@ -96,7 +113,7 @@ public abstract class SkeletonEntityMixin {
                 }
 
                 if (soundCooldown == 0 && !isPlayingDonk) {
-                    playSoundAtSkeleton(skeleton, ModSoundEvents.donk);
+                    playSoundAtSkeleton(skeleton, ModSoundEvents.DONK);
                     isPlayingDonk = true;
                     donkRepeatTimer = DONK_INTERVAL;
                     soundCooldown = 40;
@@ -119,7 +136,7 @@ public abstract class SkeletonEntityMixin {
             }
 
             if (isDancing && skeleton.isAlive() && sbRepeatTimer <= 0 && !isPlayingSb) {
-                playSoundAtSkeleton(skeleton, ModSoundEvents.sb);
+                playSoundAtSkeleton(skeleton, ModSoundEvents.SB);
                 isPlayingSb = true;
                 sbRepeatTimer = SB_INTERVAL;
             }
@@ -136,14 +153,25 @@ public abstract class SkeletonEntityMixin {
     }
 
     @Unique
+    private LivingEntity findTarget(SkeletonEntity skeleton) {
+        World world = skeleton.getWorld();
+        if (world.isClient) return null;
+
+        return world.getPlayers().stream()
+                .filter(player -> !player.isSpectator() && player.isAlive() &&
+                        player.squaredDistanceTo(skeleton) < 256.0)
+                .findFirst()
+                .orElse(null);
+    }
+
+    @Unique
     private void startDancing(SkeletonEntity skeleton) {
         if (!isDancing && skeleton.isAlive()) {
             isDancing = true;
             danceTimer = 0;
-            playSoundAtSkeleton(skeleton, ModSoundEvents.sb);
+            playSoundAtSkeleton(skeleton, ModSoundEvents.SB);
             isPlayingSb = true;
             sbRepeatTimer = SB_INTERVAL;
-            FlightManagement.LOGGER.info("Skeleton starting to dance at " + skeleton.getBlockPos());
         }
     }
 

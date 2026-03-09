@@ -11,9 +11,45 @@
       "flyconfig:found"
     ]
   },
-  "music_disc.siegHeil": {
+  "block_fuhrer_break": {
+    "subtitle": "sound.flyconfig.blockfuhrer.break",
     "sounds": [
-      "flyconfig:siegHeil"
+      "flyconfig:fuhrer_break"
+    ]
+  },
+  "block_fuhrer_step": {
+    "subtitle": "sound.flyconfig.blockfuhrer.step",
+    "sounds": [
+      "flyconfig:fuhrer_step"
+    ]
+  },
+  "block_fuhrer_place": {
+    "subtitle": "sound.flyconfig.blockfuhrer.place",
+    "sounds": [
+      "flyconfig:fuhrer_place"
+    ]
+  },
+  "block_fuhrer_hit": {
+    "subtitle": "sound.flyconfig.blockfuhrer.hit",
+    "sounds": [
+      "flyconfig:fuhrer_hit"
+    ]
+  },
+  "block_fuhrer_fall": {
+    "subtitle": "sound.flyconfig.blockfuhrer.fall",
+    "sounds": [
+      "flyconfig:fuhrer_fall"
+    ]
+  },
+  "fuhrer_lectern": {
+    "subtitle": "sound.flyconfig.villager.fuhrer_lectern",
+    "sounds": [
+      "flyconfig:fuhrer_lectern"
+    ]
+  },
+  "music_disc.siegheil": {
+    "sounds": [
+      "flyconfig:siegheil"
     ]
   }
 }

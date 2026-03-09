@@ -33,6 +33,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ULHEALN);
                         entries.add(ModItems.NODATA);
                         entries.add(ModItems.MUSIC_DISC_SIEG_HEIL);
+                        entries.add(ModItems.FUHRER_LECTERN);
                     }).build());
 
     public static void registerModItemGroups() {

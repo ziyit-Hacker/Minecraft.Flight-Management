@@ -1,9 +1,13 @@
 package io.minecraft.flyconfig;
 
+import io.minecraft.flyconfig.block.ModBlock;
 import io.minecraft.flyconfig.item.ModItemGroups;
 import io.minecraft.flyconfig.item.ModItems;
+import io.minecraft.flyconfig.sound.ModJukeboxSongs;
 import io.minecraft.flyconfig.sound.ModSoundEvents;
 import io.minecraft.flyconfig.util.ModCustomTrades;
+import io.minecraft.flyconfig.villager.ModPointOfInterestTypes;
+import io.minecraft.flyconfig.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -34,12 +38,17 @@ public class FlightManagement implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
+		ModBlock.init();
+
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 
+		ModVillagers.init();
+		ModPointOfInterestTypes.init();
 		ModCustomTrades.registerModCustomTrades();
 
 		ModSoundEvents.init();
+		ModJukeboxSongs.init();
 
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
 	}

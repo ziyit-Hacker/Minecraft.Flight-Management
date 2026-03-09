@@ -1,0 +1,8 @@
+{
+  "comparator_output": 8,
+  "description": {
+    "translate": "jukebox.flyconfig.sieg_heil"
+  },
+  "length_in_seconds": 179.0,
+  "sound_event": "flyconfig:music_disc.siegheil"
+}
