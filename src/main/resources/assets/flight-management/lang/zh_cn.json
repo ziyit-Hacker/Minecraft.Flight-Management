@@ -7,6 +7,8 @@
   "item.flyconfig.what_the_dog_doing": "为什么会变成这样呢？",
   "item.flyconfig.music_disc_sieg_heil": "音乐唱片 - Heil Hitler",
   "jukebox.flyconfig.sieg_heil": "Heil Hitler",
+  "item.flyconfig.music_disc_hitler": "音乐唱片 - Hitler",
+  "jukebox.flyconfig.hitler": "Das wer ein Befehl!",
   "itemGroup.flyconfig-group": "飞行管理",
   "sound.flyconfig.skeleton.notfound": "骷髅：杀死一个神需要多少秒？7.49秒！",
   "sound.flyconfig.skeleton.found": "骷髅：依旧预瞄",

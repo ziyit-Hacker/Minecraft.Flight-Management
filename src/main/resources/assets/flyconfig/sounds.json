@@ -51,5 +51,10 @@
     "sounds": [
       "flyconfig:siegheil"
     ]
+  },
+  "music_disc.hitler": {
+    "sounds": [
+      "flyconfig:fuhrer_lectern"
+    ]
   }
 }

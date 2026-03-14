@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "category": "redstone",
+  "group": "music_disks",
+  "ingredients": [
+    "flyconfig:germany_developed",
+    "minecraft:clock"
+  ],
+  "result": {
+    "id": "flyconfig:music_disc_hitler",
+    "count": 1
+  },
+  "show_notification": true
+}

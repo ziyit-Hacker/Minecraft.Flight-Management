@@ -13,6 +13,7 @@ import net.minecraft.util.Util;
 
 public interface ModJukeboxSongs {
     RegistryKey<JukeboxSong> SIEG_HEIL = of("siegheil");
+    RegistryKey<JukeboxSong> HITLER = of("hitler");
 
     private static RegistryKey<JukeboxSong> of(String id) {
         return RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of("flyconfig", id));
@@ -28,6 +29,7 @@ public interface ModJukeboxSongs {
 
     static void bootstrap(Registerable<JukeboxSong> registry) {
         register(registry, SIEG_HEIL, ModSoundEvents.MUSIC_DISC_SIEG_HEIL, 179, 8);
+        register(registry, HITLER, ModSoundEvents.MUSIC_DISC_HITLER, 251, 7);
     }
 
     static void init() {

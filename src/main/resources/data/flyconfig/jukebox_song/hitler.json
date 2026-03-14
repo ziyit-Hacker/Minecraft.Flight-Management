@@ -1,0 +1,8 @@
+{
+  "comparator_output": 7,
+  "description": {
+    "translate": "jukebox.flyconfig.hitler"
+  },
+  "length_in_seconds": 251.0,
+  "sound_event": "flyconfig:music_disc.hitler"
+}

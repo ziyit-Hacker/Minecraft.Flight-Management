@@ -28,6 +28,7 @@ public class ModSoundEvents {
     }
 
     public static final RegistryEntry.Reference<SoundEvent> MUSIC_DISC_SIEG_HEIL = registerReference("music_disc.siegheil");
+    public static final RegistryEntry.Reference<SoundEvent> MUSIC_DISC_HITLER = registerReference("music_disc.hitler");
 
     private static RegistryEntry.Reference<SoundEvent> registerReference(String name) {
         Identifier id = Identifier.of("flyconfig", name);
