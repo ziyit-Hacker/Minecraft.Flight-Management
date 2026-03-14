@@ -41,6 +41,8 @@ processResources {
 	filesMatching("fabric.mod.json") {
 		expand "version": inputs.properties.version
 	}
+
+	exclude "embedded_mods/*.jar"
 }
 
 tasks.withType(JavaCompile).configureEach {
