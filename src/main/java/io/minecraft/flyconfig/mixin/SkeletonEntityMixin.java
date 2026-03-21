@@ -24,21 +24,13 @@ public abstract class SkeletonEntityMixin {
     @Unique
     private LivingEntity targetCache = null;
     @Unique
-    private boolean hasPlayedDonk = false;
-    @Unique
     private int soundCooldown = 0;
     @Unique
     private boolean isDead = false;
     @Unique
-    private boolean isPlayingDonk = false;
-    @Unique
     private boolean isPlayingSb = false;
     @Unique
-    private int donkRepeatTimer = 0;
-    @Unique
     private int sbRepeatTimer = 0;
-    @Unique
-    private static final int DONK_INTERVAL = 3020;
     @Unique
     private static final int SB_INTERVAL = 600;
     @Unique
@@ -52,9 +44,7 @@ public abstract class SkeletonEntityMixin {
             if (!isDead) {
                 isDead = true;
                 isDancing = false;
-                isPlayingDonk = false;
                 isPlayingSb = false;
-                donkRepeatTimer = 0;
                 sbRepeatTimer = 0;
                 FlightManagement.LOGGER.info("Skeleton died, stopped all sounds");
             }
@@ -63,25 +53,13 @@ public abstract class SkeletonEntityMixin {
 
         if (!initialCheckDone) {
             LivingEntity target = findTarget(skeleton);
-            if (target != null) {
-                playSoundAtSkeleton(skeleton, ModSoundEvents.DONK);
-                isPlayingDonk = true;
-                donkRepeatTimer = DONK_INTERVAL;
-            } else {
-                playSoundAtSkeleton(skeleton, ModSoundEvents.SB);
-                isPlayingSb = true;
-                sbRepeatTimer = SB_INTERVAL;
-                isDancing = true;
-            }
+            playSoundAtSkeleton(skeleton, ModSoundEvents.SB);
+            isPlayingSb = true;
+            sbRepeatTimer = SB_INTERVAL;
+            isDancing = true;
             initialCheckDone = true;
         }
 
-        if (donkRepeatTimer > 0) {
-            donkRepeatTimer--;
-            if (donkRepeatTimer == 0) {
-                isPlayingDonk = false;
-            }
-        }
         if (sbRepeatTimer > 0) {
             sbRepeatTimer--;
             if (sbRepeatTimer == 0) {
@@ -111,21 +89,9 @@ public abstract class SkeletonEntityMixin {
                     isPlayingSb = false;
                     sbRepeatTimer = 0;
                 }
-
-                if (soundCooldown == 0 && !isPlayingDonk) {
-                    playSoundAtSkeleton(skeleton, ModSoundEvents.DONK);
-                    isPlayingDonk = true;
-                    donkRepeatTimer = DONK_INTERVAL;
-                    soundCooldown = 40;
-                }
             }
         } else {
             if (targetCache != null) {
-                if (isPlayingDonk) {
-                    isPlayingDonk = false;
-                    donkRepeatTimer = 0;
-                }
-
                 if (!isDancing && soundCooldown == 0) {
                     startDancing(skeleton);
                 }
@@ -203,9 +169,7 @@ public abstract class SkeletonEntityMixin {
     private void onRemove(CallbackInfo ci) {
         isDancing = false;
         isDead = true;
-        isPlayingDonk = false;
         isPlayingSb = false;
-        donkRepeatTimer = 0;
         sbRepeatTimer = 0;
         FlightManagement.LOGGER.info("Skeleton removed, cleaning up");
     }
