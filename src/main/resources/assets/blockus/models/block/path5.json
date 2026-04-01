@@ -1,0 +1,7 @@
+{
+  "parent": "blockus:block/template_path",
+  "textures": {
+    "top": "blockus:block/path5",
+    "side": "blockus:block/path_side"
+  }
+}
