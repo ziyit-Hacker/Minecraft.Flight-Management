@@ -10,13 +10,7 @@
 		"PlayerEntityMixin",
 		"SkeletonTargetMixin",
 		"SkeletonAttackDelayMixin",
-		"AbstractSkeletonEntityAccessor",
-		"RedstoneWireBlockMixin",
-		"LanternBlockMixin",
-		"CeilingHangingSignBlockMixin",
-		"BellBlockMixin",
-		"PortalShapeMixin",
-		"BaseFireBlockMixin"
+		"AbstractSkeletonEntityAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,5 +1,7 @@
 package io.minecraft.flyconfig;
 
+import io.minecraft.flyconfig.entity.ModEntities;
+import io.minecraft.flyconfig.entity.custom.NuclearEntity;
 import io.minecraft.flyconfig.item.ModItemGroups;
 import io.minecraft.flyconfig.item.ModItems;
 import io.minecraft.flyconfig.sound.ModJukeboxSongs;
@@ -42,6 +44,9 @@ public class FlightManagement implements ModInitializer {
 
 		ModSoundEvents.init();
 		ModJukeboxSongs.init();
+
+		ModEntities.register();
+		FabricDefaultAttributeRegistry.register(ModEntities.NUCLEAR, NuclearEntity.createNuclearAttributes());
 
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
 	}

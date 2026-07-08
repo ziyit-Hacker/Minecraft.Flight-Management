@@ -18,6 +18,9 @@
 		"main": [
 			"io.minecraft.flyconfig.FlightManagement"
 		],
+		"client": [
+			"io.minecraft.flyconfig.FlightManagementClient"
+		],
 		"fabric-datagen": [
 			"io.minecraft.flyconfig.FlightManagementDataGenerator"
 		]

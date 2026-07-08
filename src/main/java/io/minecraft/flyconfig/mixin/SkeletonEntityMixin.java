@@ -46,7 +46,6 @@ public abstract class SkeletonEntityMixin {
                 isDancing = false;
                 isPlayingSb = false;
                 sbRepeatTimer = 0;
-                FlightManagement.LOGGER.info("Skeleton died, stopped all sounds");
             }
             return;
         }
@@ -68,6 +67,7 @@ public abstract class SkeletonEntityMixin {
         }
 
         LivingEntity target = skeleton.getTarget();
+
 
         if (soundCooldown > 0) {
             soundCooldown--;

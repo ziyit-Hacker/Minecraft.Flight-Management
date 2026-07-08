@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NODATA);
                         entries.add(ModItems.MUSIC_DISC_SIEG_HEIL);
                         entries.add(ModItems.MUSIC_DISC_HITLER);
+                        entries.add(ModItems.NUCLEAR_SPAWN_EGG);
                     }).build());
 
     public static void registerModItemGroups() {

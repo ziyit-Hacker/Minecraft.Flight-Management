@@ -1,4 +1,10 @@
 {
+  "nuclear": {
+    "subtitle": "sound.flyconfig.nuclear",
+    "sounds": [
+      "flyconfig:nuclear"
+    ]
+  },
   "skeleton_notfound": {
     "subtitle": "sound.flyconfig.skeleton.notfound",
     "sounds": [

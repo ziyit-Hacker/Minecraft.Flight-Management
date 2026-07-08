@@ -18,6 +18,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_FUHRER_HIT = register("block_fuhrer_hit");
     public static final SoundEvent BLOCK_FUHRER_FALL = register("block_fuhrer_fall");
     public static final SoundEvent FUHRER_LECTERN = register("fuhrer_lectern");
+    public static final SoundEvent NUCLEAR = register("nuclear");
 
     public static final BlockSoundGroup FUHRER = new BlockSoundGroup(1.0f, 1.0f,
             BLOCK_FUHRER_BREAK, BLOCK_FUHRER_STEP, BLOCK_FUHRER_PLACE, BLOCK_FUHRER_HIT, BLOCK_FUHRER_FALL);
