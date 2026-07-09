@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "flyconfig:item/nuclear_spawn_egg"
+    "layer0": "flyconfig:item/uranium_ingot"
   }
 }

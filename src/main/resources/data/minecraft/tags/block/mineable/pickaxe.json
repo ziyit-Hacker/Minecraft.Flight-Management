@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "flyconfig:uranium_ore",
+    "flyconfig:deepslate_uranium_ore"
+  ]
+}

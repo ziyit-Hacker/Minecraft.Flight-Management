@@ -24,7 +24,6 @@ public class PoemResetter {
     }
 
     public static void tickReset(ServerPlayerEntity player) {
-        // 每 100 tick (5秒) 重置一次
         if (player.age % 100 == 0) {
             resetEndAdvancements(player);
         }

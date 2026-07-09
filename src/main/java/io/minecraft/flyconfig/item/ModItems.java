@@ -1,15 +1,18 @@
 package io.minecraft.flyconfig.item;
 
 import io.minecraft.flyconfig.FlightManagement;
+import io.minecraft.flyconfig.block.ModBlocks;
 import io.minecraft.flyconfig.entity.ModEntities;
 import io.minecraft.flyconfig.sound.ModJukeboxSongs;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.DeathProtectionComponent;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,8 +24,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.world.World;
-import net.minecraft.entity.EquipmentSlot;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Function;
@@ -60,6 +61,23 @@ public class ModItems {
                 }
             },
             new Item.Settings().maxCount(1));
+    public static final Item NUCLEAR_DISARM_TOOL = registerItems("nuclear_disarm_tool",
+            NuclearDisarmToolItem::new,
+            new Item.Settings().maxCount(1).rarity(Rarity.EPIC));
+
+    public static final Item URANIUM_INGOT = registerItems("uranium_ingot",
+            settings -> new Item(settings.maxCount(64).rarity(Rarity.UNCOMMON)) {
+                @Override
+                public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
+                    super.inventoryTick(stack, world, entity, slot);
+                    if (entity instanceof PlayerEntity player) {
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 100, 0));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 100, 0));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 0));
+                    }
+                }
+            });
 
     public static Item registerItems(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         Identifier itemId = Identifier.of("flyconfig", path);
@@ -71,6 +89,10 @@ public class ModItems {
         }
 
         return Registry.register(Registries.ITEM, registryKey, item);
+    }
+
+    public static Item registerItems(String path, Function<Item.Settings, Item> factory) {
+        return registerItems(path, factory, new Item.Settings());
     }
 
     public static void initialize() {

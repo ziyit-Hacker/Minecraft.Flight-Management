@@ -3,8 +3,8 @@
   "category": "misc",
   "group": "metal_scrap",
   "show_notification": true,
-  "experience": 0.1,
-  "cookingtime": 600,
+  "experience": 0.01,
+  "cookingtime": 1600,
   "ingredient": "minecraft:iron_ingot",
   "result": {
     "id": "flyconfig:metal_scrap",

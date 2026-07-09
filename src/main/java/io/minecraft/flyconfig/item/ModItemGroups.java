@@ -1,6 +1,7 @@
 package io.minecraft.flyconfig.item;
 
 import io.minecraft.flyconfig.FlightManagement;
+import io.minecraft.flyconfig.block.ModBlocks;
 import io.minecraft.flyconfig.item.ModItems;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
@@ -35,6 +36,10 @@ public class ModItemGroups {
                         entries.add(ModItems.MUSIC_DISC_SIEG_HEIL);
                         entries.add(ModItems.MUSIC_DISC_HITLER);
                         entries.add(ModItems.NUCLEAR_SPAWN_EGG);
+                        entries.add(ModItems.NUCLEAR_DISARM_TOOL);
+                        entries.add(ModItems.URANIUM_INGOT);
+                        entries.add(ModBlocks.URANIUM_ORE.asItem());
+                        entries.add(ModBlocks.DEEPSLATE_URANIUM_ORE.asItem());
                     }).build());
 
     public static void registerModItemGroups() {

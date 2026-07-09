@@ -1,5 +1,6 @@
 package io.minecraft.flyconfig;
 
+import io.minecraft.flyconfig.block.ModBlocks;
 import io.minecraft.flyconfig.entity.ModEntities;
 import io.minecraft.flyconfig.entity.custom.NuclearEntity;
 import io.minecraft.flyconfig.item.ModItemGroups;
@@ -36,6 +37,8 @@ public class FlightManagement implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		ModBlocks.initialize();
 
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();

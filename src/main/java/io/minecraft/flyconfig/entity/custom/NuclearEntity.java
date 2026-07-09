@@ -173,6 +173,98 @@ public class NuclearEntity extends PassiveEntity {
         });
     }
 
+    private boolean isFullBlock(ServerWorld world, BlockPos pos) {
+        BlockState state = world.getBlockState(pos);
+        if (state.isAir()) return false;
+        return state.isFullCube(world, pos);
+    }
+
+    private void applyWitherEffectToNearbyPlayers(ServerWorld world, Vec3d center) {
+        if (!this.isIgnited()) {
+            int radius = 15;
+            Box effectBox = new Box(
+                    center.x - radius, center.y - radius, center.z - radius,
+                    center.x + radius, center.y + radius, center.z + radius
+            );
+
+            List<PlayerEntity> players = world.getEntitiesByClass(
+                    PlayerEntity.class, effectBox, player -> player.isAlive() && player.getPos().distanceTo(center) <= radius
+            );
+
+            for (PlayerEntity player : players) {
+                Vec3d toPlayer = player.getPos().subtract(center);
+                double distance = player.getPos().distanceTo(center);
+
+                if (distance < 0.1) {
+                    player.addStatusEffect(new net.minecraft.entity.effect.StatusEffectInstance(
+                            net.minecraft.entity.effect.StatusEffects.WITHER, 500, 1
+                    ));
+                    continue;
+                }
+
+                int blockCount = 0;
+                for (double step = 0.5; step < distance; step += 0.5) {
+                    Vec3d checkPos = center.add(toPlayer.normalize().multiply(step));
+                    BlockPos checkBlock = BlockPos.ofFloored(checkPos);
+                    if (checkBlock.equals(BlockPos.ofFloored(center))) continue;
+                    if (checkBlock.equals(BlockPos.ofFloored(player.getPos()))) break;
+                    if (isFullBlock(world, checkBlock)) {
+                        blockCount++;
+                        if (blockCount >= 2) break;
+                    }
+                }
+
+                if (blockCount < 2) {
+                    int amplifier = Math.max(0, 1 - blockCount);
+                    player.addStatusEffect(new net.minecraft.entity.effect.StatusEffectInstance(
+                            net.minecraft.entity.effect.StatusEffects.WITHER, 500, amplifier
+                    ));
+                }
+            }
+        } else {
+            int radius = 50;
+            Box effectBox = new Box(
+                    center.x - radius, center.y - radius, center.z - radius,
+                    center.x + radius, center.y + radius, center.z + radius
+            );
+
+            List<PlayerEntity> players = world.getEntitiesByClass(
+                    PlayerEntity.class, effectBox, player -> player.isAlive() && player.getPos().distanceTo(center) <= radius
+            );
+
+            for (PlayerEntity player : players) {
+                Vec3d toPlayer = player.getPos().subtract(center);
+                double distance = player.getPos().distanceTo(center);
+
+                if (distance < 0.1) {
+                    player.addStatusEffect(new net.minecraft.entity.effect.StatusEffectInstance(
+                            net.minecraft.entity.effect.StatusEffects.WITHER, 2000, 7
+                    ));
+                    continue;
+                }
+
+                int blockCount = 0;
+                for (double step = 0.5; step < distance; step += 0.5) {
+                    Vec3d checkPos = center.add(toPlayer.normalize().multiply(step));
+                    BlockPos checkBlock = BlockPos.ofFloored(checkPos);
+                    if (checkBlock.equals(BlockPos.ofFloored(center))) continue;
+                    if (checkBlock.equals(BlockPos.ofFloored(player.getPos()))) break;
+                    if (isFullBlock(world, checkBlock)) {
+                        blockCount++;
+                        if (blockCount >= 3) break;
+                    }
+                }
+
+                if (blockCount < 3) {
+                    int amplifier = Math.max(0, 7 - blockCount);
+                    player.addStatusEffect(new net.minecraft.entity.effect.StatusEffectInstance(
+                            net.minecraft.entity.effect.StatusEffects.WITHER, 2000, amplifier
+                    ));
+                }
+            }
+        }
+    }
+
     @Override
     public void tick() {
         if (this.isAlive()) {
@@ -203,6 +295,10 @@ public class NuclearEntity extends PassiveEntity {
                     }
                 }
 
+                if (this.getWorld() instanceof ServerWorld serverWorld) {
+                    this.applyWitherEffectToNearbyPlayers(serverWorld, this.getPos());
+                }
+
                 if (this.currentFuseTime >= this.fuseTime && this.isIgnited()) {
                     this.startExplosion();
                 }
@@ -229,9 +325,7 @@ public class NuclearEntity extends PassiveEntity {
     }
 
     private boolean isBlockingBlock(BlockState state) {
-        return state.isOf(Blocks.OBSIDIAN) ||
-                state.isOf(Blocks.CRYING_OBSIDIAN) ||
-                state.isOf(Blocks.BEDROCK) ||
+        return state.isOf(Blocks.BEDROCK) ||
                 state.isOf(Blocks.ANVIL) ||
                 state.isOf(Blocks.CHIPPED_ANVIL) ||
                 state.isOf(Blocks.DAMAGED_ANVIL) ||
@@ -341,7 +435,7 @@ public class NuclearEntity extends PassiveEntity {
 
         ServerWorld serverWorld = (ServerWorld) this.getWorld();
 
-        int batchSize = Math.min(15000, this.pendingBlocks.size());
+        int batchSize = Math.min(25000, this.pendingBlocks.size());
         int processed = 0;
 
         while (processed < batchSize && !this.pendingBlocks.isEmpty()) {
