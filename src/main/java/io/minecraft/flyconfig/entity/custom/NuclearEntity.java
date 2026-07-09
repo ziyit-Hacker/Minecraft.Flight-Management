@@ -40,12 +40,11 @@ public class NuclearEntity extends PassiveEntity {
     private int lastFuseTime;
     private int currentFuseTime;
     private int fuseTime = 700;
-    private int destroyRadius = 100;
-    private int damageRadius = 200;
-    private int warningRadius = 150;
+    private int destroyRadius = 128;
+    private int damageRadius = 256;
+    private int warningRadius = 175;
     private boolean exploded = false;
     private int blocksDestroyed = 0;
-    private static final int MAX_BLOCKS_PER_BATCH = 10000;
     private List<BlockPos> pendingBlocks = new ArrayList<>();
     private int destroyStage = 0;
     private int stageTimer = 0;
@@ -293,10 +292,11 @@ public class NuclearEntity extends PassiveEntity {
                     if (this.currentFuseTime % 10 == 0) {
                         this.playNuclearSound();
                     }
-                }
-
-                if (this.getWorld() instanceof ServerWorld serverWorld) {
-                    this.applyWitherEffectToNearbyPlayers(serverWorld, this.getPos());
+                    if (this.currentFuseTime % 5 == 0) {
+                        if (this.getWorld() instanceof ServerWorld serverWorld) {
+                            this.applyWitherEffectToNearbyPlayers(serverWorld, this.getPos());
+                        }
+                    }
                 }
 
                 if (this.currentFuseTime >= this.fuseTime && this.isIgnited()) {
@@ -435,7 +435,7 @@ public class NuclearEntity extends PassiveEntity {
 
         ServerWorld serverWorld = (ServerWorld) this.getWorld();
 
-        int batchSize = Math.min(25000, this.pendingBlocks.size());
+        int batchSize = Math.min(15000, this.pendingBlocks.size());
         int processed = 0;
 
         while (processed < batchSize && !this.pendingBlocks.isEmpty()) {
@@ -459,14 +459,14 @@ public class NuclearEntity extends PassiveEntity {
     private void placeFire(ServerWorld world) {
         Vec3d center = this.getPos();
         BlockPos centerPos = BlockPos.ofFloored(center);
-        int radius = this.destroyRadius;
-        int radiusSq = radius * radius;
+        int fireRadius = 315;
+        int clearRadius = 500;
 
-        for (int dx = -radius; dx <= radius; dx++) {
-            for (int dy = -radius; dy <= radius; dy++) {
-                for (int dz = -radius; dz <= radius; dz++) {
+        for (int dx = -fireRadius; dx <= fireRadius; dx++) {
+            for (int dy = -fireRadius; dy <= fireRadius; dy++) {
+                for (int dz = -fireRadius; dz <= fireRadius; dz++) {
                     int distSq = dx * dx + dy * dy + dz * dz;
-                    if (distSq > radiusSq) continue;
+                    if (distSq > fireRadius * fireRadius) continue;
 
                     BlockPos pos = centerPos.add(dx, dy, dz);
                     BlockState state = world.getBlockState(pos);
@@ -476,8 +476,112 @@ public class NuclearEntity extends PassiveEntity {
                     BlockPos below = pos.down();
                     if (world.getBlockState(below).isAir()) continue;
 
-                    if (world.random.nextFloat() <= 0.75F) {
-                        world.setBlockState(pos, Blocks.FIRE.getDefaultState(), Block.NOTIFY_LISTENERS);
+                    world.setBlockState(pos, Blocks.FIRE.getDefaultState(), Block.NOTIFY_LISTENERS);
+                }
+            }
+        }
+
+        for (int dx = -clearRadius; dx <= clearRadius; dx++) {
+            for (int dy = -clearRadius; dy <= clearRadius; dy++) {
+                for (int dz = -clearRadius; dz <= clearRadius; dz++) {
+                    int distSq = dx * dx + dy * dy + dz * dz;
+                    if (distSq > clearRadius * clearRadius) continue;
+
+                    BlockPos pos = centerPos.add(dx, dy, dz);
+                    BlockState state = world.getBlockState(pos);
+
+                    if (state.getFluidState().isStill() &&
+                            (state.getFluidState().isIn(net.minecraft.registry.tag.FluidTags.WATER) ||
+                                    state.getFluidState().isIn(net.minecraft.registry.tag.FluidTags.LAVA))) {
+                        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.WATER) || state.isOf(Blocks.LAVA) ||
+                            state.isOf(Blocks.BUBBLE_COLUMN) || state.isOf(Blocks.KELP) ||
+                            state.isOf(Blocks.KELP_PLANT) || state.isOf(Blocks.SEAGRASS) ||
+                            state.isOf(Blocks.TALL_SEAGRASS)) {
+                        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.DIRT) || state.isOf(Blocks.GRASS_BLOCK) ||
+                            state.isOf(Blocks.FARMLAND) || state.isOf(Blocks.DIRT_PATH) ||
+                            state.isOf(Blocks.PODZOL) || state.isOf(Blocks.MYCELIUM)) {
+                        world.setBlockState(pos, Blocks.ROOTED_DIRT.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.STONE) || state.isOf(Blocks.DEEPSLATE) ||
+                            state.isOf(Blocks.GRANITE) || state.isOf(Blocks.DIORITE) ||
+                            state.isOf(Blocks.ANDESITE) || state.isOf(Blocks.CALCITE) ||
+                            state.isOf(Blocks.TUFF)) {
+                        world.setBlockState(pos, Blocks.COBBLESTONE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.DRIPSTONE_BLOCK) || state.isOf(Blocks.POINTED_DRIPSTONE) ||
+                            state.isOf(Blocks.MUD) || state.isOf(Blocks.CLAY) ||
+                            state.isOf(Blocks.SAND) || state.isOf(Blocks.GRAVEL) ||
+                            state.isOf(Blocks.SNOW) || state.isOf(Blocks.SNOW_BLOCK) ||
+                            state.isOf(Blocks.MOSS_BLOCK)) {
+                        world.setBlockState(pos, Blocks.PALE_MOSS_BLOCK.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.TUBE_CORAL_BLOCK) || state.isOf(Blocks.BRAIN_CORAL_BLOCK) ||
+                            state.isOf(Blocks.BUBBLE_CORAL_BLOCK) || state.isOf(Blocks.FIRE_CORAL_BLOCK) ||
+                            state.isOf(Blocks.HORN_CORAL_BLOCK) || state.isOf(Blocks.TUBE_CORAL) ||
+                            state.isOf(Blocks.BRAIN_CORAL) || state.isOf(Blocks.BUBBLE_CORAL) ||
+                            state.isOf(Blocks.FIRE_CORAL) || state.isOf(Blocks.HORN_CORAL) ||
+                            state.isOf(Blocks.TUBE_CORAL_FAN) || state.isOf(Blocks.BRAIN_CORAL_FAN) ||
+                            state.isOf(Blocks.BUBBLE_CORAL_FAN) || state.isOf(Blocks.FIRE_CORAL_FAN) ||
+                            state.isOf(Blocks.HORN_CORAL_FAN) || state.isOf(Blocks.TUBE_CORAL_WALL_FAN) ||
+                            state.isOf(Blocks.BRAIN_CORAL_WALL_FAN) || state.isOf(Blocks.BUBBLE_CORAL_WALL_FAN) ||
+                            state.isOf(Blocks.FIRE_CORAL_WALL_FAN) || state.isOf(Blocks.HORN_CORAL_WALL_FAN)) {
+                        world.setBlockState(pos, Blocks.DEAD_TUBE_CORAL_BLOCK.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.OAK_LEAVES) || state.isOf(Blocks.SPRUCE_LEAVES) ||
+                            state.isOf(Blocks.BIRCH_LEAVES) || state.isOf(Blocks.JUNGLE_LEAVES) ||
+                            state.isOf(Blocks.ACACIA_LEAVES) || state.isOf(Blocks.DARK_OAK_LEAVES) ||
+                            state.isOf(Blocks.MANGROVE_LEAVES) || state.isOf(Blocks.CHERRY_LEAVES) ||
+                            state.isOf(Blocks.AZALEA_LEAVES) || state.isOf(Blocks.FLOWERING_AZALEA_LEAVES)) {
+                        world.setBlockState(pos, Blocks.PALE_OAK_LEAVES.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.DANDELION) || state.isOf(Blocks.POPPY) ||
+                            state.isOf(Blocks.BLUE_ORCHID) || state.isOf(Blocks.ALLIUM) ||
+                            state.isOf(Blocks.AZURE_BLUET) || state.isOf(Blocks.RED_TULIP) ||
+                            state.isOf(Blocks.ORANGE_TULIP) || state.isOf(Blocks.WHITE_TULIP) ||
+                            state.isOf(Blocks.PINK_TULIP) || state.isOf(Blocks.OXEYE_DAISY) ||
+                            state.isOf(Blocks.CORNFLOWER) || state.isOf(Blocks.LILY_OF_THE_VALLEY) ||
+                            state.isOf(Blocks.WITHER_ROSE) || state.isOf(Blocks.SUNFLOWER) ||
+                            state.isOf(Blocks.LILAC) || state.isOf(Blocks.ROSE_BUSH) ||
+                            state.isOf(Blocks.PEONY) || state.isOf(Blocks.TALL_GRASS) ||
+                            state.isOf(Blocks.LARGE_FERN) || state.isOf(Blocks.SHORT_GRASS) ||
+                            state.isOf(Blocks.FERN) || state.isOf(Blocks.DEAD_BUSH) ||
+                            state.isOf(Blocks.TORCHFLOWER) || state.isOf(Blocks.PITCHER_PLANT)) {
+                        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+
+                    if (state.isOf(Blocks.OAK_LOG) || state.isOf(Blocks.SPRUCE_LOG) ||
+                            state.isOf(Blocks.BIRCH_LOG) || state.isOf(Blocks.JUNGLE_LOG) ||
+                            state.isOf(Blocks.ACACIA_LOG) || state.isOf(Blocks.DARK_OAK_LOG) ||
+                            state.isOf(Blocks.MANGROVE_LOG) || state.isOf(Blocks.CHERRY_LOG) ||
+                            state.isOf(Blocks.OAK_WOOD) || state.isOf(Blocks.SPRUCE_WOOD) ||
+                            state.isOf(Blocks.BIRCH_WOOD) || state.isOf(Blocks.JUNGLE_WOOD) ||
+                            state.isOf(Blocks.ACACIA_WOOD) || state.isOf(Blocks.DARK_OAK_WOOD) ||
+                            state.isOf(Blocks.MANGROVE_WOOD) || state.isOf(Blocks.CHERRY_WOOD) ||
+                            state.isOf(Blocks.STRIPPED_OAK_LOG) || state.isOf(Blocks.STRIPPED_SPRUCE_LOG) ||
+                            state.isOf(Blocks.STRIPPED_BIRCH_LOG) || state.isOf(Blocks.STRIPPED_JUNGLE_LOG) ||
+                            state.isOf(Blocks.STRIPPED_ACACIA_LOG) || state.isOf(Blocks.STRIPPED_DARK_OAK_LOG) ||
+                            state.isOf(Blocks.STRIPPED_MANGROVE_LOG) || state.isOf(Blocks.STRIPPED_CHERRY_LOG)) {
+                        world.setBlockState(pos, Blocks.PALE_OAK_LOG.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
                     }
                 }
             }
