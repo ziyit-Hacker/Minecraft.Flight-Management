@@ -10,6 +10,8 @@ import io.minecraft.flyconfig.sound.ModSoundEvents;
 import io.minecraft.flyconfig.util.ModCustomTrades;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.loader.api.FabricLoader;
@@ -21,6 +23,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,6 +53,12 @@ public class FlightManagement implements ModInitializer {
 
 		ModEntities.register();
 		FabricDefaultAttributeRegistry.register(ModEntities.NUCLEAR, NuclearEntity.createNuclearAttributes());
+
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInOverworld(),
+				GenerationStep.Feature.UNDERGROUND_ORES,
+				RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("flyconfig", "ore_uranium"))
+		);
 
 		LOGGER.info("[" + MOD_ID + "] Item registration completed");
 	}
