@@ -11,30 +11,54 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
-import java.util.function.Function;
-
 public class ModBlocks {
 
     public static final Block URANIUM_ORE;
     public static final Block DEEPSLATE_URANIUM_ORE;
+    public static final Block RADIATED_URANIUM_ORE;
+    public static final Block RADIATED_DEEPSLATE_URANIUM_ORE;
 
     static {
         URANIUM_ORE = register("uranium_ore",
-                UraniumOreBlock::new,
-                Block.Settings.create().strength(40.0f, 6.0f).requiresTool());
+                new UraniumOreBlock(Block.Settings.create()
+                        .strength(40.0f, 6.0f)
+                        .requiresTool()
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "uranium_ore")))));
+
         DEEPSLATE_URANIUM_ORE = register("deepslate_uranium_ore",
-                UraniumOreBlock::new,
-                Block.Settings.create().strength(45.0f, 6.0f).requiresTool());
+                new UraniumOreBlock(Block.Settings.create()
+                        .strength(45.0f, 6.0f)
+                        .requiresTool()
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "deepslate_uranium_ore")))));
+
+        RADIATED_URANIUM_ORE = registerNoItem("radiated_uranium_ore",
+                new UraniumOreBlock(Block.Settings.create()
+                        .strength(40.0f, 6.0f)
+                        .requiresTool()
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "radiated_uranium_ore")))));
+
+        RADIATED_DEEPSLATE_URANIUM_ORE = registerNoItem("radiated_deepslate_uranium_ore",
+                new UraniumOreBlock(Block.Settings.create()
+                        .strength(45.0f, 6.0f)
+                        .requiresTool()
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "radiated_deepslate_uranium_ore")))));
     }
 
-    private static Block register(String path, Function<Block.Settings, Block> factory, Block.Settings settings) {
-        Identifier id = Identifier.of("flyconfig", path);
+    private static Block register(String path, Block block) {
+        Identifier id = Identifier.of(FlightManagement.MOD_ID, path);
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
-        Block block = Blocks.register(key, factory, settings);
-        Registry.register(Registries.ITEM, id, new BlockItem(block, new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, id))));
-        return block;
+        Block registered = Registry.register(Registries.BLOCK, key, block);
+        Registry.register(Registries.ITEM, id, new BlockItem(registered, new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, id))));
+        return registered;
+    }
+
+    private static Block registerNoItem(String path, Block block) {
+        Identifier id = Identifier.of(FlightManagement.MOD_ID, path);
+        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
+        return Registry.register(Registries.BLOCK, key, block);
     }
 
     public static void initialize() {
+        FlightManagement.LOGGER.info("[" + FlightManagement.MOD_ID + "] Blocks registered");
     }
 }

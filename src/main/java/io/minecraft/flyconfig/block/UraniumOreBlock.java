@@ -16,6 +16,9 @@ import java.util.List;
 
 public class UraniumOreBlock extends Block {
 
+    private static final int RADIUS = 5;
+    private static final int DURATION = 200;
+
     public UraniumOreBlock(Block.Settings settings) {
         super(settings);
     }
@@ -25,6 +28,7 @@ public class UraniumOreBlock extends Block {
         super.onBlockAdded(state, world, pos, oldState, notify);
         if (!world.isClient) {
             applyEffectsToNearbyPlayers((ServerWorld) world, pos);
+            world.scheduleBlockTick(pos, this, 20);
         }
     }
 
@@ -36,13 +40,13 @@ public class UraniumOreBlock extends Block {
     }
 
     private void applyEffectsToNearbyPlayers(ServerWorld world, BlockPos pos) {
-        int radius = 5;
-        Box box = new Box(pos).expand(radius);
+        Box box = new Box(pos).expand(RADIUS);
         List<PlayerEntity> players = world.getEntitiesByClass(PlayerEntity.class, box, Entity::isAlive);
 
         for (PlayerEntity player : players) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 100, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, DURATION, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, DURATION, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, DURATION, 0));
         }
     }
 
@@ -50,8 +54,9 @@ public class UraniumOreBlock extends Block {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
         super.onEntityCollision(state, world, pos, entity, handler);
         if (!world.isClient && entity instanceof PlayerEntity player) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 100, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, DURATION, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, DURATION, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, DURATION, 0));
         }
     }
 
@@ -59,8 +64,9 @@ public class UraniumOreBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         super.onSteppedOn(world, pos, state, entity);
         if (!world.isClient && entity instanceof PlayerEntity player) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 100, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, DURATION, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, DURATION, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, DURATION, 0));
         }
     }
 }

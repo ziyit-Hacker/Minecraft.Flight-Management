@@ -1,5 +1,7 @@
 package io.minecraft.flyconfig.entity.custom;
 
+import io.minecraft.flyconfig.FlightManagement;
+import io.minecraft.flyconfig.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -13,6 +15,7 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -39,10 +42,10 @@ public class NuclearEntity extends PassiveEntity {
 
     private int lastFuseTime;
     private int currentFuseTime;
-    private int fuseTime = 700;
-    private int destroyRadius = 128;
-    private int damageRadius = 256;
-    private int warningRadius = 175;
+    private int fuseTime = 300;
+    private int destroyRadius = 75;
+    private int damageRadius = 150;
+    private int warningRadius = 100;
     private boolean exploded = false;
     private int blocksDestroyed = 0;
     private List<BlockPos> pendingBlocks = new ArrayList<>();
@@ -342,7 +345,7 @@ public class NuclearEntity extends PassiveEntity {
     private void startExplosion() {
         if (this.getWorld() instanceof ServerWorld serverWorld && !this.exploded) {
             this.exploded = true;
-            this.dead = true;
+
             Vec3d center = this.getPos();
             BlockPos centerPos = BlockPos.ofFloored(center);
 
@@ -435,64 +438,91 @@ public class NuclearEntity extends PassiveEntity {
 
         ServerWorld serverWorld = (ServerWorld) this.getWorld();
 
-        int batchSize = Math.min(15000, this.pendingBlocks.size());
-        int processed = 0;
-
-        while (processed < batchSize && !this.pendingBlocks.isEmpty()) {
+        while (!this.pendingBlocks.isEmpty()) {
             BlockPos pos = this.pendingBlocks.removeFirst();
             BlockState state = serverWorld.getBlockState(pos);
             if (!state.isAir() && !isIndestructibleBlock(state)) {
                 serverWorld.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
                 this.blocksDestroyed++;
             }
-            processed++;
         }
 
-        if (this.pendingBlocks.isEmpty()) {
-            this.destroying = false;
-            this.placeFire(serverWorld);
-            this.onRemoval(serverWorld, net.minecraft.entity.Entity.RemovalReason.KILLED);
-            this.discard();
-        }
+        FlightManagement.LOGGER.info("Nuclear explosion completed, destroyed {} blocks", this.blocksDestroyed);
+        this.destroying = false;
+        this.placeFire(serverWorld);
+        this.onRemoval(serverWorld, net.minecraft.entity.Entity.RemovalReason.KILLED);
+        this.discard();
     }
 
     private void placeFire(ServerWorld world) {
         Vec3d center = this.getPos();
         BlockPos centerPos = BlockPos.ofFloored(center);
-        int fireRadius = 315;
-        int clearRadius = 500;
+        int radius = 150;
+        int radiusSq = radius * radius;
 
-        for (int dx = -fireRadius; dx <= fireRadius; dx++) {
-            for (int dy = -fireRadius; dy <= fireRadius; dy++) {
-                for (int dz = -fireRadius; dz <= fireRadius; dz++) {
+        for (int dx = -radius; dx <= radius; dx++) {
+            for (int dy = -radius; dy <= radius; dy++) {
+                for (int dz = -radius; dz <= radius; dz++) {
                     int distSq = dx * dx + dy * dy + dz * dz;
-                    if (distSq > fireRadius * fireRadius) continue;
+                    if (distSq > radiusSq) continue;
 
                     BlockPos pos = centerPos.add(dx, dy, dz);
                     BlockState state = world.getBlockState(pos);
 
-                    if (!state.isAir()) continue;
+                    if (state.isOf(Blocks.DIAMOND_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.DEEPSLATE_DIAMOND_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.IRON_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.DEEPSLATE_IRON_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.GOLD_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.DEEPSLATE_GOLD_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.COPPER_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.DEEPSLATE_COPPER_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.EMERALD_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.DEEPSLATE_EMERALD_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.COAL_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.DEEPSLATE_COAL_ORE)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
+                    if (state.isOf(Blocks.ANCIENT_DEBRIS)) {
+                        world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                        continue;
+                    }
 
-                    BlockPos below = pos.down();
-                    if (world.getBlockState(below).isAir()) continue;
-
-                    world.setBlockState(pos, Blocks.FIRE.getDefaultState(), Block.NOTIFY_LISTENERS);
-                }
-            }
-        }
-
-        for (int dx = -clearRadius; dx <= clearRadius; dx++) {
-            for (int dy = -clearRadius; dy <= clearRadius; dy++) {
-                for (int dz = -clearRadius; dz <= clearRadius; dz++) {
-                    int distSq = dx * dx + dy * dy + dz * dz;
-                    if (distSq > clearRadius * clearRadius) continue;
-
-                    BlockPos pos = centerPos.add(dx, dy, dz);
-                    BlockState state = world.getBlockState(pos);
-
-                    if (state.getFluidState().isStill() &&
-                            (state.getFluidState().isIn(net.minecraft.registry.tag.FluidTags.WATER) ||
-                                    state.getFluidState().isIn(net.minecraft.registry.tag.FluidTags.LAVA))) {
+                    if (state.getFluidState().isIn(FluidTags.WATER) || state.getFluidState().isIn(FluidTags.LAVA)) {
                         world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
                         continue;
                     }
@@ -583,6 +613,29 @@ public class NuclearEntity extends PassiveEntity {
                         world.setBlockState(pos, Blocks.PALE_OAK_LOG.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
                         continue;
                     }
+
+                    if (!state.isAir()) {
+                        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                    }
+                }
+            }
+        }
+
+        for (int dx = -radius; dx <= radius; dx++) {
+            for (int dy = -radius; dy <= radius; dy++) {
+                for (int dz = -radius; dz <= radius; dz++) {
+                    int distSq = dx * dx + dy * dy + dz * dz;
+                    if (distSq > radiusSq) continue;
+
+                    BlockPos pos = centerPos.add(dx, dy, dz);
+                    BlockState state = world.getBlockState(pos);
+
+                    if (!state.isAir()) continue;
+
+                    BlockPos below = pos.down();
+                    if (world.getBlockState(below).isAir()) continue;
+
+                    world.setBlockState(pos, Blocks.FIRE.getDefaultState(), Block.NOTIFY_LISTENERS);
                 }
             }
         }
