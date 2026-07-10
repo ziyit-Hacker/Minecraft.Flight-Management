@@ -23,29 +23,29 @@ public class ModBlocks {
                 new UraniumOreBlock(Block.Settings.create()
                         .strength(40.0f, 6.0f)
                         .requiresTool()
-                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "uranium_ore")))));
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "uranium_ore")))));
 
         DEEPSLATE_URANIUM_ORE = register("deepslate_uranium_ore",
                 new UraniumOreBlock(Block.Settings.create()
                         .strength(45.0f, 6.0f)
                         .requiresTool()
-                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "deepslate_uranium_ore")))));
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "deepslate_uranium_ore")))));
 
         RADIATED_URANIUM_ORE = registerNoItem("radiated_uranium_ore",
                 new UraniumOreBlock(Block.Settings.create()
                         .strength(40.0f, 6.0f)
                         .requiresTool()
-                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "radiated_uranium_ore")))));
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "radiated_uranium_ore")))));
 
         RADIATED_DEEPSLATE_URANIUM_ORE = registerNoItem("radiated_deepslate_uranium_ore",
                 new UraniumOreBlock(Block.Settings.create()
                         .strength(45.0f, 6.0f)
                         .requiresTool()
-                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FlightManagement.MOD_ID, "radiated_deepslate_uranium_ore")))));
+                        .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "radiated_deepslate_uranium_ore")))));
     }
 
     private static Block register(String path, Block block) {
-        Identifier id = Identifier.of(FlightManagement.MOD_ID, path);
+        Identifier id = Identifier.of("flyconfig", path);
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
         Block registered = Registry.register(Registries.BLOCK, key, block);
         Registry.register(Registries.ITEM, id, new BlockItem(registered, new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, id))));
@@ -53,7 +53,7 @@ public class ModBlocks {
     }
 
     private static Block registerNoItem(String path, Block block) {
-        Identifier id = Identifier.of(FlightManagement.MOD_ID, path);
+        Identifier id = Identifier.of("flyconfig", path);
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
         return Registry.register(Registries.BLOCK, key, block);
     }

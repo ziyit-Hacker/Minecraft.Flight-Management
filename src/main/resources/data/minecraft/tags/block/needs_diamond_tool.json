@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "flyconfig:uranium_ore",
-    "flyconfig:deepslate_uranium_ore"
+    "flyconfig:deepslate_uranium_ore",
+    "flyconfig:radiated_uranium_ore",
+    "flyconfig:radiated_deepslate_uranium_ore"
   ]
 }
