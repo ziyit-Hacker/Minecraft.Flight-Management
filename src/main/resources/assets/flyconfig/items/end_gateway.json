@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "flyconfig:item/end_gateway"
+  }
+}
