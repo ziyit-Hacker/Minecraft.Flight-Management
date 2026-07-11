@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "pumpkin stem 1",
+    "ingredients": [
+        "flyconfig:flight_manager",
+        "flyconfig:germany_developed"
+    ],
+    "result": {
+        "id": "flyconfig:pumpkin_stem_1",
+        "count": 5
+    },
+    "show_notification": true
+}

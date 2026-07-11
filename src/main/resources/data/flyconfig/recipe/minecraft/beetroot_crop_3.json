@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "beetroot crop 3",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "flyconfig:ultimate_healthy_nightmare"
+    ],
+    "result": {
+        "id": "flyconfig:beetroot_crop_3",
+        "count": 3
+    },
+    "show_notification": true
+}

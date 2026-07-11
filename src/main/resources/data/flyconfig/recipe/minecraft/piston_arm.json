@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "piston arm",
+    "ingredients": [
+        "flyconfig:what_the_dog_doing",
+        "flyconfig:music_disc_sieg_heil"
+    ],
+    "result": {
+        "id": "flyconfig:piston_arm",
+        "count": 2
+    },
+    "show_notification": true
+}

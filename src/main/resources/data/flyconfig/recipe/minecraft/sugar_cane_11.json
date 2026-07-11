@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "sugar cane 11",
+    "ingredients": [
+        "flyconfig:nuclear_disarm_tool",
+        "flyconfig:uranium_ingot"
+    ],
+    "result": {
+        "id": "flyconfig:sugar_cane_11",
+        "count": 2
+    },
+    "show_notification": true
+}

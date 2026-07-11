@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "six sided piston",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "flyconfig:ultimate_healthy_nightmare"
+    ],
+    "result": {
+        "id": "flyconfig:six_sided_piston",
+        "count": 5
+    },
+    "show_notification": true
+}

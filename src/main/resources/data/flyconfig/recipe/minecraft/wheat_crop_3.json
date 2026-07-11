@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "wheat crop 3",
+    "ingredients": [
+        "flyconfig:synthetic_motoroil",
+        "flyconfig:flight_manager"
+    ],
+    "result": {
+        "id": "flyconfig:wheat_crop_3",
+        "count": 5
+    },
+    "show_notification": true
+}

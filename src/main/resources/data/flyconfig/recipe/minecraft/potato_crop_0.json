@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "potato crop 0",
+    "ingredients": [
+        "flyconfig:germany_developed",
+        "flyconfig:ultimate_healthy_nightmare"
+    ],
+    "result": {
+        "id": "flyconfig:potato_crop_0",
+        "count": 1
+    },
+    "show_notification": true
+}

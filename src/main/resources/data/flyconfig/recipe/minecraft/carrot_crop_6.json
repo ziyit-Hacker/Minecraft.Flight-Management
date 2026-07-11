@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "carrot crop 6",
+    "ingredients": [
+        "flyconfig:synthetic_motoroil",
+        "flyconfig:flight_manager"
+    ],
+    "result": {
+        "id": "flyconfig:carrot_crop_6",
+        "count": 5
+    },
+    "show_notification": true
+}

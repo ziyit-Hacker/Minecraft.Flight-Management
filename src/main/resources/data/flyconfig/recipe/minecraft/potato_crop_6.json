@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "potato crop 6",
+    "ingredients": [
+        "flyconfig:nuclear_disarm_tool",
+        "flyconfig:uranium_ingot"
+    ],
+    "result": {
+        "id": "flyconfig:potato_crop_6",
+        "count": 4
+    },
+    "show_notification": true
+}

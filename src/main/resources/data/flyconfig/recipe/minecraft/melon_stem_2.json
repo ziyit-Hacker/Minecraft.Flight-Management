@@ -1,0 +1,14 @@
+{
+    "type": "crafting_shapeless",
+    "category": "miscellaneous",
+    "group": "melon stem 2",
+    "ingredients": [
+        "flyconfig:music_disc_sieg_heil",
+        "flyconfig:music_disc_hitler"
+    ],
+    "result": {
+        "id": "flyconfig:melon_stem_2",
+        "count": 4
+    },
+    "show_notification": true
+}
