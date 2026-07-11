@@ -20,25 +20,29 @@ public class ModBlocks {
 
     static {
         URANIUM_ORE = register("uranium_ore",
-                new UraniumOreBlock(Block.Settings.create()
+                new UraniumOreBlock(Block.Settings.copy(Blocks.SEA_LANTERN)
+                        .luminance(state -> 7)
                         .strength(40.0f, 6.0f)
                         .requiresTool()
                         .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "uranium_ore")))));
 
         DEEPSLATE_URANIUM_ORE = register("deepslate_uranium_ore",
-                new UraniumOreBlock(Block.Settings.create()
+                new UraniumOreBlock(Block.Settings.copy(Blocks.SEA_LANTERN)
+                        .luminance(state -> 7)
                         .strength(45.0f, 6.0f)
                         .requiresTool()
                         .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "deepslate_uranium_ore")))));
 
         RADIATED_URANIUM_ORE = registerNoItem("radiated_uranium_ore",
-                new UraniumOreBlock(Block.Settings.create()
+                new FakeUraniumOreBlock(Block.Settings.copy(Blocks.SEA_LANTERN)
+                        .luminance(state -> 7)
                         .strength(40.0f, 6.0f)
                         .requiresTool()
                         .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "radiated_uranium_ore")))));
 
         RADIATED_DEEPSLATE_URANIUM_ORE = registerNoItem("radiated_deepslate_uranium_ore",
-                new UraniumOreBlock(Block.Settings.create()
+                new FakeUraniumOreBlock(Block.Settings.copy(Blocks.SEA_LANTERN)
+                        .luminance(state -> 7)
                         .strength(45.0f, 6.0f)
                         .requiresTool()
                         .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("flyconfig", "radiated_deepslate_uranium_ore")))));

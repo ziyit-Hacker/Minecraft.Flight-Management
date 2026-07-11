@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:ultimate_healthy_nightmare"
+    },
+    "title": {
+      "text": "健康饮食"
+    },
+    "description": {
+      "text": "食用西蓝花炒青花菜拌羽衣甘蓝 Kale拌苦瓜炒芹菜炖蓝纹奶酪海藻海带蒸奇亚籽汤"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/craft_germany_developed",
+  "criteria": {
+    "eat_healthy": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "flyconfig:ultimate_healthy_nightmare"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}

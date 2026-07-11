@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "flyconfig:cottage_old",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 45099801,
+    "spacing": 128,
+    "separation": 64
+  }
+}

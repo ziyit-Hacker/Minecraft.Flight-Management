@@ -2,6 +2,7 @@ package io.minecraft.flyconfig.entity.custom;
 
 import io.minecraft.flyconfig.FlightManagement;
 import io.minecraft.flyconfig.block.ModBlocks;
+import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -15,6 +16,7 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -30,6 +32,7 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.dimension.DimensionTypes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +49,7 @@ public class NuclearEntity extends PassiveEntity {
     private int destroyRadius = 75;
     private int damageRadius = 150;
     private int warningRadius = 100;
+    private int soundRadius = 200;
     private boolean exploded = false;
     private int blocksDestroyed = 0;
     private List<BlockPos> pendingBlocks = new ArrayList<>();
@@ -53,8 +57,11 @@ public class NuclearEntity extends PassiveEntity {
     private int stageTimer = 0;
     private boolean destroying = false;
     private boolean damageApplied = false;
+    private boolean dragonChecked = false;
 
     private static final Identifier NUCLEAR_SOUND_ID = Identifier.of("flyconfig", "nuclear");
+    private static final Identifier IGNITE_ADVANCEMENT_ID = Identifier.of("flyconfig", "husbandry/ignite_nuclear");
+    private static final Identifier KILL_DRAGON_ADVANCEMENT_ID = Identifier.of("flyconfig", "husbandry/kill_ender_dragon_with_nuclear");
 
     public NuclearEntity(EntityType<? extends PassiveEntity> entityType, World world) {
         super(entityType, world);
@@ -152,9 +159,14 @@ public class NuclearEntity extends PassiveEntity {
         List<ServerPlayerEntity> players = serverWorld.getPlayers();
         Vec3d pos = this.getPos();
 
+        int warningRange = this.warningRadius;
+        if (isInWater(serverWorld, pos)) {
+            warningRange = (int)(warningRange * 0.75);
+        }
+
         for (ServerPlayerEntity player : players) {
             double distance = player.getPos().distanceTo(pos);
-            if (distance <= this.warningRadius) {
+            if (distance <= warningRange) {
                 player.sendMessage(Text.translatable(key, args), false);
             }
         }
@@ -165,11 +177,18 @@ public class NuclearEntity extends PassiveEntity {
         ServerWorld serverWorld = (ServerWorld) this.getWorld();
         Vec3d pos = this.getPos();
 
+        int soundRange = this.soundRadius;
+        if (isInWater(serverWorld, pos)) {
+            soundRange = (int)(soundRange * 1.35);
+        }
+
+        final int finalSoundRange = soundRange;
+        final SoundEvent soundEvent = SoundEvent.of(NUCLEAR_SOUND_ID);
+
         serverWorld.getPlayers().forEach(player -> {
             double distance = player.getPos().distanceTo(pos);
-            if (distance <= 200.0D) {
-                float volume = (float) (1.0D - distance / 200.0D);
-                SoundEvent soundEvent = SoundEvent.of(NUCLEAR_SOUND_ID);
+            if (distance <= finalSoundRange) {
+                float volume = (float) (1.0D - distance / finalSoundRange);
                 player.playSoundToPlayer(soundEvent, net.minecraft.sound.SoundCategory.MASTER, volume, 1.0F);
             }
         });
@@ -179,6 +198,12 @@ public class NuclearEntity extends PassiveEntity {
         BlockState state = world.getBlockState(pos);
         if (state.isAir()) return false;
         return state.isFullCube(world, pos);
+    }
+
+    private boolean isInWater(ServerWorld world, Vec3d center) {
+        BlockPos pos = BlockPos.ofFloored(center);
+        BlockState state = world.getBlockState(pos);
+        return state.getFluidState().isIn(FluidTags.WATER);
     }
 
     private void applyWitherEffectToNearbyPlayers(ServerWorld world, Vec3d center) {
@@ -345,11 +370,15 @@ public class NuclearEntity extends PassiveEntity {
     private void startExplosion() {
         if (this.getWorld() instanceof ServerWorld serverWorld && !this.exploded) {
             this.exploded = true;
-
             Vec3d center = this.getPos();
             BlockPos centerPos = BlockPos.ofFloored(center);
 
+            boolean underwater = isInWater(serverWorld, center);
+
             int radius = this.destroyRadius;
+            if (underwater) {
+                radius = (int)(radius * 1.15);
+            }
             int radiusSq = radius * radius;
 
             this.pendingBlocks.clear();
@@ -369,6 +398,7 @@ public class NuclearEntity extends PassiveEntity {
 
                         if (isIndestructibleBlock(state)) continue;
                         if (state.isAir()) continue;
+                        if (underwater && state.getFluidState().isIn(FluidTags.WATER)) continue;
 
                         Vec3d direction = new Vec3d(dx, dy, dz).normalize();
                         double distance = Math.sqrt(distSq);
@@ -393,16 +423,21 @@ public class NuclearEntity extends PassiveEntity {
             }
 
             if (!this.damageApplied) {
-                this.applyDamage(serverWorld, center);
+                this.applyDamage(serverWorld, center, underwater);
                 this.damageApplied = true;
             }
         }
     }
 
-    private void applyDamage(ServerWorld serverWorld, Vec3d center) {
+    private void applyDamage(ServerWorld serverWorld, Vec3d center, boolean underwater) {
+        int maxRadius = this.damageRadius;
+        if (underwater) {
+            maxRadius = (int)(maxRadius * 1.15);
+        }
+        maxRadius += 50;
         Box damageBox = new Box(
-                center.x - this.damageRadius, center.y - this.damageRadius, center.z - this.damageRadius,
-                center.x + this.damageRadius, center.y + this.damageRadius, center.z + this.damageRadius
+                center.x - maxRadius, center.y - maxRadius, center.z - maxRadius,
+                center.x + maxRadius, center.y + maxRadius, center.z + maxRadius
         );
 
         List<net.minecraft.entity.LivingEntity> entities = serverWorld.getEntitiesByClass(
@@ -410,25 +445,41 @@ public class NuclearEntity extends PassiveEntity {
 
         for (net.minecraft.entity.LivingEntity entity : entities) {
             double distance = entity.getPos().distanceTo(center);
-            if (distance <= this.damageRadius) {
-                Vec3d toEntity = entity.getPos().subtract(center);
-                boolean blocked = false;
-                for (double step = 0.5; step < distance; step += 0.5) {
-                    Vec3d checkPos = center.add(toEntity.normalize().multiply(step));
-                    BlockPos checkBlock = BlockPos.ofFloored(checkPos);
-                    if (checkBlock.equals(BlockPos.ofFloored(entity.getPos()))) break;
-                    BlockState checkState = serverWorld.getBlockState(checkBlock);
-                    if (isBlockingBlock(checkState)) {
-                        blocked = true;
-                        break;
-                    }
-                }
+            if (distance > maxRadius) continue;
 
-                if (!blocked) {
-                    float damage = 1500.0F;
-                    entity.damage(serverWorld, serverWorld.getDamageSources().explosion(this, null), damage);
+            Vec3d toEntity = entity.getPos().subtract(center);
+            boolean blocked = false;
+            for (double step = 0.5; step < distance; step += 0.5) {
+                Vec3d checkPos = center.add(toEntity.normalize().multiply(step));
+                BlockPos checkBlock = BlockPos.ofFloored(checkPos);
+                if (checkBlock.equals(BlockPos.ofFloored(entity.getPos()))) break;
+                BlockState checkState = serverWorld.getBlockState(checkBlock);
+                if (isBlockingBlock(checkState)) {
+                    blocked = true;
+                    break;
                 }
             }
+
+            if (blocked) continue;
+
+            float damageRadius = this.damageRadius;
+            if (underwater) {
+                damageRadius *= 1.15F;
+            }
+
+            float damage;
+            if (distance <= 10.0) {
+                damage = 500.0F;
+            } else if (distance <= damageRadius) {
+                float t = (float)((distance - 10.0) / (damageRadius - 10.0));
+                damage = 500.0F * (1.0F - t);
+            } else {
+                float t = (float)((distance - damageRadius) / 50.0);
+                damage = 25.0F * (1.0F - t);
+            }
+
+            damage = Math.max(damage, 0.0F);
+            entity.damage(serverWorld, serverWorld.getDamageSources().explosion(this, null), damage);
         }
     }
 
@@ -449,12 +500,50 @@ public class NuclearEntity extends PassiveEntity {
 
         FlightManagement.LOGGER.info("Nuclear explosion completed, destroyed {} blocks", this.blocksDestroyed);
         this.destroying = false;
-        this.placeFire(serverWorld);
+        boolean underwater = isInWater(serverWorld, this.getPos());
+        this.placeFire(serverWorld, underwater);
         this.onRemoval(serverWorld, net.minecraft.entity.Entity.RemovalReason.KILLED);
         this.discard();
+
+        checkEnderDragon(serverWorld);
     }
 
-    private void placeFire(ServerWorld world) {
+    private void checkEnderDragon(ServerWorld world) {
+        if (this.getWorld().isClient) return;
+        if (dragonChecked) return;
+
+        if (!world.getRegistryKey().equals(net.minecraft.world.World.END)) {
+            return;
+        }
+
+        List<net.minecraft.entity.boss.dragon.EnderDragonEntity> dragons = world.getEntitiesByClass(
+                net.minecraft.entity.boss.dragon.EnderDragonEntity.class,
+                new Box(-200, -50, -200, 200, 100, 200),
+                dragon -> dragon.isAlive()
+        );
+
+        if (dragons.isEmpty()) {
+            grantDragonAdvancement(world);
+        }
+    }
+
+    private void grantDragonAdvancement(ServerWorld world) {
+        AdvancementEntry advancement = world.getServer().getAdvancementLoader().get(KILL_DRAGON_ADVANCEMENT_ID);
+        if (advancement != null) {
+            world.getPlayers().forEach(player -> {
+                if (player instanceof ServerPlayerEntity serverPlayer) {
+                    if (!serverPlayer.getAdvancementTracker().getProgress(advancement).isDone()) {
+                        serverPlayer.getAdvancementTracker().grantCriterion(advancement, "kill_ender_dragon_with_nuclear");
+                        serverPlayer.sendMessage(Text.translatable("advancement.flyconfig.kill_ender_dragon_with_nuclear.complete"), false);
+                    }
+                }
+            });
+        }
+    }
+
+    private void placeFire(ServerWorld world, boolean underwater) {
+        if (underwater) return;
+
         Vec3d center = this.getPos();
         BlockPos centerPos = BlockPos.ofFloored(center);
         int radius = 150;
@@ -468,6 +557,8 @@ public class NuclearEntity extends PassiveEntity {
 
                     BlockPos pos = centerPos.add(dx, dy, dz);
                     BlockState state = world.getBlockState(pos);
+
+                    if (isBlockingBlock(state)) continue;
 
                     if (state.isOf(Blocks.DIAMOND_ORE)) {
                         world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
@@ -519,19 +610,6 @@ public class NuclearEntity extends PassiveEntity {
                     }
                     if (state.isOf(Blocks.ANCIENT_DEBRIS)) {
                         world.setBlockState(pos, ModBlocks.RADIATED_DEEPSLATE_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
-                        continue;
-                    }
-
-                    if (state.getFluidState().isIn(FluidTags.WATER) || state.getFluidState().isIn(FluidTags.LAVA)) {
-                        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
-                        continue;
-                    }
-
-                    if (state.isOf(Blocks.WATER) || state.isOf(Blocks.LAVA) ||
-                            state.isOf(Blocks.BUBBLE_COLUMN) || state.isOf(Blocks.KELP) ||
-                            state.isOf(Blocks.KELP_PLANT) || state.isOf(Blocks.SEAGRASS) ||
-                            state.isOf(Blocks.TALL_SEAGRASS)) {
-                        world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
                         continue;
                     }
 
@@ -614,7 +692,7 @@ public class NuclearEntity extends PassiveEntity {
                         continue;
                     }
 
-                    if (!state.isAir()) {
+                    if (!state.isAir() && !isBlockingBlock(state)) {
                         world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
                     }
                 }
@@ -635,7 +713,9 @@ public class NuclearEntity extends PassiveEntity {
                     BlockPos below = pos.down();
                     if (world.getBlockState(below).isAir()) continue;
 
-                    world.setBlockState(pos, Blocks.FIRE.getDefaultState(), Block.NOTIFY_LISTENERS);
+                    if (!isBlockingBlock(world.getBlockState(below))) {
+                        world.setBlockState(pos, Blocks.FIRE.getDefaultState(), Block.NOTIFY_LISTENERS);
+                    }
                 }
             }
         }
@@ -647,6 +727,23 @@ public class NuclearEntity extends PassiveEntity {
 
     public void ignite() {
         this.dataTracker.set(IGNITED, true);
+        grantIgniteAdvancement();
+    }
+
+    private void grantIgniteAdvancement() {
+        if (this.getWorld().isClient) return;
+        if (this.getWorld() instanceof ServerWorld serverWorld) {
+            AdvancementEntry advancement = serverWorld.getServer().getAdvancementLoader().get(IGNITE_ADVANCEMENT_ID);
+            if (advancement != null) {
+                serverWorld.getPlayers().forEach(player -> {
+                    if (player instanceof ServerPlayerEntity serverPlayer) {
+                        if (!serverPlayer.getAdvancementTracker().getProgress(advancement).isDone()) {
+                            serverPlayer.getAdvancementTracker().grantCriterion(advancement, "ignite_nuclear");
+                        }
+                    }
+                });
+            }
+        }
     }
 
     public void setIgnited(boolean ignited) {

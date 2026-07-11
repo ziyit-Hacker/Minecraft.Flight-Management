@@ -6,11 +6,7 @@
 		"FuelRegistryMixin",
 		"ArrowEntityMixin",
 		"DeathMessageMixin",
-		"SkeletonEntityMixin",
-		"PlayerEntityMixin",
-		"SkeletonTargetMixin",
-		"SkeletonAttackDelayMixin",
-		"AbstractSkeletonEntityAccessor"
+		"PlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

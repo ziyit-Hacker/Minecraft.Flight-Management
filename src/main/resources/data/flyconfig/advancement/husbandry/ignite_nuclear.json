@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:nuclear_spawn_egg"
+    },
+    "title": {
+      "text": "核爆"
+    },
+    "description": {
+      "text": "点燃一颗核弹"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/get_nuclear",
+  "criteria": {
+    "ignite_nuclear": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}

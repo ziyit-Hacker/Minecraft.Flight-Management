@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:flight_manager"
+    },
+    "title": {
+      "text": "飞行管理"
+    },
+    "description": {
+      "text": "飞行管理模组"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "flyconfig:advancement/nuclear"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

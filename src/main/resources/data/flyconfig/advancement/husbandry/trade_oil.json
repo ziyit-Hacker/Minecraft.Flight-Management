@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:synthetic_motoroil"
+    },
+    "title": {
+      "text": "这就是机油吗？"
+    },
+    "description": {
+      "text": "通过村民交易获得一个合成机油"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/get_metal_scrap",
+  "criteria": {
+    "trade_oil": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "items": "flyconfig:synthetic_motoroil"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}

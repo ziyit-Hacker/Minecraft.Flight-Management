@@ -8,6 +8,7 @@ import net.minecraft.entity.EntityCollisionHandler;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
@@ -17,13 +18,13 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class UraniumOreBlock extends Block {
+public class FakeUraniumOreBlock extends Block {
 
-    private static final int RADIUS = 10;
+    private static final int RADIUS = 5;
     private static final int DURATION = 200;
-    private static final Identifier ADVANCEMENT_ID = Identifier.of("flyconfig", "husbandry/near_uranium");
+    private static final Identifier ADVANCEMENT_ID = Identifier.of("flyconfig", "husbandry/near_fake_uranium");
 
-    public UraniumOreBlock(Block.Settings settings) {
+    public FakeUraniumOreBlock(Settings settings) {
         super(settings);
     }
 
@@ -55,7 +56,7 @@ public class UraniumOreBlock extends Block {
             if (player instanceof ServerPlayerEntity serverPlayer) {
                 AdvancementEntry advancement = world.getServer().getAdvancementLoader().get(ADVANCEMENT_ID);
                 if (advancement != null) {
-                    serverPlayer.getAdvancementTracker().grantCriterion(advancement, "near_uranium");
+                    serverPlayer.getAdvancementTracker().grantCriterion(advancement, "near_fake_uranium");
                 }
             }
         }
@@ -72,7 +73,7 @@ public class UraniumOreBlock extends Block {
             if (player instanceof ServerPlayerEntity serverPlayer) {
                 AdvancementEntry advancement = world.getServer().getAdvancementLoader().get(ADVANCEMENT_ID);
                 if (advancement != null) {
-                    serverPlayer.getAdvancementTracker().grantCriterion(advancement, "near_uranium");
+                    serverPlayer.getAdvancementTracker().grantCriterion(advancement, "near_fake_uranium");
                 }
             }
         }
@@ -89,7 +90,7 @@ public class UraniumOreBlock extends Block {
             if (player instanceof ServerPlayerEntity serverPlayer) {
                 AdvancementEntry advancement = world.getServer().getAdvancementLoader().get(ADVANCEMENT_ID);
                 if (advancement != null) {
-                    serverPlayer.getAdvancementTracker().grantCriterion(advancement, "near_uranium");
+                    serverPlayer.getAdvancementTracker().grantCriterion(advancement, "near_fake_uranium");
                 }
             }
         }

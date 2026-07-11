@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:radiated_uranium_ore"
+    },
+    "title": {
+      "text": "辐射"
+    },
+    "description": {
+      "text": "玩家5格内有假铀矿"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/ignite_nuclear",
+  "criteria": {
+    "near_fake_uranium": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "block": {
+              "blocks": [
+                "flyconfig:radiated_uranium_ore",
+                "flyconfig:radiated_deepslate_uranium_ore"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}

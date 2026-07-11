@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:germany_developed"
+    },
+    "title": {
+      "text": "研发计划"
+    },
+    "description": {
+      "text": "合成一个德意志帝国研发"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/get_metal_scrap",
+  "criteria": {
+    "craft_germany_developed": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "flyconfig:germany_developed"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}

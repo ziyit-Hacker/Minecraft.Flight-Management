@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:uranium_ingot"
+    },
+    "title": {
+      "text": "铀工程"
+    },
+    "description": {
+      "text": "获得一个铀锭"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/get_uranium_ore",
+  "criteria": {
+    "get_uranium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:uranium_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}
