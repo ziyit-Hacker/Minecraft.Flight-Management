@@ -14,7 +14,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "flyconfig:husbandry/root",
+  "parent": "flyconfig:husbandry/find_cottage",
   "criteria": {
     "get_metal_scrap": {
       "trigger": "minecraft:inventory_changed",

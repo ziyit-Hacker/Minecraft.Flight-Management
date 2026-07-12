@@ -58,6 +58,7 @@ public class NuclearEntity extends PassiveEntity {
     private boolean destroying = false;
     private boolean damageApplied = false;
     private boolean dragonChecked = false;
+    private boolean dragonExistedBeforeExplosion = false;
 
     private static final Identifier NUCLEAR_SOUND_ID = Identifier.of("flyconfig", "nuclear");
     private static final Identifier IGNITE_ADVANCEMENT_ID = Identifier.of("flyconfig", "husbandry/ignite_nuclear");
@@ -349,7 +350,10 @@ public class NuclearEntity extends PassiveEntity {
                 state.isOf(Blocks.STRUCTURE_BLOCK) ||
                 state.isOf(Blocks.STRUCTURE_VOID) ||
                 state.isOf(Blocks.JIGSAW) ||
-                state.isOf(Blocks.LIGHT);
+                state.isOf(Blocks.LIGHT) ||
+                state.isOf(Blocks.NETHER_PORTAL) ||
+                state.isOf(Blocks.END_PORTAL) ||
+                state.isOf(Blocks.END_GATEWAY);
     }
 
     private boolean isBlockingBlock(BlockState state) {
@@ -364,7 +368,25 @@ public class NuclearEntity extends PassiveEntity {
                 state.isOf(Blocks.STRUCTURE_BLOCK) ||
                 state.isOf(Blocks.STRUCTURE_VOID) ||
                 state.isOf(Blocks.JIGSAW) ||
-                state.isOf(Blocks.LIGHT);
+                state.isOf(Blocks.LIGHT) ||
+                state.isOf(Blocks.NETHER_PORTAL) ||
+                state.isOf(Blocks.END_PORTAL) ||
+                state.isOf(Blocks.END_GATEWAY);
+    }
+
+    private void checkDragonBeforeExplosion(ServerWorld world) {
+        if (this.getWorld().isClient) return;
+        if (!world.getRegistryKey().equals(net.minecraft.world.World.END)) {
+            return;
+        }
+
+        List<net.minecraft.entity.boss.dragon.EnderDragonEntity> dragons = world.getEntitiesByClass(
+                net.minecraft.entity.boss.dragon.EnderDragonEntity.class,
+                new Box(-200, -50, -200, 200, 100, 200),
+                dragon -> dragon.isAlive()
+        );
+
+        this.dragonExistedBeforeExplosion = !dragons.isEmpty();
     }
 
     private void startExplosion() {
@@ -372,6 +394,8 @@ public class NuclearEntity extends PassiveEntity {
             this.exploded = true;
             Vec3d center = this.getPos();
             BlockPos centerPos = BlockPos.ofFloored(center);
+
+            this.checkDragonBeforeExplosion(serverWorld);
 
             boolean underwater = isInWater(serverWorld, center);
 
@@ -505,13 +529,13 @@ public class NuclearEntity extends PassiveEntity {
         this.onRemoval(serverWorld, net.minecraft.entity.Entity.RemovalReason.KILLED);
         this.discard();
 
-        checkEnderDragon(serverWorld);
+        this.checkEnderDragon(serverWorld);
     }
 
     private void checkEnderDragon(ServerWorld world) {
         if (this.getWorld().isClient) return;
         if (dragonChecked) return;
-
+        if (!this.dragonExistedBeforeExplosion) return;
         if (!world.getRegistryKey().equals(net.minecraft.world.World.END)) {
             return;
         }
@@ -523,8 +547,9 @@ public class NuclearEntity extends PassiveEntity {
         );
 
         if (dragons.isEmpty()) {
-            grantDragonAdvancement(world);
+            this.grantDragonAdvancement(world);
         }
+        this.dragonChecked = true;
     }
 
     private void grantDragonAdvancement(ServerWorld world) {

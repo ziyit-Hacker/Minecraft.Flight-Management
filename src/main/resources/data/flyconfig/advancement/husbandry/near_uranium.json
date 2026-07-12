@@ -14,7 +14,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "flyconfig:husbandry/root",
+  "parent": "flyconfig:husbandry/find_cottage",
   "criteria": {
     "near_uranium": {
       "trigger": "minecraft:location",

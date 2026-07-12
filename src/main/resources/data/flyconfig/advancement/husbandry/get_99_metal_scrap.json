@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:metal_scrap"
+    },
+    "title": {
+      "text": "废品回收站"
+    },
+    "description": {
+      "text": "收集一组金属废料"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/eat_metal_scrap",
+  "criteria": {
+    "get_99_metal_scrap": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

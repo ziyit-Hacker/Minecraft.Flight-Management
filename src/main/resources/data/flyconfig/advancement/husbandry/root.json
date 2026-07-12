@@ -7,17 +7,27 @@
       "text": "飞行管理"
     },
     "description": {
-      "text": "飞行管理模组"
+      "text": "模组核心与故事"
     },
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
+    "show_toast": true,
+    "announce_to_chat": true,
     "hidden": false,
     "background": "flyconfig:advancement/nuclear"
   },
   "criteria": {
-    "tick": {
-      "trigger": "minecraft:tick"
+    "find_cottage_old": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "flyconfig:cottage_old"
+          }
+        }
+      }
     }
+  },
+  "rewards": {
+    "experience": 20
   }
 }

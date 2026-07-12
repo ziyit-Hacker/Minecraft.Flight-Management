@@ -19,7 +19,7 @@
     "craft_germany_developed": {
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe_id": "flyconfig:germany_developed"
+        "recipe_id": "flyconfig:mods/germany_developed"
       }
     }
   },

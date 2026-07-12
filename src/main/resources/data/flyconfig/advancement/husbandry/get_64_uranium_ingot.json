@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:uranium_ingot"
+    },
+    "title": {
+      "text": "垄断铀矿"
+    },
+    "description": {
+      "text": "收集一组铀锭"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/get_uranium_ingot",
+  "criteria": {
+    "get_64_uranium_ingot": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

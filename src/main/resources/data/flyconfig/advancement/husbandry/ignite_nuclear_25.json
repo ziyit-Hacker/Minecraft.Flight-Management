@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "flyconfig:nuclear_spawn_egg"
+    },
+    "title": {
+      "text": "核弹狂人"
+    },
+    "description": {
+      "text": "累计引爆25颗核弹"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "flyconfig:husbandry/kill_ender_dragon_with_nuclear",
+  "criteria": {
+    "ignite_nuclear_25": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}
