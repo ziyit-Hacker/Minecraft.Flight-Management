@@ -17,7 +17,17 @@
   "parent": "flyconfig:husbandry/eat_metal_scrap",
   "criteria": {
     "get_99_metal_scrap": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:metal_scrap",
+            "count": {
+              "min": 99
+            }
+          }
+        ]
+      }
     }
   },
   "rewards": {

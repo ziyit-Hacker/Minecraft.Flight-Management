@@ -17,7 +17,17 @@
   "parent": "flyconfig:husbandry/get_uranium_ingot",
   "criteria": {
     "get_64_uranium_ingot": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:uranium_ingot",
+            "count": {
+              "min": 64
+            }
+          }
+        ]
+      }
     }
   },
   "rewards": {

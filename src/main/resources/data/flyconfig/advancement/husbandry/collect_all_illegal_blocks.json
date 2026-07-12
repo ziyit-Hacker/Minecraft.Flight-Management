@@ -16,11 +16,893 @@
   },
   "parent": "flyconfig:husbandry/get_99_metal_scrap",
   "criteria": {
-    "collect_all_illegal_blocks": {
-      "trigger": "minecraft:impossible"
+    "has_snowy_grass_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:snowy_grass_block"
+          }
+        ]
+      }
+    },
+    "has_nether_portal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:nether_portal"
+          }
+        ]
+      }
+    },
+    "has_end_portal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:end_portal"
+          }
+        ]
+      }
+    },
+    "has_end_gateway": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:end_gateway"
+          }
+        ]
+      }
+    },
+    "has_water": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:water"
+          }
+        ]
+      }
+    },
+    "has_lava": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:lava"
+          }
+        ]
+      }
+    },
+    "has_flowing_water": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:flowing_water"
+          }
+        ]
+      }
+    },
+    "has_flowing_lava": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:flowing_lava"
+          }
+        ]
+      }
+    },
+    "has_bubble_column_up": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:bubble_column_up"
+          }
+        ]
+      }
+    },
+    "has_bubble_column_down": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:bubble_column_down"
+          }
+        ]
+      }
+    },
+    "has_lit_furnace": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:lit_furnace"
+          }
+        ]
+      }
+    },
+    "has_lit_blast_furnace": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:lit_blast_furnace"
+          }
+        ]
+      }
+    },
+    "has_lit_smoker": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:lit_smoker"
+          }
+        ]
+      }
+    },
+    "has_activated_observer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:activated_observer"
+          }
+        ]
+      }
+    },
+    "has_six_sided_piston": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:six_sided_piston"
+          }
+        ]
+      }
+    },
+    "has_headless_piston": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:headless_piston"
+          }
+        ]
+      }
+    },
+    "has_piston_arm": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:piston_arm"
+          }
+        ]
+      }
+    },
+    "has_wet_farmland": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wet_farmland"
+          }
+        ]
+      }
+    },
+    "has_fire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:fire"
+          }
+        ]
+      }
+    },
+    "has_soul_fire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:soul_fire"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_0"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_1"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_2"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_3"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_4"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_5"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_6"
+          }
+        ]
+      }
+    },
+    "has_wheat_crop_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:wheat_crop_7"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_0"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_1"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_2"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_3"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_4"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_5"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_6"
+          }
+        ]
+      }
+    },
+    "has_carrot_crop_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:carrot_crop_7"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_0"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_1"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_2"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_3"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_4"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_5"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_6"
+          }
+        ]
+      }
+    },
+    "has_potato_crop_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:potato_crop_7"
+          }
+        ]
+      }
+    },
+    "has_beetroot_crop_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:beetroot_crop_0"
+          }
+        ]
+      }
+    },
+    "has_beetroot_crop_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:beetroot_crop_1"
+          }
+        ]
+      }
+    },
+    "has_beetroot_crop_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:beetroot_crop_2"
+          }
+        ]
+      }
+    },
+    "has_beetroot_crop_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:beetroot_crop_3"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_0"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_1"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_2"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_3"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_4"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_5"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_6"
+          }
+        ]
+      }
+    },
+    "has_melon_stem_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:melon_stem_7"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_0"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_1"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_2"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_3"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_4"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_5"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_6"
+          }
+        ]
+      }
+    },
+    "has_pumpkin_stem_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:pumpkin_stem_7"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_0"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_1"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_2"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_3"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_4"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_5"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_6"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_7"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_8"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_9"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_10"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_11"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_12"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_13"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_14"
+          }
+        ]
+      }
+    },
+    "has_sugar_cane_15": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "flyconfig:sugar_cane_15"
+          }
+        ]
+      }
     }
   },
+  "requirements": [
+    ["has_snowy_grass_block"],
+    ["has_nether_portal"],
+    ["has_end_portal"],
+    ["has_end_gateway"],
+    ["has_water"],
+    ["has_lava"],
+    ["has_flowing_water"],
+    ["has_flowing_lava"],
+    ["has_bubble_column_up"],
+    ["has_bubble_column_down"],
+    ["has_lit_furnace"],
+    ["has_lit_blast_furnace"],
+    ["has_lit_smoker"],
+    ["has_activated_observer"],
+    ["has_six_sided_piston"],
+    ["has_headless_piston"],
+    ["has_piston_arm"],
+    ["has_wet_farmland"],
+    ["has_fire"],
+    ["has_soul_fire"],
+    ["has_wheat_crop_0"],
+    ["has_wheat_crop_1"],
+    ["has_wheat_crop_2"],
+    ["has_wheat_crop_3"],
+    ["has_wheat_crop_4"],
+    ["has_wheat_crop_5"],
+    ["has_wheat_crop_6"],
+    ["has_wheat_crop_7"],
+    ["has_carrot_crop_0"],
+    ["has_carrot_crop_1"],
+    ["has_carrot_crop_2"],
+    ["has_carrot_crop_3"],
+    ["has_carrot_crop_4"],
+    ["has_carrot_crop_5"],
+    ["has_carrot_crop_6"],
+    ["has_carrot_crop_7"],
+    ["has_potato_crop_0"],
+    ["has_potato_crop_1"],
+    ["has_potato_crop_2"],
+    ["has_potato_crop_3"],
+    ["has_potato_crop_4"],
+    ["has_potato_crop_5"],
+    ["has_potato_crop_6"],
+    ["has_potato_crop_7"],
+    ["has_beetroot_crop_0"],
+    ["has_beetroot_crop_1"],
+    ["has_beetroot_crop_2"],
+    ["has_beetroot_crop_3"],
+    ["has_melon_stem_0"],
+    ["has_melon_stem_1"],
+    ["has_melon_stem_2"],
+    ["has_melon_stem_3"],
+    ["has_melon_stem_4"],
+    ["has_melon_stem_5"],
+    ["has_melon_stem_6"],
+    ["has_melon_stem_7"],
+    ["has_pumpkin_stem_0"],
+    ["has_pumpkin_stem_1"],
+    ["has_pumpkin_stem_2"],
+    ["has_pumpkin_stem_3"],
+    ["has_pumpkin_stem_4"],
+    ["has_pumpkin_stem_5"],
+    ["has_pumpkin_stem_6"],
+    ["has_pumpkin_stem_7"],
+    ["has_sugar_cane_0"],
+    ["has_sugar_cane_1"],
+    ["has_sugar_cane_2"],
+    ["has_sugar_cane_3"],
+    ["has_sugar_cane_4"],
+    ["has_sugar_cane_5"],
+    ["has_sugar_cane_6"],
+    ["has_sugar_cane_7"],
+    ["has_sugar_cane_8"],
+    ["has_sugar_cane_9"],
+    ["has_sugar_cane_10"],
+    ["has_sugar_cane_11"],
+    ["has_sugar_cane_12"],
+    ["has_sugar_cane_13"],
+    ["has_sugar_cane_14"],
+    ["has_sugar_cane_15"]
+  ],
   "rewards": {
-    "experience": 200
+    "experience": 1000,
+    "loot": [
+      "flyconfig:advancement/collect_all_illegal_blocks"
+    ]
   }
 }
