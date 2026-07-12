@@ -1,6 +1,5 @@
 import os
 import json
-import random
 from pathlib import Path
 
 # 合法方块列表
@@ -57,20 +56,8 @@ ILLEGAL_ITEMS = [
     "sugar_cane_12", "sugar_cane_13", "sugar_cane_14", "sugar_cane_15"
 ]
 
-def generate_recipe(illegal_item, legal1, legal2, extra_ingredient=None):
+def generate_recipe(illegal_item, ingredients):
     """生成配方JSON"""
-    ingredients = [
-        f"flyconfig:{legal1}",
-        f"flyconfig:{legal2}"
-    ]
-    
-    # 如果需要额外的材料来区分
-    if extra_ingredient:
-        ingredients.append(f"flyconfig:{extra_ingredient}")
-    
-    # 随机生成count (1-5)
-    count = random.randint(1, 5)
-    
     # 生成group名称（使用物品名）
     group_name = illegal_item.replace('_', ' ')
     
@@ -81,7 +68,7 @@ def generate_recipe(illegal_item, legal1, legal2, extra_ingredient=None):
         "ingredients": ingredients,
         "result": {
             "id": f"flyconfig:{illegal_item}",
-            "count": count
+            "count": 1
         },
         "show_notification": True
     }
@@ -93,28 +80,41 @@ def create_recipes():
     a_dir = Path("a")
     a_dir.mkdir(exist_ok=True)
     
-    # 为每个非法方块生成配方
+    used_combinations = set()
+    
     for i, illegal_item in enumerate(ILLEGAL_ITEMS):
-        # 选择两个不同的合法方块
+        # 按顺序选择两个合法方块
         legal1 = LEGAL_ITEMS[i % len(LEGAL_ITEMS)]
         legal2 = LEGAL_ITEMS[(i + 1) % len(LEGAL_ITEMS)]
         
-        # 检查是否与其他非法方块配方重复
-        # 如果重复，添加第三个合法方块作为区分
-        extra = None
-        # 简单检查：如果两个合法方块相同，或者可能会造成歧义
-        if legal1 == legal2:
-            extra = LEGAL_ITEMS[(i + 2) % len(LEGAL_ITEMS)]
+        # 构建材料列表
+        ingredients = [f"flyconfig:{legal1}", f"flyconfig:{legal2}"]
+        
+        # 检查组合是否已使用
+        combo_key = tuple(sorted([legal1, legal2]))
+        if combo_key in used_combinations:
+            # 如果重复，添加一个非法方块作为第三个材料（不能是自己）
+            extra = None
+            for other in ILLEGAL_ITEMS:
+                if other != illegal_item:
+                    extra = other
+                    break
+            if extra:
+                ingredients.append(f"flyconfig:{extra}")
+                print(f"配方 {illegal_item} 与已有配方重复，添加额外材料: {extra}")
+        
+        # 记录使用的组合
+        used_combinations.add(combo_key)
         
         # 生成配方
-        recipe = generate_recipe(illegal_item, legal1, legal2, extra)
+        recipe = generate_recipe(illegal_item, ingredients)
         
         # 写入文件
         file_path = a_dir / f"{illegal_item}.json"
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(recipe, f, indent=4, ensure_ascii=False)
         
-        print(f"已生成: {illegal_item}.json")
+        print(f"已生成: {illegal_item}.json (材料: {', '.join(ingredients)})")
     
     print(f"\n完成！共生成 {len(ILLEGAL_ITEMS)} 个配方文件到 a 文件夹")
 
