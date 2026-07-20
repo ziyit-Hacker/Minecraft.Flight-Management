@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "flight-management",
 	"version": "${version}",
-	"name": "Flight Management",
-	"description": "这是一个在我的世界的航班管理mod。",
+	"name": "Flight-Management",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"我的世界寒坤"
+		"Me!"
 	],
 	"contact": {
-		"homepage": "https://ziyit-hacker.github.io/",
-		"sources": "[NO DATA]"
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/flight-management/icon.png",
@@ -18,23 +18,20 @@
 		"main": [
 			"io.minecraft.flyconfig.FlightManagement"
 		],
-		"client": [
-			"io.minecraft.flyconfig.FlightManagementClient"
-		],
 		"fabric-datagen": [
 			"io.minecraft.flyconfig.FlightManagementDataGenerator"
+		],
+		"client": [
+			"io.minecraft.flyconfig.FlightManagementClient"
 		]
 	},
 	"mixins": [
 		"flight-management.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
-		"minecraft": "~1.21.8",
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"custom": {
-		"fabric-api:module-lifecycle": "early"
 	}
 }

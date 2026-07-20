@@ -512,13 +512,29 @@ public class NuclearEntity extends PassiveEntity {
         if (this.getWorld().isClient) return;
 
         ServerWorld serverWorld = (ServerWorld) this.getWorld();
+        Vec3d center = this.getPos();
 
         while (!this.pendingBlocks.isEmpty()) {
             BlockPos pos = this.pendingBlocks.removeFirst();
             BlockState state = serverWorld.getBlockState(pos);
             if (!state.isAir() && !isIndestructibleBlock(state)) {
-                serverWorld.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
-                this.blocksDestroyed++;
+                Vec3d direction = new Vec3d(pos.getX() - center.x + 0.5, pos.getY() - center.y + 0.5, pos.getZ() - center.z + 0.5).normalize();
+                double distance = center.distanceTo(Vec3d.ofCenter(pos));
+                boolean blocked = false;
+                for (double step = 0.5; step < distance; step += 0.5) {
+                    Vec3d checkPos = center.add(direction.multiply(step));
+                    BlockPos checkBlock = BlockPos.ofFloored(checkPos);
+                    if (checkBlock.equals(pos)) break;
+                    BlockState checkState = serverWorld.getBlockState(checkBlock);
+                    if (isBlockingBlock(checkState)) {
+                        blocked = true;
+                        break;
+                    }
+                }
+                if (!blocked) {
+                    serverWorld.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
+                    this.blocksDestroyed++;
+                }
             }
         }
 
@@ -583,7 +599,19 @@ public class NuclearEntity extends PassiveEntity {
                     BlockPos pos = centerPos.add(dx, dy, dz);
                     BlockState state = world.getBlockState(pos);
 
-                    if (isBlockingBlock(state)) continue;
+                    Vec3d direction = new Vec3d(pos.getX() - center.x + 0.5, pos.getY() - center.y + 0.5, pos.getZ() - center.z + 0.5).normalize();
+                    double distance = center.distanceTo(Vec3d.ofCenter(pos));
+                    boolean blocked = false;
+                    for (double step = 0.5; step < distance; step += 0.5) {
+                        Vec3d checkPos = center.add(direction.multiply(step));
+                        BlockPos checkBlock = BlockPos.ofFloored(checkPos);
+                        if (checkBlock.equals(pos)) break;
+                        if (isBlockingBlock(world.getBlockState(checkBlock))) {
+                            blocked = true;
+                            break;
+                        }
+                    }
+                    if (blocked) continue;
 
                     if (state.isOf(Blocks.DIAMOND_ORE)) {
                         world.setBlockState(pos, ModBlocks.RADIATED_URANIUM_ORE.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
@@ -734,6 +762,20 @@ public class NuclearEntity extends PassiveEntity {
                     BlockState state = world.getBlockState(pos);
 
                     if (!state.isAir()) continue;
+
+                    Vec3d direction = new Vec3d(pos.getX() - center.x + 0.5, pos.getY() - center.y + 0.5, pos.getZ() - center.z + 0.5).normalize();
+                    double distance = center.distanceTo(Vec3d.ofCenter(pos));
+                    boolean blocked = false;
+                    for (double step = 0.5; step < distance; step += 0.5) {
+                        Vec3d checkPos = center.add(direction.multiply(step));
+                        BlockPos checkBlock = BlockPos.ofFloored(checkPos);
+                        if (checkBlock.equals(pos)) break;
+                        if (isBlockingBlock(world.getBlockState(checkBlock))) {
+                            blocked = true;
+                            break;
+                        }
+                    }
+                    if (blocked) continue;
 
                     BlockPos below = pos.down();
                     if (world.getBlockState(below).isAir()) continue;

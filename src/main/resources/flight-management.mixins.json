@@ -3,10 +3,9 @@
 	"package": "io.minecraft.flyconfig.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"FuelRegistryMixin",
-		"ArrowEntityMixin",
-		"DeathMessageMixin",
-		"PlayerEntityMixin"
+		"ExampleMixin",
+		"PlayerEntityMixin",
+		"FuelRegistryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
